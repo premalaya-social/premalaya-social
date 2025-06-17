@@ -6,623 +6,910 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Premalaya Social Development Society</title>
     <meta name="description" content="Premalaya Social Development Society works for the well-being of downtrodden and vulnerable sections in Tiruvallur, Chennai Districts of Tamilnadu and in Prakasam, Nellore Districts of Andhra Pradesh. It works in the community development through education, health, advocacy, communication and social mobilization.">
-    
-    <link href="favicon.ico" type="image/x-icon" rel="icon">
-    <link href="favicon.ico" type="image/x-icon" rel="shortcut icon">
-    <link rel="stylesheet" href="css/bootstrap-3.3.7-dist/css/bootstrap.css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans%7CRoboto:400,700%7CLato%7COswald%7CRoboto+Condensed' rel='stylesheet' type='text/css'>
+      <link href="favicon.ico" type="image/x-icon" rel="icon">
+    <link href="favicon.ico" type="image/x-icon" rel="shortcut icon">    <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap' rel='stylesheet'>
     <link rel="stylesheet" href="css/swiper/swiper.min.css">
-    <link rel="stylesheet" href="css/font-awesome-4.5.0/css/font-awesome.min.css">
-    <link href="css/app.css" rel="stylesheet">
-    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f0ff',
+                            100: '#e5e5ff',
+                            500: '#2f3192',
+                            600: '#262a7a',
+                            700: '#1d2062',
+                            800: '#14174a',
+                            900: '#0b0d32'
+                        },
+                        secondary: {
+                            400: '#3eb8e6',
+                            500: '#1090bf',
+                            600: '#0d7299'
+                        },
+                        accent: '#2a2b64',
+                        gray: {
+                            50: '#f9fafb',
+                            100: '#f3f4f6',
+                            200: '#e5e7eb',
+                            300: '#d1d5db',
+                            400: '#9ca3af',
+                            500: '#6b7280',
+                            600: '#4b5563',
+                            700: '#374151',
+                            800: '#1f2937',
+                            900: '#111827'
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'roboto': ['Roboto', 'sans-serif']
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'float': 'float 3s ease-in-out infinite'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-5px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>    
     <style>
-    #container {
-      margin: 0 auto;
-    }
-
-    .container {
-      padding: 0px;
-      border: 0px solid red;
-      margin: 0px auto;
-    }
-
-    .supertop {
-      display: inline;
-      margin: 0px;
-      padding: 0px;
-      margin-left: 10px;
-    }
-
-    .supertop li {
-      padding: 0px;
-      list-style-type: none;
-      font-size: 14px;
-      font-family: 'segoe ui';
-      display: inline;
-      margin-right: 25px;
-      color: #FFFFFF;
-    }
-
-    .container2 {
-      padding-right: 15px;
-      padding-left: 15px;
-      margin-right: auto;
-      margin-left: auto;
-      border: 0px solid red;
-    }
-
-    .container4 {
-      margin-right: auto;
-      margin-left: auto;
-      border: 0px solid red;
-      padding-top: 0px;
-    }
-
-    .container3 {
-      padding-right: 15px;
-      padding-left: 15px;
-      margin-right: auto;
-      margin-left: auto;
-      border: 0px solid red;
-      margin-top: 60px;
-      padding-top: 40px;
-      padding-bottom: 40px;
-    }
-
-    .navlogo {
-      background-image: url('img/images2/premalayalogos.png');
-      width: 238px;
-      height: 60px;
-      margin: 0px;   
-    }
-
-    .intro,
-    .future,
-    .specialities {
-      padding: 30px 0px 30px 0px;
-    }
-
-    @media (min-width: 768px) {
-      .container,
-      .container2,
-      .container3 {
-        width: 750px;
-      }
-   
-      .navlogo {
-        background-image: url('img/images2/premalayalogol.png');
-        width: 400px;
-        height: 60px;
-        margin: 0px;
-      }
-    }
-
-    @media (min-width: 992px) {
-      .container,
-      .container2,
-      .container3 {
-        width: 970px;
-      }
-    }
-
-    @media (min-width: 1200px) {
-      .container,
-      .container2,
-      .container3 {
-        width: 1170px;
-      }
-    }
-
-    .homepara {
-      font-family: 'segoe ui', 'open sans', roboto;
-      font-size: 16px;
-      line-height: 160%;
-      padding-bottom: 35px;
-    }
-
-    .specialitypara,
-    .homepara2 {
-      font-family: 'segoe ui', lato, roboto;
-      font-size: 15px;
-      line-height: 160%;
-      padding-bottom: 35px;
-      padding-left: 10px;
-      padding-right: 10px;
-      font-style: italic;
-    }
-
-    .specialityhead {
-      font-family: roboto, 'Roboto Condensed';
-      font-size: 18px;
-      line-height: 160%;
-      padding-bottom: 35px;
-      padding-left: 0px;
-      text-align: center;
-      font-weight: bold;
-      font-style: normal;
-      color: #333333;
-    }
-
-    h1,
-    h4 {
-      color: #333333;
-      margin: 15px 0px 10px 0px;
-      padding: 15px 0px 0px 0px;
-      font-family: Roboto;
-      font-size: 26px;
-      font-weight: bold;
-      text-align: center;
-      line-height: 100%;
-    }
-
-    .blu {
-      color: #2f3192;
-    }
-
-    a.aboutlinks:link {
-      text-decoration: none;
-      color: #2a2a2a;
-    }
-
-    a.aboutlinks:visited {
-      text-decoration: none;
-      color: #2a2a2a;
-    }
-
-    a.aboutlinks:hover {
-      text-decoration: none;
-      color: #2a2a2a;
-    }
-
-    .navbar-default {
-      font-family: roboto,"Open Sans", sans-serif;
-      border: none;
-      border-radius: 0;
-      margin-bottom: 0;
-      width: 100%;
-      min-height: 80px;
-      padding: 15px 0;
-      box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.1);
-      background: #fff;
-      transition: all 0.4s ease-in-out;
-    }
-
-    .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-      color: #2a2b64;
-      background-color: transparent;
-    }
-
-    .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-      color: #2a2b64;
-      background-color: #fff;
-    }
-
-    .navbar-brand {
-      font-weight: 800;
-      color: #000 !important;
-      font-size: 30px;
-      line-height: 14px;
-      padding:0px 0px 0px 10px;
-      margin:0px;
-      height:60px;
-    }
-
-    .navbar-default .navbar-nav > li > a {
-      color: #777;
-      font-weight: 400;
-      font-size: 14px;
-      text-transform: uppercase;
-    }
-
-    .navbar-default .navbar-nav > li > a:hover {
-      color: #2a2b64;
-    }
-
-    .navbar .dropdown-menu {
-      margin: 0;
-      background-color: #fff;
-      border: none;
-      padding: 0px;
-    }
-
-    .navbar .dropdown-menu li a {
-      color: #777;
-      padding: 4px 20px;
-      font-weight: 400;
-      font-size: 14px;
-      text-transform: uppercase;
-      transition: all 200ms ease-in;
-    }
-
-    .container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse {
-        margin:0px;
-    }
-
-    a.linktext2a:visited {
-      text-decoration: none;
-      color: #000000;
-    }
-
-    a.linktext2a:link {
-      text-decoration: none;
-      color: #000000;
-    }
-
-    a.linktext2a:hover {
-      text-decoration: none;
-      color: #1090bf;
-    }
+        .navlogo {
+            background-image: url('img/images2/premalayalogos.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 238px;
+            height: 60px;
+            transition: all 0.3s ease;
+        }
+        
+        @media (min-width: 768px) {
+            .navlogo {
+                background-image: url('img/images2/premalayalogol.png');
+                width: 400px;
+                height: 60px;
+            }
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #2f3192 0%, #1090bf 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .image-overlay {
+            background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);
+        }        .swiper-button-next, .swiper-button-prev {
+            position: absolute !important;
+            top: 50% !important;
+            width: 50px !important;
+            height: 50px !important;
+            margin-top: -25px !important;
+            z-index: 10 !important;
+            cursor: pointer !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            background: rgba(0, 0, 0, 0.3) !important;
+            border-radius: 50% !important;
+            color: white !important;
+            font-size: 20px !important;
+            font-weight: bold !important;
+            transition: all 0.3s ease !important;
+            border: 2px solid rgba(255, 255, 255, 0.8) !important;
+        }
+        
+        .swiper-button-next {
+            right: 20px !important;
+        }
+        
+        .swiper-button-prev {
+            left: 20px !important;
+        }
+        
+        .swiper-button-next:after {
+            content: '›' !important;
+            font-size: 24px !important;
+            color: white !important;
+            margin-left: 2px !important;
+        }
+        
+        .swiper-button-prev:after {
+            content: '‹' !important;
+            font-size: 24px !important;
+            color: white !important;
+            margin-right: 2px !important;
+        }
+        
+        .swiper-button-next:hover, .swiper-button-prev:hover {
+            background: rgba(0, 0, 0, 0.8) !important;
+            transform: scale(1.1) !important;
+            border-color: white !important;
+        }
+        
+        .swiper-button-disabled {
+            opacity: 0.5 !important;
+            cursor: not-allowed !important;
+        }
+        
+        .swiper-progress {
+            width: 0%;
+            transition: width linear;
+        }
+        
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #2f3192 0%, #1090bf 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
     </style>
 </head>
-<body>
-    <!-- Top Contact Bar -->
-    <div class="container41" style="background-color:#2a2b64;padding:10px 0px;">
-        <div class="container" style="background-color:#2a2b64;color:#fff;height:25px;text-align:right">
-            <ul class="supertop">
-                <li><i aria-hidden="true" class="fa fa-phone" style="font-size:15px;margin-right:10px;"></i>+91 9884204493</li>
-                <li class="hidden-sm hidden-xs"><i aria-hidden="true" class="fa fa-map-marker" style="font-size:15px;margin-right:10px;"></i> 9/A, 6th St, 2nd Lane, Defence Enclave, Muthapudupet, IAF Avadi, Chennai - 600 055. India</li>
-                <li class="hidden-sm hidden-xs"><i aria-hidden="true" class="fa fa-envelope" style="font-size:15px;margin-right:10px;"></i> premalayamin@yahoo.co.in</li>
-                <li><i aria-hidden="true" class="fa fa-facebook" style="font-size:15px;margin-right:10px;"></i>Facebook</li>
-            </ul>
+<body>    <!-- Top Contact Bar -->
+    <div class="bg-gradient-to-r from-slate-900 via-gray-900 to-slate-800 text-white text-sm py-3 border-b border-slate-700/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-between items-center">
+                <div class="flex flex-wrap items-center space-x-6 lg:space-x-8">
+                    <div class="flex items-center group cursor-pointer">
+                        <div class="w-8 h-8 rounded-full bg-primary-500/20 flex items-center justify-center mr-3 group-hover:bg-primary-500/30 transition-all duration-300">
+                            <svg class="w-4 h-4 text-primary-400 group-hover:text-primary-300 transition-colors duration-300" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                            </svg>
+                        </div>
+                        <span class="font-medium hover:text-primary-300 transition-colors duration-300">+91 9884204493</span>
+                    </div>
+                    <div class="hidden sm:flex items-center group cursor-pointer">
+                        <div class="w-8 h-8 rounded-full bg-secondary-500/20 flex items-center justify-center mr-3 group-hover:bg-secondary-500/30 transition-all duration-300">
+                            <svg class="w-4 h-4 text-secondary-400 group-hover:text-secondary-300 transition-colors duration-300" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                            </svg>
+                        </div>
+                        <span class="font-medium hover:text-secondary-300 transition-colors duration-300">premalayamin@yahoo.co.in</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <div class="flex items-center group cursor-pointer">
+                        <div class="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center mr-3 group-hover:bg-blue-500/30 transition-all duration-300 group-hover:scale-110">
+                            <svg class="w-4 h-4 text-blue-400 group-hover:text-blue-300 transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </div>
+                        <span class="font-medium hover:text-blue-300 transition-colors duration-300">Follow Us</span>
+                    </div>
+                    <div class="h-6 w-px bg-slate-600/50"></div>
+                    <div class="flex items-center text-sm text-slate-300">
+                        <svg class="w-4 h-4 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                        </svg>
+                        <span class="hidden lg:inline font-medium">Chennai, India</span>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-        
-    <!-- Navigation -->
-    <div class="navbar navbar-default navbar-static-top sticky" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>                <a class="navbar-brand" href="index.html">
-                    <div class="navlogo"></div>
+    </div>    <!-- Navigation -->
+    <nav class="bg-white/80 backdrop-blur-xl shadow-xl sticky top-0 z-50 border-b border-white/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-24">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex-shrink-0 hover:scale-105 transition-all duration-500 ease-out">
+                        <div class="navlogo drop-shadow-sm"></div>
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex lg:items-center lg:space-x-2">
+                    <a href="index.html" class="relative text-primary-500 bg-gradient-to-r from-primary-50 to-primary-100 px-6 py-3 rounded-xl text-sm font-bold uppercase tracking-wider transition-all duration-300 hover:shadow-lg hover:scale-105 group">
+                        <span class="relative z-10">Home</span>
+                        <div class="absolute inset-0 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-xl opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+                    </a>
+                    
+                    <div class="relative group">
+                        <button class="relative text-gray-700 hover:text-primary-500 hover:bg-gray-50/80 px-6 py-3 rounded-xl text-sm uppercase tracking-wider font-semibold flex items-center transition-all duration-300 group hover:shadow-md hover:scale-105">
+                            <span class="relative z-10">About us</span>
+                            <svg class="ml-2 h-4 w-4 transition-all duration-300 group-hover:rotate-180 group-hover:text-primary-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                            <div class="absolute inset-0 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-xl opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
+                        </button>
+                        <div class="absolute left-0 mt-3 w-72 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-gray-100/50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 transform group-hover:translate-y-0 translate-y-3 ring-1 ring-black/5">
+                            <div class="py-3">
+                                <a href="about.html" class="flex items-center px-5 py-4 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-primary-50 hover:to-secondary-50 hover:text-primary-600 transition-all duration-300 rounded-xl mx-3 group/item">
+                                    <div class="w-2 h-2 rounded-full bg-primary-400 mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300"></div>
+                                    <span class="font-medium">About Premalaya</span>
+                                </a>
+                                <a href="vision-mission.html" class="flex items-center px-5 py-4 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-primary-50 hover:to-secondary-50 hover:text-primary-600 transition-all duration-300 rounded-xl mx-3 group/item">
+                                    <div class="w-2 h-2 rounded-full bg-primary-400 mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300"></div>
+                                    <span class="font-medium">Vision & Mission</span>
+                                </a>
+                                <a href="founder.html" class="flex items-center px-5 py-4 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-primary-50 hover:to-secondary-50 hover:text-primary-600 transition-all duration-300 rounded-xl mx-3 group/item">
+                                    <div class="w-2 h-2 rounded-full bg-primary-400 mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300"></div>
+                                    <span class="font-medium">Rev. A. Isaiah</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="relative group">
+                        <button class="relative text-gray-700 hover:text-primary-500 hover:bg-gray-50/80 px-6 py-3 rounded-xl text-sm uppercase tracking-wider font-semibold flex items-center transition-all duration-300 group hover:shadow-md hover:scale-105">
+                            <span class="relative z-10">Savitribai Scholarships</span>
+                            <svg class="ml-2 h-4 w-4 transition-all duration-300 group-hover:rotate-180 group-hover:text-primary-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                            <div class="absolute inset-0 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-xl opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
+                        </button>
+                        <div class="absolute left-0 mt-3 w-80 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-gray-100/50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 transform group-hover:translate-y-0 translate-y-3 ring-1 ring-black/5">
+                            <div class="py-3">
+                                <a href="savitribai-phule.html" class="flex items-center px-5 py-4 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-primary-50 hover:to-secondary-50 hover:text-primary-600 transition-all duration-300 rounded-xl mx-3 group/item">
+                                    <div class="w-2 h-2 rounded-full bg-primary-400 mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300"></div>
+                                    <span class="font-medium">About Savitribai Phule</span>
+                                </a>
+                                <a href="savitribai-scholarships.html" class="flex items-center px-5 py-4 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-primary-50 hover:to-secondary-50 hover:text-primary-600 transition-all duration-300 rounded-xl mx-3 group/item">
+                                    <div class="w-2 h-2 rounded-full bg-primary-400 mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300"></div>
+                                    <span class="font-medium">Appeal</span>
+                                </a>
+                                <a href="pdf/savithribaischolarship.pdf" class="flex items-center px-5 py-4 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-primary-50 hover:to-secondary-50 hover:text-primary-600 transition-all duration-300 rounded-xl mx-3 group/item">
+                                    <div class="w-2 h-2 rounded-full bg-primary-400 mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300"></div>
+                                    <span class="font-medium">Download Scholarship Form</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="relative group">
+                        <button class="relative text-gray-700 hover:text-primary-500 hover:bg-gray-50/80 px-6 py-3 rounded-xl text-sm uppercase tracking-wider font-semibold flex items-center transition-all duration-300 group hover:shadow-md hover:scale-105">
+                            <span class="relative z-10">Programs</span>
+                            <svg class="ml-2 h-4 w-4 transition-all duration-300 group-hover:rotate-180 group-hover:text-primary-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                            <div class="absolute inset-0 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-xl opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
+                        </button>
+                        <div class="absolute left-0 mt-3 w-80 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-gray-100/50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 transform group-hover:translate-y-0 translate-y-3 ring-1 ring-black/5">
+                            <div class="py-3">
+                                <a href="women-empowerment.html" class="flex items-center px-5 py-4 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-primary-50 hover:to-secondary-50 hover:text-primary-600 transition-all duration-300 rounded-xl mx-3 group/item">
+                                    <div class="w-2 h-2 rounded-full bg-primary-400 mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300"></div>
+                                    <span class="font-medium">Women Empowerment</span>
+                                </a>
+                                <a href="children-home.html" class="flex items-center px-5 py-4 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-primary-50 hover:to-secondary-50 hover:text-primary-600 transition-all duration-300 rounded-xl mx-3 group/item">
+                                    <div class="w-2 h-2 rounded-full bg-primary-400 mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300"></div>
+                                    <span class="font-medium">Children's Home</span>
+                                </a>
+                                <a href="health-care.html" class="flex items-center px-5 py-4 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-primary-50 hover:to-secondary-50 hover:text-primary-600 transition-all duration-300 rounded-xl mx-3 group/item">
+                                    <div class="w-2 h-2 rounded-full bg-primary-400 mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300"></div>
+                                    <span class="font-medium">Health Care</span>
+                                </a>
+                                <a href="medical-camps.html" class="flex items-center px-5 py-4 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-primary-50 hover:to-secondary-50 hover:text-primary-600 transition-all duration-300 rounded-xl mx-3 group/item">
+                                    <div class="w-2 h-2 rounded-full bg-primary-400 mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300"></div>
+                                    <span class="font-medium">Medical Camps</span>
+                                </a>
+                                <a href="relief-operations.html" class="flex items-center px-5 py-4 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-primary-50 hover:to-secondary-50 hover:text-primary-600 transition-all duration-300 rounded-xl mx-3 group/item">
+                                    <div class="w-2 h-2 rounded-full bg-primary-400 mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300"></div>
+                                    <span class="font-medium">Relief Operations</span>
+                                </a>
+                                <a href="educational-activities.html" class="flex items-center px-5 py-4 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-primary-50 hover:to-secondary-50 hover:text-primary-600 transition-all duration-300 rounded-xl mx-3 group/item">
+                                    <div class="w-2 h-2 rounded-full bg-primary-400 mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300"></div>
+                                    <span class="font-medium">Educational Activities</span>
+                                </a>
+                                <a href="shankar-narayan-library.html" class="flex items-center px-5 py-4 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-primary-50 hover:to-secondary-50 hover:text-primary-600 transition-all duration-300 rounded-xl mx-3 group/item">
+                                    <div class="w-2 h-2 rounded-full bg-primary-400 mr-3 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300"></div>
+                                    <span class="font-medium">Shankar Narayan Library</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="contact.html" class="relative text-gray-700 hover:text-primary-500 hover:bg-gray-50/80 px-6 py-3 rounded-xl text-sm uppercase tracking-wider font-semibold transition-all duration-300 hover:shadow-md hover:scale-105 group">
+                        <span class="relative z-10">Contact</span>
+                        <div class="absolute inset-0 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-xl opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
+                    </a>
+                    <a href="support.html" class="relative bg-gradient-to-r from-primary-500 to-secondary-500 hover:from-primary-600 hover:to-secondary-600 text-white px-8 py-3 rounded-xl text-sm uppercase tracking-wider font-bold transition-all duration-300 hover:shadow-lg hover:scale-105 group overflow-hidden">
+                        <span class="relative z-10">Support Us</span>
+                        <div class="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-primary-500 p-3 rounded-xl hover:bg-gray-50/80 transition-all duration-300 hover:shadow-md hover:scale-105">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="lg:hidden hidden bg-white/95 backdrop-blur-xl border-t border-gray-100/50 shadow-lg">
+            <div class="px-6 pt-4 pb-6 space-y-3">
+                <a href="index.html" class="flex items-center text-primary-500 bg-gradient-to-r from-primary-50 to-primary-100 font-bold px-5 py-4 text-sm uppercase rounded-xl transition-all duration-300 hover:shadow-md">
+                    <div class="w-2 h-2 rounded-full bg-primary-400 mr-3"></div>
+                    <span>Home</span>
+                </a>
+                <a href="about.html" class="flex items-center text-gray-700 hover:text-primary-500 hover:bg-gray-50/80 px-5 py-4 text-sm uppercase rounded-xl transition-all duration-300 hover:shadow-md group">
+                    <div class="w-2 h-2 rounded-full bg-gray-300 group-hover:bg-primary-400 mr-3 transition-colors duration-300"></div>
+                    <span>About us</span>
+                </a>
+                <a href="savitribai-scholarships.html" class="flex items-center text-gray-700 hover:text-primary-500 hover:bg-gray-50/80 px-5 py-4 text-sm uppercase rounded-xl transition-all duration-300 hover:shadow-md group">
+                    <div class="w-2 h-2 rounded-full bg-gray-300 group-hover:bg-primary-400 mr-3 transition-colors duration-300"></div>
+                    <span>Savitribai Scholarships</span>
+                </a>
+                <a href="women-empowerment.html" class="flex items-center text-gray-700 hover:text-primary-500 hover:bg-gray-50/80 px-5 py-4 text-sm uppercase rounded-xl transition-all duration-300 hover:shadow-md group">
+                    <div class="w-2 h-2 rounded-full bg-gray-300 group-hover:bg-primary-400 mr-3 transition-colors duration-300"></div>
+                    <span>Programs</span>
+                </a>
+                <a href="contact.html" class="flex items-center text-gray-700 hover:text-primary-500 hover:bg-gray-50/80 px-5 py-4 text-sm uppercase rounded-xl transition-all duration-300 hover:shadow-md group">
+                    <div class="w-2 h-2 rounded-full bg-gray-300 group-hover:bg-primary-400 mr-3 transition-colors duration-300"></div>
+                    <span>Contact</span>
+                </a>
+                <a href="support.html" class="flex items-center bg-gradient-to-r from-primary-500 to-secondary-500 hover:from-primary-600 hover:to-secondary-600 text-white px-5 py-4 text-sm uppercase rounded-xl font-bold transition-all duration-300 hover:shadow-lg group">
+                    <div class="w-2 h-2 rounded-full bg-white/80 mr-3"></div>
+                    <span>Support Us</span>
                 </a>
             </div>
-            <div class="navbar-collapse collapse" style="padding:0px;margin:0px">
-                <ul class="nav navbar-nav navbar-right" style="padding:4px 0px;margin:0px">
-                    <li class="active"><a href="index.html">Home</a></li>
-                    <li class="dropdown">
-                        <a href="about.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About us<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="about.html" class="linktext2a">About Premalaya</a></li>
-                            <li><a href="vision-mission.html" class="linktext2a">Vision & Mission</a></li>
-                            <li><a href="founder.html" class="linktext2a">Rev. A. Isaiah</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="savitribai-scholarships.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Savitribai Scholarships<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="savitribai-phule.html" class="linktext2a">About Savitribai Phule</a></li>
-                            <li><a href="savitribai-scholarships.html" class="linktext2a">Appeal</a></li>
-                            <li><a href="governing-committee.html" class="linktext2a">Governing Committee</a></li>     
-                            <li><a href="donors-list.html" class="linktext2a">Donors List</a></li>
-                            <li><a href="scholarship-recipients.html" class="linktext2a">Scholarship Recipients</a></li>  
-                            <li><a href="pdf/savithribaischolarship.pdf" class="linktext2a">Download Scholarship Form</a></li>                                   
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="women-empowerment.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Programs<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="women-empowerment.html" class="linktext2a">Women Empowerment</a></li>
-                            <li><a href="children-home.html" class="linktext2a">Children's Home</a></li>
-                            <li><a href="health-care.html" class="linktext2a">Health Care</a></li>
-                            <li><a href="medical-camps.html" class="linktext2a">Medical Camps</a></li>
-                            <li><a href="relief-operations.html" class="linktext2a">Relief Operations</a></li>
-                            <li><a href="educational-activities.html" class="linktext2a">Educational Activities</a></li>
-                            <li><a href="shankar-narayan-library.html" class="linktext2a">Shankar Narayan Library</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="contact.html" class="linktext2a">Contact</a></li>
-                <li><a href="support.html" class="linktext2a">Support Us</a></li>
-                    <!-- <li><a href="https://www.payumoney.com/paybypayumoney/#/380069" class="linktext2a">Donate Online</a></li> -->
-                </ul>
+        </div>
+    </nav>    <!-- Hero Carousel -->
+    <section class="relative overflow-hidden">
+        <div class="swiper-container gallery-top h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[75vh] xl:h-[80vh]">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide relative group">
+                    <a href="about.html" class="block h-full">
+                        <img src="img/images2/home1.jpg" alt="About Premalaya" class="w-full h-full object-cover object-center sm:object-cover"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="text-center text-white animate-fade-in max-w-4xl px-4 sm:px-6">
+                                <div class="mb-3 sm:mb-4">
+                                    <div class="inline-block px-3 py-1 sm:px-4 sm:py-2 bg-white/20 backdrop-blur-md rounded-full text-xs sm:text-sm font-medium border border-white/30">
+                                        Discover Our Mission
+                                    </div>
+                                </div>
+                                <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-2 sm:mb-4 leading-tight">About Premalaya</h2>
+                                <p class="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 font-light">Caring for the community with compassion and dedication</p>
+                                <div class="mt-4 sm:mt-6 md:mt-8">
+                                    <div class="inline-flex px-3 py-1 sm:px-4 sm:py-2 md:px-6 md:py-3 bg-primary-500/20 backdrop-blur-md rounded-xl border border-primary-400/30 text-xs sm:text-sm font-semibold hover:bg-primary-500/30 transition-all duration-300">
+                                        Learn More →
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide relative group">
+                    <a href="women-empowerment.html" class="block h-full">
+                        <img src="img/images2/home5.jpg" alt="Women Empowerment" class="w-full h-full object-cover object-center sm:object-cover"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="text-center text-white animate-fade-in max-w-4xl px-4 sm:px-6">
+                                <div class="mb-3 sm:mb-4">
+                                    <div class="inline-block px-3 py-1 sm:px-4 sm:py-2 bg-white/20 backdrop-blur-md rounded-full text-xs sm:text-sm font-medium border border-white/30">
+                                        Empowerment Program
+                                    </div>
+                                </div>
+                                <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-2 sm:mb-4 leading-tight">Women Empowerment</h2>
+                                <p class="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 font-light">Empowering women through skills and opportunities</p>
+                                <div class="mt-4 sm:mt-6 md:mt-8">
+                                    <div class="inline-flex px-3 py-1 sm:px-4 sm:py-2 md:px-6 md:py-3 bg-secondary-500/20 backdrop-blur-md rounded-xl border border-secondary-400/30 text-xs sm:text-sm font-semibold hover:bg-secondary-500/30 transition-all duration-300">
+                                        Explore Programs →
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide relative group">
+                    <a href="founder.html" class="block h-full">
+                        <img src="img/images2/home2.jpg" alt="Founder" class="w-full h-full object-cover object-center sm:object-cover"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="text-center text-white animate-fade-in max-w-4xl px-4 sm:px-6">
+                                <div class="mb-3 sm:mb-4">
+                                    <div class="inline-block px-3 py-1 sm:px-4 sm:py-2 bg-white/20 backdrop-blur-md rounded-full text-xs sm:text-sm font-medium border border-white/30">
+                                        Leadership
+                                    </div>
+                                </div>
+                                <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-2 sm:mb-4 leading-tight">Our Founder</h2>
+                                <p class="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 font-light">Rev. A. Isaiah's vision of compassionate service</p>
+                                <div class="mt-4 sm:mt-6 md:mt-8">
+                                    <div class="inline-flex px-3 py-1 sm:px-4 sm:py-2 md:px-6 md:py-3 bg-purple-500/20 backdrop-blur-md rounded-xl border border-purple-400/30 text-xs sm:text-sm font-semibold hover:bg-purple-500/30 transition-all duration-300">
+                                        Meet Our Founder →
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide relative group">
+                    <a href="children-home.html" class="block h-full">
+                        <img src="img/images2/home3.jpg" alt="Children's Home" class="w-full h-full object-cover object-center sm:object-cover"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="text-center text-white animate-fade-in max-w-4xl px-4 sm:px-6">
+                                <div class="mb-3 sm:mb-4">
+                                    <div class="inline-block px-3 py-1 sm:px-4 sm:py-2 bg-white/20 backdrop-blur-md rounded-full text-xs sm:text-sm font-medium border border-white/30">
+                                        Children's Care
+                                    </div>
+                                </div>
+                                <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-2 sm:mb-4 leading-tight">Children's Home</h2>
+                                <p class="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 font-light">Caring for our future, nurturing young minds</p>
+                                <div class="mt-4 sm:mt-6 md:mt-8">
+                                    <div class="inline-flex px-3 py-1 sm:px-4 sm:py-2 md:px-6 md:py-3 bg-green-500/20 backdrop-blur-md rounded-xl border border-green-400/30 text-xs sm:text-sm font-semibold hover:bg-green-500/30 transition-all duration-300">
+                                        Children's Programs →
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide relative group">
+                    <a href="medical-camps.html" class="block h-full">
+                        <img src="img/images2/home4.jpg" alt="Medical Camps" class="w-full h-full object-cover object-center sm:object-cover"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="text-center text-white animate-fade-in max-w-4xl px-4 sm:px-6">
+                                <div class="mb-3 sm:mb-4">
+                                    <div class="inline-block px-3 py-1 sm:px-4 sm:py-2 bg-white/20 backdrop-blur-md rounded-full text-xs sm:text-sm font-medium border border-white/30">
+                                        Healthcare Services
+                                    </div>
+                                </div>
+                                <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-2 sm:mb-4 leading-tight">Medical Camps</h2>
+                                <p class="text-sm sm:text-base md:text-lg lg:text-xl opacity-90 font-light">Healthcare for all, serving communities with care</p>
+                                <div class="mt-4 sm:mt-6 md:mt-8">
+                                    <div class="inline-flex px-3 py-1 sm:px-4 sm:py-2 md:px-6 md:py-3 bg-red-500/20 backdrop-blur-md rounded-xl border border-red-400/30 text-xs sm:text-sm font-semibold hover:bg-red-500/30 transition-all duration-300">
+                                        Medical Services →
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- Navigation Buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            
+            <!-- Progress Bar -->
+            <div class="absolute bottom-0 left-0 right-0 h-1 bg-black/20">
+                <div class="swiper-progress h-full bg-gradient-to-r from-primary-500 to-secondary-500 transition-all duration-300"></div>
             </div>
         </div>
-    </div>
-
-    <!-- Carousel with Clickable Navigation -->
-    <div class='container4' style="padding:0px;margin:0px;">
-        <div class="row" style="padding:0px;margin:0px;background-color:#FFFFFF;height: auto;border:0px solid red">
-            <div class="col-md-12 col-lg-12" style="padding:0px;margin:0px;background-color:#FFFFFF;height: auto;width:100%">
-                <div class="swiper-container gallery-top">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"> <a href="about.html"><img src="img/images2/home1.jpg" alt="" class="img-responsive"/></a></div>
-                        <div class="swiper-slide"><a href="women-empowerment.html"><img src="img/images2/home5.jpg" alt="" class="img-responsive"/></a></div>
-                        <div class="swiper-slide"><a href="founder.html"><img src="img/images2/home2.jpg" alt="" class="img-responsive"/></a></div> 
-                        <div class="swiper-slide"><a href="children-home.html"><img src="img/images2/home3.jpg" alt="" class="img-responsive"/></a></div>
-                        <div class="swiper-slide"><a href="medical-camps.html"><img src="img/images2/home4.jpg" alt="" class="img-responsive"/></a></div>
+    </section>
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-slate-900 via-primary-800 to-secondary-600 py-16 md:py-24 lg:py-32">
+        <!-- Animated Background Elements -->
+        <div class="absolute inset-0">
+            <div class="absolute top-0 left-0 w-72 h-72 bg-primary-500/10 rounded-full blur-3xl -translate-x-36 -translate-y-36 animate-float"></div>
+            <div class="absolute top-1/4 right-0 w-96 h-96 bg-secondary-500/10 rounded-full blur-3xl translate-x-48 animate-float" style="animation-delay: -2s;"></div>
+            <div class="absolute bottom-0 left-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl translate-y-40 animate-float" style="animation-delay: -1s;"></div>
+            <div class="absolute inset-0 bg-black/20"></div>
+        </div>
+        
+        <!-- Grid Pattern Overlay -->
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0); background-size: 20px 20px;"></div>
+        </div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-white">
+                <!-- Welcome Badge -->
+                <div class="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-md rounded-full border border-white/20 text-sm font-medium mb-8 animate-slide-up">
+                    <svg class="w-4 h-4 mr-2 text-primary-300" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                    <span>Serving Communities Since Years</span>
+                </div>
+                
+                <!-- Main Heading -->
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-8 leading-tight animate-slide-up" style="animation-delay: 0.1s;">
+                    <span class="block mb-2">Welcome to</span>
+                    <span class="block bg-gradient-to-r from-white via-blue-100 to-primary-100 bg-clip-text text-transparent">
+                        Premalaya Social
+                    </span>
+                    <span class="block bg-gradient-to-r from-primary-100 via-secondary-200 to-white bg-clip-text text-transparent">
+                        Development Society
+                    </span>
+                </h1>
+                
+                <!-- Description -->
+                <p class="text-lg md:text-xl lg:text-2xl xl:text-3xl leading-relaxed mb-12 max-w-5xl mx-auto opacity-90 font-light animate-slide-up" style="animation-delay: 0.2s;">
+                    <span class="block mb-2">Premalaya Social Development Society works for the well-being of downtrodden and vulnerable sections</span>
+                    <span class="block mb-2">in <strong class="font-semibold text-primary-200">Tiruvallur, Chennai Districts of Tamilnadu</strong> and in <strong class="font-semibold text-secondary-200">Prakasam, Nellore Districts of Andhra Pradesh.</strong></span>
+                    <span class="block">We work for the community through <em class="text-primary-200">education, health, advocacy, communication and social mobilization.</em></span>
+                </p>
+                
+                <!-- Action Buttons -->
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center animate-slide-up" style="animation-delay: 0.4s;">
+                    <a href="about.html" class="group relative inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-md border-2 border-white/30 text-white hover:bg-white hover:text-slate-900 text-lg font-semibold uppercase tracking-wide transition-all duration-500 rounded-2xl hover:scale-105 hover:shadow-2xl overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-r from-primary-500/20 to-secondary-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <span class="relative z-10">Learn More About Premalaya</span>
+                        <svg class="relative z-10 ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
+                    </a>
+                    <a href="pdf/savithribaischolarship.pdf" class="group relative inline-flex items-center px-8 py-4 bg-red-600/90 backdrop-blur-md hover:bg-red-700 text-white text-lg font-semibold uppercase tracking-wide transition-all duration-500 rounded-2xl hover:scale-105 hover:shadow-2xl overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-r from-red-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <svg class="relative z-10 mr-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                        <span class="relative z-10">Download Scholarship Form</span>
+                    </a>
+                </div>
+                
+                <!-- Stats or Key Info -->
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto animate-slide-up" style="animation-delay: 0.6s;">
+                    <div class="text-center group">
+                        <div class="inline-flex items-center justify-center w-16 h-16 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-8 h-8 text-primary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Community Focus</h3>
+                        <p class="text-white/80 text-sm">Serving vulnerable sections across Tamil Nadu and Andhra Pradesh</p>
                     </div>
-                    <div class="swiper-button-next swiper-button-white"></div>
-                    <div class="swiper-button-prev swiper-button-white"></div>
-                </div>
-            </div>
-        </div>
-    </div>    
-    <!-- Main Content -->
-    <div class='container4 text-center' style="background-color:#FFFFFF;">
-        <div class="row" style="margin:0px;">
-            <div class="col-md-12">
-                <div class='container2'>
-                    <section class="intro">
-                        <div class="row">
-                            <div class="col-md-10 col-md-offset-1">
-                                <div class="row" style="padding:20px 0px">
-                                    <div class="col-md-12" style="margin:0px auto;">
-                                        <h1 style="text-align:center;border:0px solid red;padding: 0px 0px 20px 0px;margin:0px;color:#2f3192;">Welcome to Premalaya Social Development Society</h1>
-                                        <p class="homepara" style="text-align: center;padding-bottom: 10px">
-                                            Premalaya Social Development Society works for the well-being of downtrodden and vulnerable sections in Tiruvallur, Chennai Districts of Tamilnadu and in Prakasam, Nellore Districts of Andhra Pradesh. It works for the community through education, health, advocacy, communication and social mobilization.
-                                            <span style="display:block;margin-top:25px;">
-                                            <a href="about.html" class="btn btn-primary" style="font-size:14px;color: #2f3192;  background-color: transparent; border-radius: 0;  font-weight:bold;font-family:Roboto;border: 1px solid #2f3192; transition: .3s ease-out;padding: 11px 15px;text-transform:uppercase;">Click to know more about Premalaya</a>
-                                        </span>
-                                        <span style="display:block;margin-top:25px;">
-                                            <a href="pdf/savithribaischolarship.pdf" class="btn btn-primary" style="font-size:14px;color: #FFF; background-color:#9a3032;border-radius: 0;  font-weight:bold;font-family:Roboto;border: 0px solid #2f3192; transition: .3s ease-out;padding: 11px 15px;text-transform:uppercase;">Click to download Savitribai Scholarship Form</a>
-                                        </span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="text-center group">
+                        <div class="inline-flex items-center justify-center w-16 h-16 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-8 h-8 text-secondary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                            </svg>
                         </div>
-                    </section>
+                        <h3 class="text-xl font-bold mb-2">Education First</h3>
+                        <p class="text-white/80 text-sm">Empowering through education, scholarships, and skill development</p>
+                    </div>
+                    <div class="text-center group">
+                        <div class="inline-flex items-center justify-center w-16 h-16 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-8 h-8 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Healthcare Access</h3>
+                        <p class="text-white/80 text-sm">Medical camps and healthcare services for underserved communities</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section><!-- About Section -->
+    <section class="gradient-bg py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-slide-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 font-roboto">
+                    Premalaya <span class="text-gradient">Social Development Society</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    Know more about Premalaya Social Development Society and the people behind our mission
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 lg:gap-12">
+                <div class="group card-hover bg-white rounded-2xl shadow-lg overflow-hidden animate-slide-up" style="animation-delay: 0.1s;">
+                    <div class="aspect-w-16 aspect-h-12 overflow-hidden">
+                        <img src="img/images2/homepastor.jpg" alt="Rev. A. Isaiah" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4 font-roboto group-hover:text-primary-600 transition-colors duration-300">About Rev. A. Isaiah</h3>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            Founder & President of Premalaya Social Development Society, leading with compassion and dedication.
+                        </p>
+                        <a href="founder.html" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold group/link">
+                            <span>Learn More</span>
+                            <svg class="ml-2 h-4 w-4 group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="group card-hover bg-white rounded-2xl shadow-lg overflow-hidden animate-slide-up" style="animation-delay: 0.2s;">
+                    <div class="aspect-w-16 aspect-h-12 overflow-hidden">
+                        <img src="img/images2/homepremalaya.jpg" alt="About Premalaya" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4 font-roboto group-hover:text-primary-600 transition-colors duration-300">About Premalaya</h3>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            Details about Premalaya Social Development Society and our commitment to community development.
+                        </p>
+                        <a href="about.html" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold group/link">
+                            <span>Learn More</span>
+                            <svg class="ml-2 h-4 w-4 group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="group card-hover bg-white rounded-2xl shadow-lg overflow-hidden animate-slide-up" style="animation-delay: 0.3s;">
+                    <div class="aspect-w-16 aspect-h-12 overflow-hidden">
+                        <img src="img/images2/homevision.jpg" alt="Vision Mission" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4 font-roboto group-hover:text-primary-600 transition-colors duration-300">Mission & Vision</h3>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            Share love, by caring for the poor, needy and the helpless through our dedicated mission.
+                        </p>
+                        <a href="vision-mission.html" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold group/link">
+                            <span>Learn More</span>
+                            <svg class="ml-2 h-4 w-4 group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    <!-- Projects Section -->
+    <section class="bg-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-slide-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 font-roboto">
+                    Our <span class="text-gradient">Projects</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    Activities conducted by Premalaya Social Development Society to make a positive impact in communities
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <div class="group card-hover bg-white rounded-2xl shadow-lg overflow-hidden animate-slide-up" style="animation-delay: 0.1s;">
+                    <div class="aspect-w-16 aspect-h-12 overflow-hidden">
+                        <a href="women-empowerment.html">
+                            <img src="img/images2/homewomen.jpg" alt="Women Empowerment" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"/>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </a>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4 font-roboto group-hover:text-primary-600 transition-colors duration-300">Women Empowerment</h3>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            Premalaya trains women in tailoring, computer skills, bag making and other valuable skills for economic independence.
+                        </p>
+                        <a href="women-empowerment.html" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold group/link">
+                            <span>Learn More</span>
+                            <svg class="ml-2 h-4 w-4 group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="group card-hover bg-white rounded-2xl shadow-lg overflow-hidden animate-slide-up" style="animation-delay: 0.2s;">
+                    <div class="aspect-w-16 aspect-h-12 overflow-hidden">
+                        <a href="children-home.html">
+                            <img src="img/images2/homechildren.jpg" alt="Children Home" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"/>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </a>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4 font-roboto group-hover:text-primary-600 transition-colors duration-300">Children Home</h3>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            Premalaya Children has taken care of orphans and semi-orphans, providing them with care, education and hope.
+                        </p>
+                        <a href="children-home.html" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold group/link">
+                            <span>Learn More</span>
+                            <svg class="ml-2 h-4 w-4 group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="group card-hover bg-white rounded-2xl shadow-lg overflow-hidden animate-slide-up" style="animation-delay: 0.3s;">
+                    <div class="aspect-w-16 aspect-h-12 overflow-hidden">
+                        <a href="health-care.html">
+                            <img src="img/images2/homehealth.jpg" alt="Health Care" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"/>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </a>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4 font-roboto group-hover:text-primary-600 transition-colors duration-300">Health Care</h3>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            Premalaya provides basic health care services for the benefit of society, ensuring wellness for all.
+                        </p>
+                        <a href="health-care.html" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold group/link">
+                            <span>Learn More</span>
+                            <svg class="ml-2 h-4 w-4 group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="group card-hover bg-white rounded-2xl shadow-lg overflow-hidden animate-slide-up" style="animation-delay: 0.4s;">
+                    <div class="aspect-w-16 aspect-h-12 overflow-hidden">
+                        <a href="relief-operations.html">
+                            <img src="img/images2/homerelief.jpg" alt="Relief Operations" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"/>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </a>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4 font-roboto group-hover:text-primary-600 transition-colors duration-300">Relief Operations</h3>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            In times of natural calamities, Premalaya has provided manpower and material support to affected communities.
+                        </p>
+                        <a href="relief-operations.html" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold group/link">
+                            <span>Learn More</span>
+                            <svg class="ml-2 h-4 w-4 group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="group card-hover bg-white rounded-2xl shadow-lg overflow-hidden animate-slide-up" style="animation-delay: 0.5s;">
+                    <div class="aspect-w-16 aspect-h-12 overflow-hidden">
+                        <a href="educational-activities.html">
+                            <img src="img/images2/homeeducation.jpg" alt="Educational Activities" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"/>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </a>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4 font-roboto group-hover:text-primary-600 transition-colors duration-300">Educational Activities</h3>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            Premalaya has been instrumental in sending a number of children to school, ensuring access to quality education.
+                        </p>
+                        <a href="educational-activities.html" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold group/link">
+                            <span>Learn More</span>
+                            <svg class="ml-2 h-4 w-4 group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="group card-hover bg-white rounded-2xl shadow-lg overflow-hidden animate-slide-up" style="animation-delay: 0.6s;">
+                    <div class="aspect-w-16 aspect-h-12 overflow-hidden">
+                        <a href="medical-camps.html">
+                            <img src="img/images2/homemedical.jpg" alt="Medical Camps" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"/>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </a>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4 font-roboto group-hover:text-primary-600 transition-colors duration-300">Medical Camps</h3>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            Premalaya conducts periodical medical camps in villages, slums and cities, bringing healthcare to those who need it most.
+                        </p>
+                        <a href="medical-camps.html" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold group/link">
+                            <span>Learn More</span>
+                            <svg class="ml-2 h-4 w-4 group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class='container4 text-center' style="background-color:#F8F8F8;">
-        <div class="row" style="margin:0px;padding:0px 0px 30px 0px;">
-            <div class="col-md-12">
-                <div class="container2">
-                    <section class="specialities">
-                        <div class="row">
-                            <div class="col-md-12 text-center">
-                                <h1>Premalaya <span class="blu">Social Development Society</span></h1>
-                                <p class="homepara2">
-                                    Know more about Premalaya Social Development Society
-                                </p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4" style="padding:0px 30px">
-                                <div class="row">
-                                    <div class="col-md-12" style="padding:0px;background-color: #FFFFFF">
-                                        <p><img alt="" src="img/images2/homepastor.jpg" class="img-responsive"></p>
-                                        <p class="specialitypara">
-                                            <span class="specialityhead">About Rev. A. Isaiah</span>
-                                            <br/>
-                                            <a href="founder.html" class="aboutlinks">Founder & President<br/>Premalaya Social Development Society</a> </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4" style="padding:0px 30px">
-                                <div class="row">
-                                    <div class="col-md-12" style="padding:0px;background-color: #FFFFFF">
-                                        <p><img alt="" src="img/images2/homepremalaya.jpg" class="img-responsive"></p>
-                                        <p class="specialitypara">
-                                            <span class="specialityhead">About Premalaya</span>
-                                            <br/>
-                                            <a href="about.html" class="aboutlinks">
-                                                Details about Premalaya Social Development Society
-                                            </a> </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4" style="padding:0px 30px;border:0px solid red">
-                                <div class="row">
-                                    <div class="col-md-12" style="padding:0px;background-color: #FFFFFF">
-                                        <p><img alt="" src="img/images2/homevision.jpg" class="img-responsive"></p>
-                                        <p class="specialitypara">
-                                            <span class="specialityhead">Mission & Vision</span>
-                                            <br/>
-                                            <a href="vision-mission.html" class="aboutlinks">
-                                            Share love, by caring for the poor, needy and the helpless</a> </p>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
+    <!-- Location Section -->
+    <section class="bg-gray-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-roboto">Find Us</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Visit our location to learn more about our work and how you can get involved</p>
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-xl">
+                <iframe 
+                    width="100%" 
+                    height="450" 
+                    frameborder="0" 
+                    style="border:0"
+                    src="https://www.google.com/maps/embed/v1/place?q=premalaya%20society&key=AIzaSyBaT9TCekRe5-bY8ysU63t-Yn527c6Y3_A&zoom=16" 
+                    allowfullscreen>
+                </iframe>
             </div>
         </div>
-    </div>
-
-    <div class='container4 text-center'>
-        <div class="row" style="margin:0px;padding:0px 0px 30px 0px;">
-            <div class="col-md-12">
-                <div class="container2">
-                    <section class="specialities">
-                        <div class="row">
-                            <div class="col-md-12 text-center">
-                                <h1>Our <span class="blu">Projects</span></h1>
-                                <p class="homepara2">
-                                    Activities conducted by Premalaya Social
-                                </p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4" style="padding:0px 30px">
-                                <div class="row">
-                                    <div class="col-md-12" style="padding:0px;background-color: #FFFFFF">
-                                        <p><a href="women-empowerment.html"><img alt="" src="img/images2/homewomen.jpg" class="img-responsive"></a></p>
-                                        <p class="specialitypara">
-                                            <span class="specialityhead">Women Empowerment</span>
-                                            <br/>
-                                            <a href="women-empowerment.html" class="aboutlinks">Premalaya trains women in tailoring, computer skills, bag making..</a> </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4" style="padding:0px 30px">
-                                <div class="row">
-                                    <div class="col-md-12" style="padding:0px;background-color: #FFFFFF">
-                                        <p><a href="children-home.html"><img alt="" src="img/images2/homechildren.jpg" class="img-responsive"></a></p>
-                                        <p class="specialitypara">
-                                            <span class="specialityhead">Children Home</span>
-                                            <br/>
-                                            <a href="children-home.html" class="aboutlinks">Premalaya Children has taken care of orphans and Semi Orphans..</a> </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4" style="padding:0px 30px">
-                                <div class="row">
-                                    <div class="col-md-12" style="padding:0px;background-color: #FFFFFF">
-                                        <p><a href="health-care.html"><img alt="" src="img/images2/homehealth.jpg" class="img-responsive"></a></p>
-                                        <p class="specialitypara">
-                                            <span class="specialityhead">Health Care</span>
-                                            <br/>
-                                            <a href="health-care.html" class="aboutlinks">Premalaya provides basic health care services for the benefit of the society</a> </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row" style="margin-top:30px">
-                            <div class="col-md-4" style="padding:0px 30px">
-                                <div class="row">
-                                    <div class="col-md-12" style="padding:0px;background-color: #FFFFFF">
-                                        <p><a href="relief-operations.html"><img alt="" src="img/images2/homerelief.jpg" class="img-responsive"></a></p>
-                                        <p class="specialitypara">
-                                            <span class="specialityhead">Relief Operations</span>
-                                            <br/>
-                                            <a href="relief-operations.html" class="aboutlinks">In times of natural calamities, Premalaya has provided man power and material support</a> </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4" style="padding:0px 30px">
-                                <div class="row">
-                                    <div class="col-md-12" style="padding:0px;background-color: #FFFFFF">
-                                        <p><a href="educational-activities.html"><img alt="" src="img/images2/homeeducation.jpg" class="img-responsive"></a></p>
-                                        <p class="specialitypara">
-                                            <span class="specialityhead">Educational Activities</span>
-                                            <br/>
-                                            <a href="educational-activities.html" class="aboutlinks">
-                                                        Premalaya has been instrumental in sending a number of children to School
-                                                    </a> </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4" style="padding:0px 30px">
-                                <div class="row">
-                                    <div class="col-md-12" style="padding:0px;background-color: #FFFFFF">
-                                        <p><a href="medical-camps.html"><img alt="" src="img/images2/homemedical.jpg" class="img-responsive"></a></p>
-                                        <p class="specialitypara">
-                                            <span class="specialityhead">Medical Camps</span>
-                                            <br/>
-                                            <a href="medical-camps.html" class="aboutlinks">Premalaya conducts periodical medical camps in the villages, slums and in the cities. </a> </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Google Map -->
-    <div class='container4 text-center' style="padding:0px;margin:0px">
-        <div class="row" style="margin:0px;padding:0px 0px;">
-            <div class="col-md-12" style="margin:0px;padding:0px 0px;">
-                <iframe style='display:block' width="100%" height="405" frameborder="0" style="border:0"
-    src="https://www.google.com/maps/embed/v1/place?q=premalaya%20society&key=AIzaSyBaT9TCekRe5-bY8ysU63t-Yn527c6Y3_A&zoom=16" allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>    
+    </section>
+    
     <!-- Footer -->
-    <footer>
-        <div class='container4 text-center' style="background-color:#272c32">
-            <div class="row" style="margin:0px;padding:0px;">
-                <div class="col-md-12">
-                    <div class="container2">
-                        <section class="future" style="margin:0px;padding:20px 0px 20px 0px;border:0px solid red">
-                            <div class="row" style="margin:0px;padding:0px;">
-                                <div class="col-md-6">
-                                    <p class="futurepara" style="color:#FFFFFF;padding:0px;text-align:left;margin:0px;font-family: 'Open Sans', 'segoe ui', lato, roboto;font-size: 15px;line-height: 160%;">
-                                        Copyright Premalaya Social <?php echo date('Y')?> 2024
-                                    </p>
-                                </div>
-                                <div class="col-md-6 text-right">
-                                    <p class="futurepara" style="color:#FFFFFF;padding:0px;text-align:right;margin:0px;font-family: 'Open Sans', 'segoe ui', lato, roboto;font-size: 15px;line-height: 160%;"><a style="color:#FFF;text-decoration:none;" href="http://www.kings360.in">Powered by Beracah Consulting</a></p>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
+    <footer class="bg-gray-900 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-gray-300 text-sm">
+                        Copyright © Premalaya Social 2024. All rights reserved.
+                    </p>
+                </div>
+                <div>
+                    <p class="text-gray-300 text-sm">
+                        <a href="http://www.kings360.in" class="text-white hover:text-primary-400 transition-colors duration-300">
+                            Powered by Beracah Consulting
+                        </a>
+                    </p>
                 </div>
             </div>
         </div>
     </footer>
-
-    <!-- Scripts -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
-    <script src="js/jquery.easing.1.3.min.js"></script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>    <!-- Scripts -->
     <script src="js/swiper/swiper.min.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/jquery.sticky.js"></script>
     <script>
-        var galleryTop = new Swiper('.gallery-top', {
-            nextButton: '.swiper-button-next',
-            prevButton: '.swiper-button-prev',
-            spaceBetween: 10,
-            loop: true,
-            effect: 'fade',
-            autoplay: 10000,
-            speed: 1000,
-            autoplayDisableOnInteraction: false
-        });
-    </script>    <script>
-        //sticky header on scroll
-        $(window).load(function() {
-            $(".sticky").sticky({topSpacing: 0});
-        });    
-    </script>    <script>
-        // Debug dropdown functionality
-        $(document).ready(function() {
-            console.log('jQuery loaded:', typeof $ !== 'undefined');
-            console.log('Bootstrap loaded:', typeof $.fn.dropdown !== 'undefined');
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
             
-            // Ensure dropdown functionality works properly
-            $('.dropdown-toggle').off('click.bs.dropdown').on('click', function(e) {
-                var $this = $(this);
-                var $parent = $this.parent();
-                
-                // Check if this is a real dropdown click (not just navigation)
-                if (e.target === this || $(e.target).hasClass('caret')) {
-                    // Close other open dropdowns
-                    $('.dropdown.open').not($parent).removeClass('open');
-                    
-                    // Toggle current dropdown
-                    $parent.toggleClass('open');
-                    
-                    // Prevent default link behavior when toggling dropdown
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        });        // Initialize Swiper with working navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            var galleryTop = new Swiper('.gallery-top', {
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                loop: true,
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true
+                },
+                autoplay: false,
+                speed: 400,
+                allowTouchMove: true,
+                simulateTouch: true,
+                touchRatio: 1,
+                grabCursor: true
+            });
+            
+            // Add manual click handlers as backup
+            const nextBtn = document.querySelector('.swiper-button-next');
+            const prevBtn = document.querySelector('.swiper-button-prev');
+            
+            if (nextBtn) {
+                nextBtn.addEventListener('click', function(e) {
                     e.preventDefault();
                     e.stopPropagation();
-                    return false;
-                }
-                // If clicking on the text part, allow normal navigation
-            });
+                    galleryTop.slideNext();
+                });
+            }
             
-            // Close dropdowns when clicking outside
-            $(document).on('click', function(e) {
-                if (!$(e.target).closest('.dropdown').length) {
-                    $('.dropdown.open').removeClass('open');
-                }
-            });
-            
-            // Add hover functionality for better UX
-            $('.dropdown').hover(
-                function() { 
-                    $(this).addClass('open'); 
-                },
-                function() { 
-                    var $this = $(this);
-                    setTimeout(function() {
-                        if (!$this.is(':hover')) {
-                            $this.removeClass('open');
-                        }
-                    }, 200);
-                }
-            );
+            if (prevBtn) {
+                prevBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    galleryTop.slidePrev();
+                });
+            }
         });
     </script>
 </body>

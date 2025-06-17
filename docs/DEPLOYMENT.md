@@ -130,7 +130,7 @@ The website is fully responsive and works on:
 Contact details are properly configured:
 - Address: 9/A, 6th St, 2nd Lane, Defence Enclave, Muthapudupet, IAF Avadi, Chennai - 600 055, India
 - Phone: +91 9884204493
-- Email: support@premalayasocial.in
+- Email: premalayasocial@gmail.com
 
 ## 🎨 Styling
 
