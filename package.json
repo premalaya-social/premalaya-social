@@ -1,0 +1,17 @@
+{
+  "name": "premalaya-social",
+  "version": "1.0.0",
+  "description": "Premalaya Social Development Society Website",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve",
+    "cms": "npx decap-server",
+    "debug": "DEBUG=Eleventy* npx @11ty/eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "decap-server": "^3.0.0",
+    "markdown-it": "^14.0.0"
+  }
+}
+

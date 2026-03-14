@@ -1,0 +1,14 @@
+<!-- Slim contact strip - hidden on mobile for clean look -->
+<div class="hidden md:block bg-white border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-9 text-[12px] text-gray-400">
+            <div class="flex items-center gap-6">
+                <a href="tel:{{ site.phone }}" class="hover:text-gray-600 transition-colors">{{ site.phone }}</a>
+                <a href="mailto:{{ site.email }}" class="hidden lg:inline hover:text-gray-600 transition-colors">{{ site.email }}</a>
+            </div>
+            <a href="{{ site.facebook }}" target="_blank" class="hover:text-gray-600 transition-colors">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+        </div>
+    </div>
+</div>

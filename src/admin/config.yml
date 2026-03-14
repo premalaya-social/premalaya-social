@@ -1,0 +1,915 @@
+local_backend: true # Set to false (or remove) before deploying to production
+
+backend:
+  name: github
+  repo: premalaya-social/premalaya-social
+  branch: develop
+
+# Media files will be stored in src/img/uploads
+media_folder: "src/img/uploads"
+# The public path for media files
+public_folder: "/img/uploads"
+
+# Site URL for previews
+site_url: https://www.premalayasocial.in
+display_url: https://www.premalayasocial.in
+
+collections:
+  # ===========================
+  # SITE SETTINGS
+  # ===========================
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - name: "site"
+        label: "Site Information"
+        file: "src/_data/site.json"
+        fields:
+          - { label: "Site Name", name: "name", widget: "string" }
+          - { label: "Short Name", name: "shortName", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "URL", name: "url", widget: "string" }
+          - { label: "Phone", name: "phone", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Contact Email", name: "contactEmail", widget: "string" }
+          - { label: "Address", name: "address", widget: "string" }
+          - { label: "Location", name: "location", widget: "string" }
+          - { label: "Facebook URL", name: "facebook", widget: "string" }
+          - { label: "Google Maps Embed URL", name: "mapEmbedUrl", widget: "string" }
+          - { label: "Copyright Text", name: "copyright", widget: "string" }
+          - { label: "Powered By Text", name: "poweredBy", widget: "string" }
+          - { label: "Powered By URL", name: "poweredByUrl", widget: "string" }
+
+  # ===========================
+  # HOMEPAGE
+  # ===========================
+  - name: "homepage"
+    label: "Homepage"
+    files:
+      - name: "home"
+        label: "Homepage Content"
+        file: "src/index.md"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/home.njk" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - label: "Hero Slides"
+            name: "heroSlides"
+            widget: "list"
+            summary: "{{fields.heading}}"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Alt Text", name: "alt", widget: "string" }
+              - label: "Image Focus"
+                name: "imageFocus"
+                widget: "select"
+                options: ["center", "top", "bottom", "left", "right"]
+                default: "center"
+                hint: "Which part of the image should stay visible when cropped"
+                required: false
+              - { label: "Link", name: "link", widget: "string" }
+              - { label: "Badge Text", name: "badge", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Sub Text", name: "subtext", widget: "string" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Button Color", name: "buttonColor", widget: "select", options: ["primary", "secondary", "purple", "green", "red"] }
+          - label: "About Cards"
+            name: "aboutCards"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Alt Text", name: "alt", widget: "string" }
+              - label: "Image Focus"
+                name: "imageFocus"
+                widget: "select"
+                options: ["center", "top", "bottom"]
+                default: "center"
+                hint: "Which part of the image to focus on in the card thumbnail"
+                required: false
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Link", name: "link", widget: "string" }
+          - label: "Project Cards"
+            name: "projectCards"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Alt Text", name: "alt", widget: "string" }
+              - label: "Image Focus"
+                name: "imageFocus"
+                widget: "select"
+                options: ["center", "top", "bottom"]
+                default: "center"
+                hint: "Which part of the image to focus on in the card thumbnail"
+                required: false
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Link", name: "link", widget: "string" }
+
+  # ===========================
+  # ABOUT PAGES
+  # ===========================
+  - name: "about_pages"
+    label: "About Us Pages"
+    files:
+      - name: "about"
+        label: "About Premalaya"
+        file: "src/about.md"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.njk" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Lead Text", name: "lead", widget: "string" }
+          - { label: "Banner Image", name: "bannerImage", widget: "image" }
+          - label: "Banner Height"
+            name: "bannerHeight"
+            widget: "select"
+            options:
+              - { label: "Short (200px)", value: "short" }
+              - { label: "Medium (300px)", value: "medium" }
+              - { label: "Tall (400px)", value: "tall" }
+              - { label: "Extra Tall (500px)", value: "xtall" }
+              - { label: "HD 720p (720px)", value: "hd" }
+              - { label: "Full HD 1080p (1080px)", value: "xxtall" }
+            default: "medium"
+            hint: "Choose banner height based on your image. Tall/portrait images look better with Tall or Extra Tall."
+            required: false
+          - label: "Banner Focus"
+            name: "bannerFocus"
+            widget: "select"
+            options:
+              - { label: "Center", value: "center" }
+              - { label: "Center-Top (between center and top)", value: "center-top" }
+              - { label: "Top (faces/heads at top)", value: "top" }
+              - { label: "Center-Bottom (between center and bottom)", value: "center-bottom" }
+              - { label: "Bottom", value: "bottom" }
+            default: "center"
+            hint: "Which part of the image should stay visible when the banner is cropped"
+            required: false
+          - { label: "Show Sidebar", name: "sidebar", widget: "boolean", default: true }
+          - label: "Sidebar Info"
+            name: "sidebarInfo"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Value", name: "value", widget: "string" }
+          - label: "Sidebar Call to Action"
+            name: "sidebarCta"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Primary Button", name: "primaryButton", widget: "string" }
+              - { label: "Secondary Button", name: "secondaryButton", widget: "string" }
+          - label: "Gallery"
+            name: "gallery"
+            widget: "list"
+            required: false
+            fields:
+              - { label: "Image", name: "src", widget: "image" }
+              - { label: "Alt Text", name: "alt", widget: "string" }
+              - { label: "Caption", name: "caption", widget: "string", required: false, hint: "Optional caption displayed below the image in the lightbox viewer" }
+          - label: "Gallery Display Ratio"
+            name: "galleryRatio"
+            widget: "select"
+            options:
+              - { label: "Square (1:1)", value: "square" }
+              - { label: "Landscape (4:3)", value: "4/3" }
+              - { label: "Wide (3:2)", value: "3/2" }
+              - { label: "Widescreen (16:9)", value: "16/9" }
+              - { label: "Portrait (3:4)", value: "3/4" }
+              - { label: "Auto (original size)", value: "auto" }
+            default: "square"
+            hint: "How gallery thumbnails are cropped. Use Auto to show original proportions."
+            required: false
+          - { label: "URL Path", name: "permalink", widget: "string" }
+          - { label: "Body Content", name: "body", widget: "markdown" }
+
+      - name: "vision-mission"
+        label: "Vision & Mission"
+        file: "src/vision-mission.md"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.njk" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Lead Text", name: "lead", widget: "string" }
+          - { label: "Banner Image", name: "bannerImage", widget: "image" }
+          - label: "Banner Height"
+            name: "bannerHeight"
+            widget: "select"
+            options:
+              - { label: "Short (200px)", value: "short" }
+              - { label: "Medium (300px)", value: "medium" }
+              - { label: "Tall (400px)", value: "tall" }
+              - { label: "Extra Tall (500px)", value: "xtall" }
+              - { label: "HD 720p (720px)", value: "hd" }
+              - { label: "Full HD 1080p (1080px)", value: "xxtall" }
+            default: "medium"
+            required: false
+          - label: "Banner Focus"
+            name: "bannerFocus"
+            widget: "select"
+            options:
+              - { label: "Center", value: "center" }
+              - { label: "Center-Top (between center and top)", value: "center-top" }
+              - { label: "Top (faces/heads at top)", value: "top" }
+              - { label: "Center-Bottom (between center and bottom)", value: "center-bottom" }
+              - { label: "Bottom", value: "bottom" }
+            default: "center"
+            required: false
+          - { label: "URL Path", name: "permalink", widget: "string" }
+          - { label: "Body Content", name: "body", widget: "markdown" }
+
+      - name: "founder"
+        label: "Rev. A. Isaiah (Founder)"
+        file: "src/founder.md"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.njk" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Lead Text", name: "lead", widget: "string" }
+          - { label: "Banner Image", name: "bannerImage", widget: "image" }
+          - label: "Banner Height"
+            name: "bannerHeight"
+            widget: "select"
+            options:
+              - { label: "Short (200px)", value: "short" }
+              - { label: "Medium (300px)", value: "medium" }
+              - { label: "Tall (400px)", value: "tall" }
+              - { label: "Extra Tall (500px)", value: "xtall" }
+              - { label: "HD 720p (720px)", value: "hd" }
+              - { label: "Full HD 1080p (1080px)", value: "xxtall" }
+            default: "medium"
+            required: false
+          - label: "Banner Focus"
+            name: "bannerFocus"
+            widget: "select"
+            options:
+              - { label: "Center", value: "center" }
+              - { label: "Center-Top (between center and top)", value: "center-top" }
+              - { label: "Top (faces/heads at top)", value: "top" }
+              - { label: "Center-Bottom (between center and bottom)", value: "center-bottom" }
+              - { label: "Bottom", value: "bottom" }
+            default: "center"
+            required: false
+          - { label: "URL Path", name: "permalink", widget: "string" }
+          - { label: "Body Content", name: "body", widget: "markdown" }
+
+  # ===========================
+  # SCHOLARSHIP PAGES
+  # ===========================
+  - name: "scholarship_pages"
+    label: "Scholarship Pages"
+    files:
+      - name: "savitribai-phule"
+        label: "About Savitribai Phule"
+        file: "src/savitribai-phule.md"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.njk" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Lead Text", name: "lead", widget: "string" }
+          - { label: "Banner Image", name: "bannerImage", widget: "image" }
+          - label: "Banner Height"
+            name: "bannerHeight"
+            widget: "select"
+            options:
+              - { label: "Short (200px)", value: "short" }
+              - { label: "Medium (300px)", value: "medium" }
+              - { label: "Tall (400px)", value: "tall" }
+              - { label: "Extra Tall (500px)", value: "xtall" }
+              - { label: "HD 720p (720px)", value: "hd" }
+              - { label: "Full HD 1080p (1080px)", value: "xxtall" }
+            default: "medium"
+            required: false
+          - label: "Banner Focus"
+            name: "bannerFocus"
+            widget: "select"
+            options:
+              - { label: "Center", value: "center" }
+              - { label: "Center-Top (between center and top)", value: "center-top" }
+              - { label: "Top (faces/heads at top)", value: "top" }
+              - { label: "Center-Bottom (between center and bottom)", value: "center-bottom" }
+              - { label: "Bottom", value: "bottom" }
+            default: "center"
+            required: false
+          - { label: "URL Path", name: "permalink", widget: "string" }
+          - { label: "Body Content", name: "body", widget: "markdown" }
+
+      - name: "savitribai-scholarships"
+        label: "Scholarship Appeal"
+        file: "src/savitribai-scholarships.md"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.njk" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Lead Text", name: "lead", widget: "string" }
+          - { label: "Banner Image", name: "bannerImage", widget: "image" }
+          - label: "Banner Height"
+            name: "bannerHeight"
+            widget: "select"
+            options:
+              - { label: "Short (200px)", value: "short" }
+              - { label: "Medium (300px)", value: "medium" }
+              - { label: "Tall (400px)", value: "tall" }
+              - { label: "Extra Tall (500px)", value: "xtall" }
+              - { label: "HD 720p (720px)", value: "hd" }
+              - { label: "Full HD 1080p (1080px)", value: "xxtall" }
+            default: "medium"
+            required: false
+          - label: "Banner Focus"
+            name: "bannerFocus"
+            widget: "select"
+            options:
+              - { label: "Center", value: "center" }
+              - { label: "Center-Top (between center and top)", value: "center-top" }
+              - { label: "Top (faces/heads at top)", value: "top" }
+              - { label: "Center-Bottom (between center and bottom)", value: "center-bottom" }
+              - { label: "Bottom", value: "bottom" }
+            default: "center"
+            required: false
+          - { label: "URL Path", name: "permalink", widget: "string" }
+          - { label: "Body Content", name: "body", widget: "markdown" }
+
+      - name: "scholarship-recipients"
+        label: "Scholarship Recipients"
+        file: "src/scholarship-recipients.md"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.njk" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Lead Text", name: "lead", widget: "string" }
+          - { label: "Banner Image", name: "bannerImage", widget: "image" }
+          - label: "Banner Height"
+            name: "bannerHeight"
+            widget: "select"
+            options:
+              - { label: "Short (200px)", value: "short" }
+              - { label: "Medium (300px)", value: "medium" }
+              - { label: "Tall (400px)", value: "tall" }
+              - { label: "Extra Tall (500px)", value: "xtall" }
+              - { label: "HD 720p (720px)", value: "hd" }
+              - { label: "Full HD 1080p (1080px)", value: "xxtall" }
+            default: "medium"
+            required: false
+          - label: "Banner Focus"
+            name: "bannerFocus"
+            widget: "select"
+            options:
+              - { label: "Center", value: "center" }
+              - { label: "Center-Top (between center and top)", value: "center-top" }
+              - { label: "Top (faces/heads at top)", value: "top" }
+              - { label: "Center-Bottom (between center and bottom)", value: "center-bottom" }
+              - { label: "Bottom", value: "bottom" }
+            default: "center"
+            required: false
+          - { label: "URL Path", name: "permalink", widget: "string" }
+          - { label: "Body Content", name: "body", widget: "markdown" }
+
+  # ===========================
+  # PROGRAM PAGES
+  # ===========================
+  - name: "programs"
+    label: "Programs"
+    files:
+      - name: "women-empowerment"
+        label: "Women Empowerment"
+        file: "src/women-empowerment.md"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.njk" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Lead Text", name: "lead", widget: "string" }
+          - { label: "Banner Image", name: "bannerImage", widget: "image" }
+          - label: "Banner Height"
+            name: "bannerHeight"
+            widget: "select"
+            options:
+              - { label: "Short (200px)", value: "short" }
+              - { label: "Medium (300px)", value: "medium" }
+              - { label: "Tall (400px)", value: "tall" }
+              - { label: "Extra Tall (500px)", value: "xtall" }
+              - { label: "HD 720p (720px)", value: "hd" }
+              - { label: "Full HD 1080p (1080px)", value: "xxtall" }
+            default: "medium"
+            required: false
+          - label: "Banner Focus"
+            name: "bannerFocus"
+            widget: "select"
+            options:
+              - { label: "Center", value: "center" }
+              - { label: "Center-Top (between center and top)", value: "center-top" }
+              - { label: "Top (faces/heads at top)", value: "top" }
+              - { label: "Center-Bottom (between center and bottom)", value: "center-bottom" }
+              - { label: "Bottom", value: "bottom" }
+            default: "center"
+            required: false
+          - { label: "Show Sidebar", name: "sidebar", widget: "boolean", default: true }
+          - label: "Sidebar Info"
+            name: "sidebarInfo"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Value", name: "value", widget: "string" }
+          - label: "Sidebar Call to Action"
+            name: "sidebarCta"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Primary Button", name: "primaryButton", widget: "string" }
+              - { label: "Secondary Button", name: "secondaryButton", widget: "string" }
+          - { label: "URL Path", name: "permalink", widget: "string" }
+          - { label: "Body Content", name: "body", widget: "markdown" }
+
+      - name: "children-home"
+        label: "Children's Home"
+        file: "src/children-home.md"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.njk" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Lead Text", name: "lead", widget: "string" }
+          - { label: "Banner Image", name: "bannerImage", widget: "image" }
+          - label: "Banner Height"
+            name: "bannerHeight"
+            widget: "select"
+            options:
+              - { label: "Short (200px)", value: "short" }
+              - { label: "Medium (300px)", value: "medium" }
+              - { label: "Tall (400px)", value: "tall" }
+              - { label: "Extra Tall (500px)", value: "xtall" }
+              - { label: "HD 720p (720px)", value: "hd" }
+              - { label: "Full HD 1080p (1080px)", value: "xxtall" }
+            default: "medium"
+            required: false
+          - label: "Banner Focus"
+            name: "bannerFocus"
+            widget: "select"
+            options:
+              - { label: "Center", value: "center" }
+              - { label: "Center-Top (between center and top)", value: "center-top" }
+              - { label: "Top (faces/heads at top)", value: "top" }
+              - { label: "Center-Bottom (between center and bottom)", value: "center-bottom" }
+              - { label: "Bottom", value: "bottom" }
+            default: "center"
+            required: false
+          - { label: "Show Sidebar", name: "sidebar", widget: "boolean", default: true }
+          - label: "Sidebar Info"
+            name: "sidebarInfo"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Value", name: "value", widget: "string" }
+          - label: "Sidebar Call to Action"
+            name: "sidebarCta"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Primary Button", name: "primaryButton", widget: "string" }
+              - { label: "Secondary Button", name: "secondaryButton", widget: "string" }
+          - { label: "URL Path", name: "permalink", widget: "string" }
+          - { label: "Body Content", name: "body", widget: "markdown" }
+
+      - name: "health-care"
+        label: "Health Care"
+        file: "src/health-care.md"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.njk" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Lead Text", name: "lead", widget: "string" }
+          - { label: "Banner Image", name: "bannerImage", widget: "image" }
+          - label: "Banner Height"
+            name: "bannerHeight"
+            widget: "select"
+            options:
+              - { label: "Short (200px)", value: "short" }
+              - { label: "Medium (300px)", value: "medium" }
+              - { label: "Tall (400px)", value: "tall" }
+              - { label: "Extra Tall (500px)", value: "xtall" }
+              - { label: "HD 720p (720px)", value: "hd" }
+              - { label: "Full HD 1080p (1080px)", value: "xxtall" }
+            default: "medium"
+            required: false
+          - label: "Banner Focus"
+            name: "bannerFocus"
+            widget: "select"
+            options:
+              - { label: "Center", value: "center" }
+              - { label: "Center-Top (between center and top)", value: "center-top" }
+              - { label: "Top (faces/heads at top)", value: "top" }
+              - { label: "Center-Bottom (between center and bottom)", value: "center-bottom" }
+              - { label: "Bottom", value: "bottom" }
+            default: "center"
+            required: false
+          - { label: "Show Sidebar", name: "sidebar", widget: "boolean", default: true }
+          - label: "Sidebar Info"
+            name: "sidebarInfo"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Value", name: "value", widget: "string" }
+          - label: "Sidebar Call to Action"
+            name: "sidebarCta"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Primary Button", name: "primaryButton", widget: "string" }
+              - { label: "Secondary Button", name: "secondaryButton", widget: "string" }
+          - { label: "URL Path", name: "permalink", widget: "string" }
+          - { label: "Body Content", name: "body", widget: "markdown" }
+
+      - name: "medical-camps"
+        label: "Medical Camps"
+        file: "src/medical-camps.md"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.njk" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Lead Text", name: "lead", widget: "string" }
+          - { label: "Banner Image", name: "bannerImage", widget: "image" }
+          - label: "Banner Height"
+            name: "bannerHeight"
+            widget: "select"
+            options:
+              - { label: "Short (200px)", value: "short" }
+              - { label: "Medium (300px)", value: "medium" }
+              - { label: "Tall (400px)", value: "tall" }
+              - { label: "Extra Tall (500px)", value: "xtall" }
+              - { label: "HD 720p (720px)", value: "hd" }
+              - { label: "Full HD 1080p (1080px)", value: "xxtall" }
+            default: "medium"
+            required: false
+          - label: "Banner Focus"
+            name: "bannerFocus"
+            widget: "select"
+            options:
+              - { label: "Center", value: "center" }
+              - { label: "Center-Top (between center and top)", value: "center-top" }
+              - { label: "Top (faces/heads at top)", value: "top" }
+              - { label: "Center-Bottom (between center and bottom)", value: "center-bottom" }
+              - { label: "Bottom", value: "bottom" }
+            default: "center"
+            required: false
+          - { label: "Show Sidebar", name: "sidebar", widget: "boolean", default: true }
+          - label: "Sidebar Info"
+            name: "sidebarInfo"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Value", name: "value", widget: "string" }
+          - label: "Sidebar Call to Action"
+            name: "sidebarCta"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Primary Button", name: "primaryButton", widget: "string" }
+              - { label: "Secondary Button", name: "secondaryButton", widget: "string" }
+          - { label: "URL Path", name: "permalink", widget: "string" }
+          - { label: "Body Content", name: "body", widget: "markdown" }
+
+      - name: "relief-operations"
+        label: "Relief Operations"
+        file: "src/relief-operations.md"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.njk" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Lead Text", name: "lead", widget: "string" }
+          - { label: "Banner Image", name: "bannerImage", widget: "image" }
+          - label: "Banner Height"
+            name: "bannerHeight"
+            widget: "select"
+            options:
+              - { label: "Short (200px)", value: "short" }
+              - { label: "Medium (300px)", value: "medium" }
+              - { label: "Tall (400px)", value: "tall" }
+              - { label: "Extra Tall (500px)", value: "xtall" }
+              - { label: "HD 720p (720px)", value: "hd" }
+              - { label: "Full HD 1080p (1080px)", value: "xxtall" }
+            default: "medium"
+            required: false
+          - label: "Banner Focus"
+            name: "bannerFocus"
+            widget: "select"
+            options:
+              - { label: "Center", value: "center" }
+              - { label: "Center-Top (between center and top)", value: "center-top" }
+              - { label: "Top (faces/heads at top)", value: "top" }
+              - { label: "Center-Bottom (between center and bottom)", value: "center-bottom" }
+              - { label: "Bottom", value: "bottom" }
+            default: "center"
+            required: false
+          - { label: "Show Sidebar", name: "sidebar", widget: "boolean", default: true }
+          - label: "Sidebar Info"
+            name: "sidebarInfo"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Value", name: "value", widget: "string" }
+          - label: "Sidebar Call to Action"
+            name: "sidebarCta"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Primary Button", name: "primaryButton", widget: "string" }
+              - { label: "Secondary Button", name: "secondaryButton", widget: "string" }
+          - { label: "URL Path", name: "permalink", widget: "string" }
+          - { label: "Body Content", name: "body", widget: "markdown" }
+
+      - name: "educational-activities"
+        label: "Educational Activities"
+        file: "src/educational-activities.md"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.njk" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Lead Text", name: "lead", widget: "string" }
+          - { label: "Banner Image", name: "bannerImage", widget: "image" }
+          - label: "Banner Height"
+            name: "bannerHeight"
+            widget: "select"
+            options:
+              - { label: "Short (200px)", value: "short" }
+              - { label: "Medium (300px)", value: "medium" }
+              - { label: "Tall (400px)", value: "tall" }
+              - { label: "Extra Tall (500px)", value: "xtall" }
+              - { label: "HD 720p (720px)", value: "hd" }
+              - { label: "Full HD 1080p (1080px)", value: "xxtall" }
+            default: "medium"
+            required: false
+          - label: "Banner Focus"
+            name: "bannerFocus"
+            widget: "select"
+            options:
+              - { label: "Center", value: "center" }
+              - { label: "Center-Top (between center and top)", value: "center-top" }
+              - { label: "Top (faces/heads at top)", value: "top" }
+              - { label: "Center-Bottom (between center and bottom)", value: "center-bottom" }
+              - { label: "Bottom", value: "bottom" }
+            default: "center"
+            required: false
+          - { label: "Show Sidebar", name: "sidebar", widget: "boolean", default: true }
+          - label: "Sidebar Info"
+            name: "sidebarInfo"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Value", name: "value", widget: "string" }
+          - label: "Sidebar Call to Action"
+            name: "sidebarCta"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Primary Button", name: "primaryButton", widget: "string" }
+              - { label: "Secondary Button", name: "secondaryButton", widget: "string" }
+          - { label: "URL Path", name: "permalink", widget: "string" }
+          - { label: "Body Content", name: "body", widget: "markdown" }
+
+      - name: "shankar-narayan-library"
+        label: "Shankar Narayan Library"
+        file: "src/shankar-narayan-library.md"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.njk" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Lead Text", name: "lead", widget: "string" }
+          - { label: "Banner Image", name: "bannerImage", widget: "image" }
+          - label: "Banner Height"
+            name: "bannerHeight"
+            widget: "select"
+            options:
+              - { label: "Short (200px)", value: "short" }
+              - { label: "Medium (300px)", value: "medium" }
+              - { label: "Tall (400px)", value: "tall" }
+              - { label: "Extra Tall (500px)", value: "xtall" }
+              - { label: "HD 720p (720px)", value: "hd" }
+              - { label: "Full HD 1080p (1080px)", value: "xxtall" }
+            default: "medium"
+            required: false
+          - label: "Banner Focus"
+            name: "bannerFocus"
+            widget: "select"
+            options:
+              - { label: "Center", value: "center" }
+              - { label: "Center-Top (between center and top)", value: "center-top" }
+              - { label: "Top (faces/heads at top)", value: "top" }
+              - { label: "Center-Bottom (between center and bottom)", value: "center-bottom" }
+              - { label: "Bottom", value: "bottom" }
+            default: "center"
+            required: false
+          - { label: "Show Sidebar", name: "sidebar", widget: "boolean", default: true }
+          - label: "Sidebar Info"
+            name: "sidebarInfo"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Value", name: "value", widget: "string" }
+          - label: "Sidebar Call to Action"
+            name: "sidebarCta"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Primary Button", name: "primaryButton", widget: "string" }
+              - { label: "Secondary Button", name: "secondaryButton", widget: "string" }
+          - { label: "URL Path", name: "permalink", widget: "string" }
+          - { label: "Body Content", name: "body", widget: "markdown" }
+
+  # ===========================
+  # OTHER PAGES
+  # ===========================
+  - name: "other_pages"
+    label: "Other Pages"
+    files:
+      - name: "contact"
+        label: "Contact Page"
+        file: "src/contact.md"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.njk" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Lead Text", name: "lead", widget: "string" }
+          - { label: "Banner Image", name: "bannerImage", widget: "image" }
+          - label: "Banner Height"
+            name: "bannerHeight"
+            widget: "select"
+            options:
+              - { label: "Short (200px)", value: "short" }
+              - { label: "Medium (300px)", value: "medium" }
+              - { label: "Tall (400px)", value: "tall" }
+              - { label: "Extra Tall (500px)", value: "xtall" }
+              - { label: "HD 720p (720px)", value: "hd" }
+              - { label: "Full HD 1080p (1080px)", value: "xxtall" }
+            default: "medium"
+            required: false
+          - label: "Banner Focus"
+            name: "bannerFocus"
+            widget: "select"
+            options:
+              - { label: "Center", value: "center" }
+              - { label: "Center-Top (between center and top)", value: "center-top" }
+              - { label: "Top (faces/heads at top)", value: "top" }
+              - { label: "Center-Bottom (between center and bottom)", value: "center-bottom" }
+              - { label: "Bottom", value: "bottom" }
+            default: "center"
+            required: false
+          - { label: "Show Sidebar", name: "sidebar", widget: "boolean", default: true }
+          - label: "Sidebar Info"
+            name: "sidebarInfo"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Value", name: "value", widget: "string" }
+          - label: "Sidebar Call to Action"
+            name: "sidebarCta"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Primary Button", name: "primaryButton", widget: "string" }
+              - { label: "Secondary Button", name: "secondaryButton", widget: "string" }
+          - { label: "Map Embed URL", name: "mapEmbed", widget: "string", required: false }
+          - { label: "URL Path", name: "permalink", widget: "string" }
+          - { label: "Body Content", name: "body", widget: "markdown" }
+
+      - name: "support"
+        label: "Support Us Page"
+        file: "src/support.md"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.njk" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Lead Text", name: "lead", widget: "string" }
+          - { label: "Banner Image", name: "bannerImage", widget: "image" }
+          - label: "Banner Height"
+            name: "bannerHeight"
+            widget: "select"
+            options:
+              - { label: "Short (200px)", value: "short" }
+              - { label: "Medium (300px)", value: "medium" }
+              - { label: "Tall (400px)", value: "tall" }
+              - { label: "Extra Tall (500px)", value: "xtall" }
+              - { label: "HD 720p (720px)", value: "hd" }
+              - { label: "Full HD 1080p (1080px)", value: "xxtall" }
+            default: "medium"
+            required: false
+          - label: "Banner Focus"
+            name: "bannerFocus"
+            widget: "select"
+            options:
+              - { label: "Center", value: "center" }
+              - { label: "Center-Top (between center and top)", value: "center-top" }
+              - { label: "Top (faces/heads at top)", value: "top" }
+              - { label: "Center-Bottom (between center and bottom)", value: "center-bottom" }
+              - { label: "Bottom", value: "bottom" }
+            default: "center"
+            required: false
+          - { label: "URL Path", name: "permalink", widget: "string" }
+          - { label: "Body Content", name: "body", widget: "markdown" }
+
+      - name: "governing-committee"
+        label: "Governing Committee"
+        file: "src/governing-committee.md"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.njk" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Lead Text", name: "lead", widget: "string" }
+          - { label: "Banner Image", name: "bannerImage", widget: "image" }
+          - label: "Banner Height"
+            name: "bannerHeight"
+            widget: "select"
+            options:
+              - { label: "Short (200px)", value: "short" }
+              - { label: "Medium (300px)", value: "medium" }
+              - { label: "Tall (400px)", value: "tall" }
+              - { label: "Extra Tall (500px)", value: "xtall" }
+              - { label: "HD 720p (720px)", value: "hd" }
+              - { label: "Full HD 1080p (1080px)", value: "xxtall" }
+            default: "medium"
+            required: false
+          - label: "Banner Focus"
+            name: "bannerFocus"
+            widget: "select"
+            options:
+              - { label: "Center", value: "center" }
+              - { label: "Center-Top (between center and top)", value: "center-top" }
+              - { label: "Top (faces/heads at top)", value: "top" }
+              - { label: "Center-Bottom (between center and bottom)", value: "center-bottom" }
+              - { label: "Bottom", value: "bottom" }
+            default: "center"
+            required: false
+          - { label: "URL Path", name: "permalink", widget: "string" }
+          - { label: "Body Content", name: "body", widget: "markdown" }
+
+      - name: "donors-list"
+        label: "Donors List"
+        file: "src/donors-list.md"
+        fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.njk" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Lead Text", name: "lead", widget: "string" }
+          - { label: "Banner Image", name: "bannerImage", widget: "image" }
+          - label: "Banner Height"
+            name: "bannerHeight"
+            widget: "select"
+            options:
+              - { label: "Short (200px)", value: "short" }
+              - { label: "Medium (300px)", value: "medium" }
+              - { label: "Tall (400px)", value: "tall" }
+              - { label: "Extra Tall (500px)", value: "xtall" }
+              - { label: "HD 720p (720px)", value: "hd" }
+              - { label: "Full HD 1080p (1080px)", value: "xxtall" }
+            default: "medium"
+            required: false
+          - label: "Banner Focus"
+            name: "bannerFocus"
+            widget: "select"
+            options:
+              - { label: "Center", value: "center" }
+              - { label: "Center-Top (between center and top)", value: "center-top" }
+              - { label: "Top (faces/heads at top)", value: "top" }
+              - { label: "Center-Bottom (between center and bottom)", value: "center-bottom" }
+              - { label: "Bottom", value: "bottom" }
+            default: "center"
+            required: false
+          - { label: "URL Path", name: "permalink", widget: "string" }
+          - { label: "Body Content", name: "body", widget: "markdown" }

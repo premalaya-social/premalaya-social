@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }} - {{ site.name }}</title>
+    <meta name="description" content="{{ description or site.description }}">
+    <link href="/favicon.ico" type="image/x-icon" rel="icon">
+    <link href="/favicon.ico" type="image/x-icon" rel="shortcut icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: { 50:'#eef0ff', 100:'#e0e2ff', 200:'#c7caff', 400:'#7b7fff', 500:'#2f3192', 600:'#262a7a', 700:'#1d2062', 800:'#14174a', 900:'#0b0d32' },
+                        secondary: { 50:'#edfaff', 100:'#d6f3ff', 400:'#3eb8e6', 500:'#1090bf', 600:'#0d7299' },
+                        accent: '#2a2b64'
+                    },
+                    fontFamily: { 'sans':['Inter','system-ui','sans-serif'], 'roboto':['Roboto','sans-serif'] },
+                    typography: (theme) => ({
+                        DEFAULT: {
+                            css: {
+                                color: theme('colors.gray.700'),
+                                a: { color: theme('colors.primary.500'), '&:hover': { color: theme('colors.primary.600') } },
+                                h1: { color: theme('colors.gray.900'), fontFamily: 'Roboto, sans-serif' },
+                                h2: { color: theme('colors.gray.900'), fontFamily: 'Roboto, sans-serif' },
+                                h3: { color: theme('colors.gray.900'), fontFamily: 'Roboto, sans-serif' },
+                                h4: { color: theme('colors.gray.800'), fontFamily: 'Roboto, sans-serif' },
+                            }
+                        }
+                    })
+                }
+            }
+        }
+    </script>
+    <style>
+        .navlogo { background-image:url('/img/images2/premalayalogos.png'); background-size:contain; background-repeat:no-repeat; background-position:center; width:200px; height:50px; }
+        @media(min-width:768px) { .navlogo { background-image:url('/img/images2/premalayalogol.png'); width:340px; height:55px; } }
+        .content-area h2 { font-size:1.5rem; font-weight:700; color:#111827; margin:2rem 0 1rem; padding-bottom:0.5rem; border-bottom:2px solid #eef0ff; font-family:Roboto,sans-serif; }
+        .content-area h3 { font-size:1.25rem; font-weight:600; color:#1f2937; margin:1.5rem 0 0.75rem; font-family:Roboto,sans-serif; }
+        .content-area h4 { font-size:1.125rem; font-weight:600; color:#374151; margin:1.25rem 0 0.5rem; font-family:Roboto,sans-serif; }
+        .content-area p { color:#4b5563; line-height:1.75; margin-bottom:1rem; }
+        .content-area ul, .content-area ol { color:#4b5563; margin:0.75rem 0 1rem 1.25rem; }
+        .content-area ul { list-style-type:disc; }
+        .content-area ol { list-style-type:decimal; }
+        .content-area li { margin-bottom:0.375rem; line-height:1.625; }
+        .content-area a { color:#2f3192; text-decoration:underline; text-underline-offset:2px; }
+        .content-area a:hover { color:#1090bf; }
+        .content-area strong { color:#1f2937; }
+        .content-area blockquote { border-left:4px solid #2f3192; padding:0.75rem 1rem; margin:1rem 0; background:#f8fafc; border-radius:0 0.5rem 0.5rem 0; }
+        .content-area img { border-radius:0.75rem; margin:1rem 0; }
+        .content-area table { width:100%; border-collapse:collapse; margin:1rem 0; }
+        .content-area th, .content-area td { border:1px solid #e5e7eb; padding:0.625rem 0.75rem; text-align:left; }
+        .content-area th { background:#f9fafb; font-weight:600; color:#374151; }
+
+        /* Lightbox */
+        .lightbox-overlay { position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,0.92); backdrop-filter:blur(8px); display:flex; flex-direction:column; opacity:0; pointer-events:none; transition:opacity .3s ease; }
+        .lightbox-overlay.active { opacity:1; pointer-events:auto; }
+        .lightbox-overlay.active .lightbox-img { transform:scale(1); }
+        .lightbox-img { max-width:90vw; max-height:75vh; object-fit:contain; border-radius:0.75rem; box-shadow:0 20px 60px rgba(0,0,0,0.5); transform:scale(0.92); transition:transform .35s cubic-bezier(0.19,1,0.22,1); }
+        .lightbox-btn { width:48px; height:48px; border-radius:50%; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); color:#fff; display:flex; align-items:center; justify-content:center; cursor:pointer; transition:all .2s; backdrop-filter:blur(4px); }
+        .lightbox-btn:hover { background:rgba(255,255,255,0.2); transform:scale(1.08); }
+        .lightbox-counter { font-variant-numeric:tabular-nums; }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50">
+    {% include "partials/topbar.njk" %}
+    {% include "partials/nav.njk" %}
+
+    <main class="min-h-[60vh]">
+        {{ content | safe }}
+    </main>
+
+    {% include "partials/footer.njk" %}
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var btn = document.getElementById('mobile-menu-btn');
+            var menu = document.getElementById('mobile-menu');
+            var iconOpen = document.getElementById('menu-icon-open');
+            var iconClose = document.getElementById('menu-icon-close');
+            if (btn && menu) {
+                btn.addEventListener('click', function() {
+                    menu.classList.toggle('hidden');
+                    if (iconOpen && iconClose) { iconOpen.classList.toggle('hidden'); iconClose.classList.toggle('hidden'); }
+                });
+            }
+
+            document.querySelectorAll('.dropdown-parent').forEach(function(el) {
+                var btn = el.querySelector('.dropdown-btn');
+                var panel = el.querySelector('.dropdown-panel');
+                if (!btn || !panel) return;
+
+                var timeout;
+                el.addEventListener('mouseenter', function() {
+                    clearTimeout(timeout);
+                    panel.classList.remove('opacity-0', 'invisible');
+                    panel.classList.add('opacity-100', 'visible');
+                });
+                el.addEventListener('mouseleave', function() {
+                    timeout = setTimeout(function() {
+                        panel.classList.add('opacity-0', 'invisible');
+                        panel.classList.remove('opacity-100', 'visible');
+                    }, 150);
+                });
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    panel.classList.toggle('opacity-0');
+                    panel.classList.toggle('invisible');
+                    panel.classList.toggle('opacity-100');
+                    panel.classList.toggle('visible');
+                });
+            });
+
+            document.querySelectorAll('.mobile-dropdown-btn').forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    var panel = btn.nextElementSibling;
+                    var icon = btn.querySelector('.dropdown-icon');
+                    if (panel) panel.classList.toggle('hidden');
+                    if (icon) icon.classList.toggle('rotate-180');
+                });
+            });
+        });
+    </script>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox-overlay" role="dialog" aria-modal="true" aria-label="Image gallery viewer">
+        <!-- Top bar -->
+        <div class="flex items-center justify-between px-4 sm:px-6 py-4 flex-shrink-0">
+            <span id="lb-counter" class="lightbox-counter text-white/70 text-sm font-medium"></span>
+            <button id="lb-close" class="lightbox-btn" aria-label="Close gallery">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+        </div>
+        <!-- Image area -->
+        <div class="flex-1 flex items-center justify-center px-4 sm:px-16 relative min-h-0">
+            <button id="lb-prev" class="lightbox-btn absolute left-3 sm:left-6 z-10" aria-label="Previous image">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <div class="flex flex-col items-center min-h-0 max-h-full">
+                <img id="lb-img" class="lightbox-img" src="" alt="">
+                <p id="lb-caption" class="text-white/80 text-sm sm:text-base mt-4 text-center max-w-2xl px-4 leading-relaxed"></p>
+            </div>
+            <button id="lb-next" class="lightbox-btn absolute right-3 sm:right-6 z-10" aria-label="Next image">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+        <!-- Bottom padding -->
+        <div class="flex-shrink-0 h-6 sm:h-10"></div>
+    </div>
+
+    <script>
+    (function() {
+        var dataEl = document.getElementById('gallery-data');
+        if (!dataEl) return;
+
+        var images = JSON.parse(dataEl.textContent);
+        var current = 0;
+        var overlay = document.getElementById('lightbox');
+        var img = document.getElementById('lb-img');
+        var caption = document.getElementById('lb-caption');
+        var counter = document.getElementById('lb-counter');
+        var prevReturnFocus = null;
+
+        function show(idx) {
+            current = (idx + images.length) % images.length;
+            img.src = images[current].src;
+            img.alt = images[current].alt;
+            if (images[current].caption) {
+                caption.textContent = images[current].caption;
+                caption.style.display = '';
+            } else {
+                caption.textContent = '';
+                caption.style.display = 'none';
+            }
+            counter.textContent = (current + 1) + ' / ' + images.length;
+        }
+
+        function open(idx) {
+            prevReturnFocus = document.activeElement;
+            show(idx);
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function close() {
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+            if (prevReturnFocus) prevReturnFocus.focus();
+        }
+
+        document.querySelectorAll('.gallery-thumb').forEach(function(el) {
+            el.addEventListener('click', function() { open(parseInt(el.dataset.galleryIndex)); });
+        });
+
+        document.getElementById('lb-close').addEventListener('click', close);
+        document.getElementById('lb-prev').addEventListener('click', function() { show(current - 1); });
+        document.getElementById('lb-next').addEventListener('click', function() { show(current + 1); });
+
+        overlay.addEventListener('click', function(e) {
+            if (e.target === overlay || e.target.closest('.flex-1') === e.target) close();
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (!overlay.classList.contains('active')) return;
+            if (e.key === 'Escape') close();
+            else if (e.key === 'ArrowLeft') show(current - 1);
+            else if (e.key === 'ArrowRight') show(current + 1);
+        });
+
+        var touchStartX = 0;
+        overlay.addEventListener('touchstart', function(e) { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+        overlay.addEventListener('touchend', function(e) {
+            var diff = e.changedTouches[0].screenX - touchStartX;
+            if (Math.abs(diff) > 50) { diff > 0 ? show(current - 1) : show(current + 1); }
+        }, { passive: true });
+    })();
+    </script>
+</body>
+</html>
