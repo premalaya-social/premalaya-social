@@ -14,7 +14,7 @@ heroSlides:
     subtext: Caring for the community with compassion and dedication
     buttonText: Learn More →
     buttonColor: primary
-  - image: /img/images2/home5.jpg
+  - image: /img/uploads/dsc01185.jpg
     alt: Women Empowerment
     link: /women-empowerment/
     badge: Empowerment Program
@@ -38,7 +38,7 @@ heroSlides:
     subtext: Caring for our future, nurturing young minds
     buttonText: Children's Programs →
     buttonColor: green
-  - image: /img/images2/home4.jpg
+  - image: /img/uploads/dsc_0690.jpg
     alt: Medical Camps
     link: /medical-camps/
     badge: Healthcare Services
@@ -47,19 +47,21 @@ heroSlides:
     buttonText: Medical Services →
     buttonColor: red
 aboutCards:
-  - image: /img/images2/homepastor.jpg
+  - image: /img/uploads/isaiah-individual.jpg
     alt: Rev. A. Isaiah
     title: About Rev. A. Isaiah
     description: Founder & President of Premalaya Social Development Society,
       leading with compassion and dedication.
     link: /founder/
-  - image: /img/images2/homepremalaya.jpg
+    imageFocus: center
+  - image: /img/uploads/dsc07302.jpg
     alt: About Premalaya
     title: About Premalaya
     description: Details about Premalaya Social Development Society and our
       commitment to community development.
     link: /about/
-  - image: /img/images2/homevision.jpg
+    imageFocus: center
+  - image: /img/uploads/dsc_0221.jpg
     alt: Vision Mission
     title: Mission & Vision
     description: Share love, by caring for the poor, needy and the helpless through
@@ -72,18 +74,20 @@ projectCards:
     description: Premalaya trains women in tailoring, computer skills, bag making
       and other valuable skills for economic independence.
     link: /women-empowerment/
+    imageFocus: top
   - image: /img/images2/homechildren.jpg
     alt: Children Home
     title: Children Home
     description: Premalaya Children has taken care of orphans and semi-orphans,
       providing them with care, education and hope.
     link: /children-home/
-  - image: /img/images2/homehealth.jpg
+  - image: /img/uploads/dsc_0578.jpg
     alt: Health Care
     title: Health Care
     description: Premalaya provides basic health care services for the benefit of
       society, ensuring wellness for all.
     link: /health-care/
+    imageFocus: center
   - image: /img/images2/homerelief.jpg
     alt: Relief Operations
     title: Relief Operations
