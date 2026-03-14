@@ -22,7 +22,7 @@ heroSlides:
     subtext: Empowering women through skills and opportunities
     buttonText: Explore Programs →
     buttonColor: secondary
-  - image: /img/uploads/dsc_0193.jpg
+  - image: /img/uploads/dsc_4067.jpg
     alt: Founder
     link: /founder/
     badge: Leadership

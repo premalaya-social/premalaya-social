@@ -1,9 +1,11 @@
-local_backend: true # Set to false (or remove) before deploying to production
+local_backend: true
 
 backend:
   name: github
   repo: premalaya-social/premalaya-social
-  branch: develop
+  branch: main
+  auth_type: pkce
+  app_id: "" # REPLACE with your GitHub OAuth App Client ID
 
 # Media files will be stored in src/img/uploads
 media_folder: "src/img/uploads"

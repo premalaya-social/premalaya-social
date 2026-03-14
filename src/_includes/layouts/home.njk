@@ -31,12 +31,17 @@
         @media(min-width:768px) { .navlogo { background-image:url('/img/images2/premalayalogol.png'); width:340px; height:55px; } }
         .swiper-pagination-bullet { width:28px!important; height:3px!important; border-radius:2px!important; background:#fff!important; opacity:.4!important; transition:all .3s!important; }
         .swiper-pagination-bullet-active { opacity:1!important; width:40px!important; }
-        .swiper-button-next,.swiper-button-prev { width:40px!important; height:40px!important; background:rgba(255,255,255,.85)!important; border-radius:50%!important; box-shadow:0 2px 8px rgba(0,0,0,.12)!important; transition:all .3s!important; }
-        .swiper-button-next:after,.swiper-button-prev:after { font-size:16px!important; color:#2f3192!important; font-weight:bold!important; }
-        .swiper-button-next:hover,.swiper-button-prev:hover { background:#fff!important; box-shadow:0 4px 16px rgba(0,0,0,.18)!important; transform:scale(1.08)!important; }
-        .swiper-button-next { right:16px!important; }
-        .swiper-button-prev { left:16px!important; }
-        @media(max-width:640px) { .swiper-button-next,.swiper-button-prev { display:none!important; } }
+        .swiper-button-next,.swiper-button-prev { width:44px!important; height:44px!important; background:rgba(0,0,0,.25)!important; backdrop-filter:blur(8px)!important; -webkit-backdrop-filter:blur(8px)!important; border-radius:50%!important; border:1px solid rgba(255,255,255,.2)!important; transition:all .3s!important; }
+        .swiper-button-next:after,.swiper-button-prev:after { font-size:18px!important; color:#fff!important; font-weight:600!important; }
+        .swiper-button-next:hover,.swiper-button-prev:hover { background:rgba(0,0,0,.45)!important; border-color:rgba(255,255,255,.4)!important; transform:scale(1.08)!important; }
+        .swiper-button-next { right:12px!important; }
+        .swiper-button-prev { left:12px!important; }
+        @media(max-width:640px) {
+            .swiper-button-next,.swiper-button-prev { width:36px!important; height:36px!important; }
+            .swiper-button-next:after,.swiper-button-prev:after { font-size:14px!important; }
+            .swiper-button-next { right:8px!important; }
+            .swiper-button-prev { left:8px!important; }
+        }
     </style>
 </head>
 <body class="font-sans antialiased text-gray-800 bg-white">
