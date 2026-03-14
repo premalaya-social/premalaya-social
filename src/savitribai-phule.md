@@ -4,6 +4,8 @@ title: About Savitribai Phule
 lead: Pioneer of women's education in India and an inspiration for our
   scholarship program.
 bannerImage: /img/images2/savitriheader.png
+bannerHeight: xxtall
+bannerFocus: center-top
 permalink: /savitribai-phule/
 ---
 ## Our Key Focus Areas
