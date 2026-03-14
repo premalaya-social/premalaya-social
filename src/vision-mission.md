@@ -1,12 +1,24 @@
 ---
 layout: layouts/page.njk
 title: Vision & Mission
-lead: Our vision is to create a society where everyone has equal opportunities for growth and development.
+lead: Our vision is to create a society where everyone has equal opportunities
+  for growth and development.
 bannerImage: /img/images2/invision.jpg
+bannerHeight: tall
+bannerFocus: center-top
 permalink: /vision-mission/
 ---
+## Our Vision
 
-This page contains information about our vision and how it relates to our mission of serving the community through social development programs.
+To create an inclusive and just society where every individual has access to education, healthcare, dignity, and sustainable livelihood opportunities.
 
-For more information about our programs and services, please visit our other pages or [contact us](/contact/) directly.
+## Our Mission
 
+Our mission is rooted in equality, dignity, and inclusive development—serving humanity without discrimination of caste, creed, gender, or religion.
+
+To empower underprivileged communities through:
+
+- Education and skill development
+- Women and youth empowerment
+- Healthcare and rehabilitation
+- Community development and disaster relief
