@@ -1,6 +1,6 @@
 ---
 layout: layouts/page.njk
-title: Rev. A. Isaiah
+title: Founder - Rev. A. Isaiah
 lead: Spiritual leadership and guidance for our community development programs.
 bannerImage: /img/uploads/isaiah-individual.jpg
 bannerHeight: xxtall
