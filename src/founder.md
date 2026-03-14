@@ -2,11 +2,13 @@
 layout: layouts/page.njk
 title: Rev. A. Isaiah
 lead: Spiritual leadership and guidance for our community development programs.
-bannerImage: /img/images2/inpastor.jpg
+bannerImage: /img/uploads/isaiah-individual.jpg
+bannerHeight: xxtall
+bannerFocus: center-top
 permalink: /founder/
 ---
 
-This page contains information about our pastor and how it relates to our mission of serving the community through social development programs.
+Premalaya Social Development Society (PSDS), meaning *Temple of Love*, is a registered non-profit organization founded in 1994 by Rev. Dr. A. Isaiah.
 
-For more information about our programs and services, please visit our other pages or [contact us](/contact/) directly.
+Premalaya works with compassion and commitment to uplift rural and urban poor, marginalized communities, scavengers, women, children, persons with disabilities, and other vulnerable sections of society.
 
