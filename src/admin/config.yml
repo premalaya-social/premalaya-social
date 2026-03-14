@@ -5,7 +5,7 @@ backend:
   repo: premalaya-social/premalaya-social
   branch: main
   auth_type: pkce
-  app_id: "" # REPLACE with your GitHub OAuth App Client ID
+  app_id: "Ov23liKiROBRRflMisfD"
 
 # Media files will be stored in src/img/uploads
 media_folder: "src/img/uploads"
