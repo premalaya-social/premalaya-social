@@ -11,8 +11,6 @@ sidebarInfo:
   items:
     - label: For general inquiries
       value: premalayasocial@gmail.com
-    - label: For program information
-      value: +91 9884204493
     - label: For donations
       value: Visit our support page
 sidebarCta:
