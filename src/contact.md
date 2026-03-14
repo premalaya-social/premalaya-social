@@ -18,7 +18,7 @@ sidebarCta:
   text: We welcome visitors to our office. Please call ahead to schedule an appointment. Our office is located in Chennai, Tamil Nadu, India.
   primaryButton: Support Us
   secondaryButton: Get Directions
-mapEmbed: "https://www.google.com/maps/embed/v1/place?q=premalaya%20society&key=AIzaSyBaT9TCekRe5-bY8ysU63t-Yn527c6Y3_A&zoom=16"
+mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.2131176464263!2d80.06314847507956!3d13.148952887182947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52899df6cc1ee1%3A0x91e4256114c4bf54!2sPremalaya%20Social%20Development%20Society!5e0!3m2!1sen!2sin!4v1773475085185!5m2!1sen!2sin"
 permalink: /contact/
 ---
 
