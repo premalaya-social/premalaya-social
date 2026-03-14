@@ -5,7 +5,7 @@ lead: Premalaya operates entirely through **donations and partnerships**. We
   invite individuals, corporates, and institutions in India and abroad to join
   hands with us in creating lasting social impact.
 bannerImage: /img/uploads/dsc_4067.jpg
-bannerHeight: hd
+bannerHeight: tall
 bannerFocus: center-top
 permalink: /support/
 ---
@@ -33,6 +33,6 @@ permalink: /support/
 | SWIFT Code     | SBININBB104                          |
 | Branch Code    | 00691                                |
 
+## Donations can be made in favor of “PREMALAYA SOCIAL DEVELOPMENT SOCIETY “.
 
-## Donations can be made in favor of “PREMALAYA SOCIAL DEVELOPMENT SOCIETY “. 
-## Eligible for 80G tax exemption. 
+## Eligible for 80G tax exemption
