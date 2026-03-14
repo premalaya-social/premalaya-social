@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: premalaya-social/premalaya-social
-  branch: main
+  branch: develop
   auth_type: pkce
   app_id: "Ov23liKiROBRRflMisfD"
 
