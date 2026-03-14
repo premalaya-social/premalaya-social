@@ -71,8 +71,9 @@ projectCards:
   - image: /img/images2/homewomen.jpg
     alt: Women Empowerment
     title: Women Empowerment
-    description: Premalaya trains women in tailoring, computer skills, bag making
-      and other valuable skills for economic independence.
+    description: Premalaya equips women with practical skills such as tailoring,
+      computer training, and other livelihood-oriented activities to promote
+      economic independence.
     link: /women-empowerment/
     imageFocus: top
   - image: /img/images2/homechildren.jpg
