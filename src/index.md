@@ -54,7 +54,7 @@ aboutCards:
       leading with compassion and dedication.
     link: /founder/
     imageFocus: center
-  - image: /img/uploads/dsc07302.jpg
+  - image: /img/uploads/dsc_0221.jpg
     alt: About Premalaya
     title: About Premalaya
     description: Details about Premalaya Social Development Society and our
