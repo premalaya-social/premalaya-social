@@ -1,8 +1,11 @@
 ---
 layout: layouts/page.njk
 title: Educational Activities
-lead: Our educational activities program is designed to make a positive impact in the community.
-bannerImage: /img/images2/ineducational.jpg
+lead: Our educational activities program is designed to make a positive impact
+  in the community.
+bannerImage: /img/uploads/dsc_0029.jpg
+bannerHeight: hd
+bannerFocus: center-top
 sidebar: true
 sidebarInfo:
   title: Program Information
@@ -17,25 +20,18 @@ sidebarInfo:
       value: Ongoing program
 sidebarCta:
   title: Support This Program
-  text: Your support can make a significant difference in the lives of those we serve.
+  text: Your support can make a significant difference in the lives of those we
+    serve.
   primaryButton: Donate Now
   secondaryButton: Learn More
 permalink: /educational-activities/
 ---
+### Education & Child Development 
 
-### Program Overview
+*“A child without education is like a bird without wings.”* 
 
-This program focuses on addressing the specific needs of our community through targeted interventions and support services. We work closely with beneficiaries to ensure sustainable development and positive outcomes.
+•      Supplementary education for school-going children and dropouts in slum and marginalized communities.
 
-#### Key Features:
+•      Distribution of books, uniforms, bags, and educational materials.
 
-- Community-based approach
-- Sustainable development focus
-- Regular monitoring and evaluation
-- Collaborative partnerships
-- Capacity building initiatives
-
-#### How to Get Involved:
-
-If you're interested in supporting or participating in this program, please [contact us](/contact/) for more information.
-
+•      Day Care Centers providing safety, care, and nutrition for young children.
