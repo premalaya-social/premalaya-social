@@ -1,51 +1,58 @@
 ---
 layout: layouts/home.njk
 title: Premalaya Social Development Society
-description: Premalaya Social Development Society works for the well-being of
-  downtrodden and vulnerable sections in Tiruvallur, Chennai Districts of
-  Tamilnadu and in Prakasam, Nellore Districts of Andhra Pradesh.
+description: "Premalaya Social Development Society (PSDS), meaning Temple of
+  Love, is a registered non-profit organization founded in 1994 by Rev. Dr. A.
+  Isaiah. Premalaya works with compassion and commitment to uplift rural and
+  urban poor, marginalized communities, scavengers, women, children, persons
+  with disabilities, and other vulnerable sections of society. "
 permalink: /
 heroSlides:
-  - image: /img/images2/home1.jpg
-    alt: About Premalaya
-    link: /about/
+  - heading: About Premalaya
     badge: Discover Our Mission
-    heading: About Premalaya
+    alt: About Premalaya
     subtext: Caring for the community with compassion and dedication
-    buttonText: Learn More →
     buttonColor: primary
-  - image: /img/uploads/dsc01185.jpg
-    alt: Women Empowerment
-    link: /women-empowerment/
+    link: /about/
+    image: /img/images2/home1.jpg
+    imageFocus: top
+    buttonText: Learn More →
+  - heading: Women Empowerment
     badge: Empowerment Program
-    heading: Women Empowerment
+    alt: Women Empowerment
     subtext: Empowering women through skills and opportunities
-    buttonText: Explore Programs →
     buttonColor: secondary
-  - image: /img/uploads/dsc_4067.jpg
-    alt: Founder
-    link: /founder/
+    link: /women-empowerment/
+    image: /img/uploads/dsc01185.jpg
+    imageFocus: center
+    buttonText: Explore Programs →
+  - heading: Our Founder
     badge: Leadership
-    heading: Our Founder
+    alt: Founder
     subtext: Rev. A. Isaiah's vision of compassionate service
-    buttonText: Meet Our Founder →
     buttonColor: purple
-  - image: /img/images2/home3.jpg
-    alt: Children's Home
-    link: /children-home/
+    link: /founder/
+    image: /img/uploads/dsc_4067.jpg
+    imageFocus: top
+    buttonText: Meet Our Founder →
+  - heading: Children's Home
     badge: Children's Care
-    heading: Children's Home
+    alt: Children's Home
     subtext: Caring for our future, nurturing young minds
-    buttonText: Children's Programs →
     buttonColor: green
-  - image: /img/uploads/dsc_0690.jpg
-    alt: Medical Camps
-    link: /medical-camps/
+    link: /children-home/
+    image: /img/images2/home3.jpg
+    imageFocus: center
+    buttonText: Children's Programs →
+  - heading: Medical Camps
     badge: Healthcare Services
-    heading: Medical Camps
+    alt: Medical Camps
     subtext: Healthcare for all, serving communities with care
-    buttonText: Medical Services →
     buttonColor: red
+    link: /medical-camps/
+    image: /img/uploads/dsc_0690.jpg
+    imageFocus: center
+    buttonText: Medical Services →
 aboutCards:
   - image: /img/uploads/isaiah-individual.jpg
     alt: Rev. A. Isaiah
@@ -54,7 +61,7 @@ aboutCards:
       leading with compassion and dedication.
     link: /founder/
     imageFocus: center
-  - image: /img/uploads/dsc_0221.jpg
+  - image: /img/uploads/dsc07302.jpg
     alt: About Premalaya
     title: About Premalaya
     description: Details about Premalaya Social Development Society and our
@@ -89,22 +96,25 @@ projectCards:
       society, ensuring wellness for all.
     link: /health-care/
     imageFocus: center
-  - image: /img/images2/homerelief.jpg
+  - image: /img/uploads/img_20200421_170957.jpg
     alt: Relief Operations
     title: Relief Operations
     description: In times of natural calamities, Premalaya has provided manpower and
       material support to affected communities.
     link: /relief-operations/
-  - image: /img/images2/homeeducation.jpg
+    imageFocus: center
+  - image: /img/uploads/dsc_0193.jpg
     alt: Educational Activities
     title: Educational Activities
     description: Premalaya has been instrumental in sending a number of children to
       school, ensuring access to quality education.
     link: /educational-activities/
-  - image: /img/images2/homemedical.jpg
+    imageFocus: center
+  - image: /img/uploads/dsc_0588.jpg
     alt: Medical Camps
     title: Medical Camps
     description: Premalaya conducts periodical medical camps in villages, slums and
       cities, bringing healthcare to those who need it most.
     link: /medical-camps/
+    imageFocus: center
 ---
