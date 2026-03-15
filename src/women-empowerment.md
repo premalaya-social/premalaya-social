@@ -32,7 +32,6 @@ permalink: /women-empowerment/
 
 •      Free distribution of sewing machines.
 
-•      Monthly groceries and clothing support for widows and vulnerable women, helping them
-live with dignity. 
+•      Monthly groceries and clothing support for widows and vulnerable women, helping them live with dignity. 
 
 •      Awareness programs on women’s rights.
