@@ -9,7 +9,7 @@
     <link href="/favicon.ico" type="image/x-icon" rel="icon">
     <link href="/favicon.ico" type="image/x-icon" rel="shortcut icon">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href='https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=DM+Sans:wght@300;400;500;600;700&display=swap' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script>
         tailwind.config = {
@@ -17,12 +17,12 @@
                 extend: {
                     colors: {
                         primary: { 50:'#f0f1ff', 100:'#e0e2ff', 200:'#c7caff', 300:'#a3a7ff', 400:'#7b7fff', 500:'#2f3192', 600:'#262a7a', 700:'#1d2062', 800:'#14174a', 900:'#0b0d32' },
-                        secondary: { 50:'#edfaff', 100:'#d6f3ff', 200:'#b5ecff', 300:'#83e0ff', 400:'#3eb8e6', 500:'#1090bf', 600:'#0d7299' },
+                        accent: { 50:'#fff7ed', 100:'#ffedd5', 200:'#fed7aa', 300:'#fdba74', 400:'#fb923c', 500:'#E97130', 600:'#c2570e' },
                         warm: { 50:'#fffbeb', 100:'#fef3c7', 400:'#fbbf24', 500:'#f59e0b' }
                     },
                     fontFamily: {
                         'sans':['DM Sans','system-ui','-apple-system','sans-serif'],
-                        'heading':['Plus Jakarta Sans','system-ui','-apple-system','sans-serif']
+                        'heading':['Outfit','system-ui','-apple-system','sans-serif']
                     }
                 }
             }
@@ -32,9 +32,9 @@
         .navlogo { background-image:url('/img/images2/premalaya-logo-square.svg'); background-size:cover; background-repeat:no-repeat; background-position:center; width:44px; height:44px; border-radius:50%; }
         @media(min-width:768px) { .navlogo { width:50px; height:50px; } }
 
-        .content-area h2 { font-family:'Plus Jakarta Sans',system-ui,sans-serif; font-size:1.375rem; font-weight:700; color:#1e293b; margin:2rem 0 0.75rem; padding-bottom:0.5rem; border-bottom:1px solid #f1f5f9; }
-        .content-area h3 { font-family:'Plus Jakarta Sans',system-ui,sans-serif; font-size:1.125rem; font-weight:600; color:#334155; margin:1.5rem 0 0.5rem; }
-        .content-area h4 { font-family:'Plus Jakarta Sans',system-ui,sans-serif; font-size:1rem; font-weight:600; color:#475569; margin:1.25rem 0 0.5rem; }
+        .content-area h2 { font-family:'Outfit',system-ui,sans-serif; font-size:1.5rem; font-weight:700; color:#1e293b; margin:2rem 0 0.75rem; padding-bottom:0.5rem; border-bottom:1px solid #f1f5f9; }
+        .content-area h3 { font-family:'Outfit',system-ui,sans-serif; font-size:1.25rem; font-weight:600; color:#334155; margin:1.5rem 0 0.5rem; }
+        .content-area h4 { font-family:'Outfit',system-ui,sans-serif; font-size:1.0625rem; font-weight:600; color:#475569; margin:1.25rem 0 0.5rem; }
         .content-area p { color:#64748b; line-height:1.8; margin-bottom:1rem; font-size:0.9375rem; }
         .content-area ul, .content-area ol { color:#64748b; margin:0.75rem 0 1rem 1.25rem; font-size:0.9375rem; }
         .content-area ul { list-style-type:disc; }
@@ -60,37 +60,40 @@
     </style>
 </head>
 <body class="font-sans antialiased text-slate-700 bg-white">
-    <!-- Navigation -->
-<nav class="bg-white sticky top-0 z-50 border-b border-gray-100" style="box-shadow:0 1px 3px rgba(0,0,0,0.06);">
+    <!-- Navigation — FA-style thin clean header -->
+<nav class="bg-white sticky top-0 z-50" style="box-shadow:0 1px 3px rgba(0,0,0,0.06);">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-[68px] lg:h-[66px]">
+        <div class="flex items-center justify-between h-[56px] lg:h-[60px]">
             <!-- Logo -->
             <a href="/" class="flex-shrink-0 flex items-center gap-2.5" aria-label="Home">
                 <div class="navlogo flex-shrink-0"></div>
-                <span class="text-slate-800 font-extrabold text-[13px] sm:text-[14px] lg:text-[16px] whitespace-nowrap" style="font-family:'Outfit',sans-serif; letter-spacing:-0.01em;">Premalaya <span class="font-medium text-slate-400">Social Development Society</span></span>
+                <div class="flex flex-col leading-none">
+                    <span class="font-heading text-primary-500 font-black text-[13px] sm:text-[14px] lg:text-[15px] whitespace-nowrap tracking-tight uppercase">Premalaya</span>
+                    <span class="font-heading text-slate-400 font-medium text-[8px] sm:text-[9px] whitespace-nowrap tracking-[0.08em] uppercase">Social Development Society</span>
+                </div>
             </a>
 
-            <!-- Desktop Nav + Since + CTA — all one line -->
-            <div class="hidden lg:flex items-center">
+            <!-- Desktop Nav -->
+            <div class="hidden lg:flex items-center gap-0.5">
                 
                 
-                <a href="/" class="px-3 xl:px-3.5 py-2 text-[13px] font-medium transition-colors relative after:absolute after:bottom-0 after:left-3 after:right-3 after:h-0.5 after:bg-primary-500 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:origin-left text-slate-500 hover:text-primary-500">Home</a>
+                <a href="/" class="px-3 py-2 text-[13px] font-medium transition-colors text-slate-700 hover:text-primary-500">Home</a>
                 
                 
                 
                 <div class="relative group/nav">
-                    <button class="px-3 xl:px-3.5 py-2 text-[13px] font-medium text-slate-500 hover:text-primary-500 transition-colors flex items-center gap-1 relative after:absolute after:bottom-0 after:left-3 after:right-3 after:h-0.5 after:bg-primary-500 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:origin-left">
+                    <button class="px-3 py-2 text-[13px] font-medium text-slate-700 hover:text-primary-500 transition-colors flex items-center gap-1">
                         About us
-                        <svg class="w-3 h-3 opacity-40 group-hover/nav:opacity-60 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        <svg class="w-3 h-3 opacity-40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </button>
                     <div class="absolute left-0 top-full pt-2 w-52 opacity-0 invisible group-hover/nav:opacity-100 group-hover/nav:visible transition-all duration-200 translate-y-1 group-hover/nav:translate-y-0">
-                        <div class="bg-white rounded-xl py-2 shadow-lg shadow-black/5 border border-gray-100/80 ring-1 ring-black/[0.03]">
+                        <div class="bg-white rounded-xl py-2 shadow-xl shadow-black/8 border border-gray-100 ring-1 ring-black/[0.02]">
                             
-                            <a href="/about/" class="block px-4 py-2.5 text-sm text-slate-500 hover:text-primary-500 hover:bg-primary-50/50 transition-colors">About Premalaya</a>
+                            <a href="/about/" class="block px-4 py-2.5 text-sm text-slate-600 hover:text-primary-500 hover:bg-primary-50/50 transition-colors">About Premalaya</a>
                             
-                            <a href="/vision-mission/" class="block px-4 py-2.5 text-sm text-slate-500 hover:text-primary-500 hover:bg-primary-50/50 transition-colors">Vision &amp; Mission</a>
+                            <a href="/vision-mission/" class="block px-4 py-2.5 text-sm text-slate-600 hover:text-primary-500 hover:bg-primary-50/50 transition-colors">Vision &amp; Mission</a>
                             
-                            <a href="/founder/" class="block px-4 py-2.5 text-sm text-slate-500 hover:text-primary-500 hover:bg-primary-50/50 transition-colors">Rev. A. Isaiah</a>
+                            <a href="/founder/" class="block px-4 py-2.5 text-sm text-slate-600 hover:text-primary-500 hover:bg-primary-50/50 transition-colors">Rev. A. Isaiah</a>
                             
                         </div>
                     </div>
@@ -99,26 +102,26 @@
                 
                 
                 <div class="relative group/nav">
-                    <button class="px-3 xl:px-3.5 py-2 text-[13px] font-medium text-slate-500 hover:text-primary-500 transition-colors flex items-center gap-1 relative after:absolute after:bottom-0 after:left-3 after:right-3 after:h-0.5 after:bg-primary-500 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:origin-left">
+                    <button class="px-3 py-2 text-[13px] font-medium text-slate-700 hover:text-primary-500 transition-colors flex items-center gap-1">
                         Programs
-                        <svg class="w-3 h-3 opacity-40 group-hover/nav:opacity-60 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        <svg class="w-3 h-3 opacity-40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </button>
                     <div class="absolute left-0 top-full pt-2 w-52 opacity-0 invisible group-hover/nav:opacity-100 group-hover/nav:visible transition-all duration-200 translate-y-1 group-hover/nav:translate-y-0">
-                        <div class="bg-white rounded-xl py-2 shadow-lg shadow-black/5 border border-gray-100/80 ring-1 ring-black/[0.03]">
+                        <div class="bg-white rounded-xl py-2 shadow-xl shadow-black/8 border border-gray-100 ring-1 ring-black/[0.02]">
                             
-                            <a href="/women-empowerment/" class="block px-4 py-2.5 text-sm text-slate-500 hover:text-primary-500 hover:bg-primary-50/50 transition-colors">Women Empowerment</a>
+                            <a href="/women-empowerment/" class="block px-4 py-2.5 text-sm text-slate-600 hover:text-primary-500 hover:bg-primary-50/50 transition-colors">Women Empowerment</a>
                             
-                            <a href="/children-home/" class="block px-4 py-2.5 text-sm text-slate-500 hover:text-primary-500 hover:bg-primary-50/50 transition-colors">Children&#39;s Home</a>
+                            <a href="/children-home/" class="block px-4 py-2.5 text-sm text-slate-600 hover:text-primary-500 hover:bg-primary-50/50 transition-colors">Children&#39;s Home</a>
                             
-                            <a href="/health-care/" class="block px-4 py-2.5 text-sm text-slate-500 hover:text-primary-500 hover:bg-primary-50/50 transition-colors">Health Care</a>
+                            <a href="/health-care/" class="block px-4 py-2.5 text-sm text-slate-600 hover:text-primary-500 hover:bg-primary-50/50 transition-colors">Health Care</a>
                             
-                            <a href="/relief-operations/" class="block px-4 py-2.5 text-sm text-slate-500 hover:text-primary-500 hover:bg-primary-50/50 transition-colors">Relief Operations</a>
+                            <a href="/relief-operations/" class="block px-4 py-2.5 text-sm text-slate-600 hover:text-primary-500 hover:bg-primary-50/50 transition-colors">Relief Operations</a>
                             
-                            <a href="/educational-activities/" class="block px-4 py-2.5 text-sm text-slate-500 hover:text-primary-500 hover:bg-primary-50/50 transition-colors">Educational Activities</a>
+                            <a href="/educational-activities/" class="block px-4 py-2.5 text-sm text-slate-600 hover:text-primary-500 hover:bg-primary-50/50 transition-colors">Educational Activities</a>
                             
-                            <a href="/shankar-narayan-library/" class="block px-4 py-2.5 text-sm text-slate-500 hover:text-primary-500 hover:bg-primary-50/50 transition-colors">Shankar Narayan Library</a>
+                            <a href="/shankar-narayan-library/" class="block px-4 py-2.5 text-sm text-slate-600 hover:text-primary-500 hover:bg-primary-50/50 transition-colors">Shankar Narayan Library</a>
                             
-                            <a href="/savitribai-scholarships/" class="block px-4 py-2.5 text-sm text-slate-500 hover:text-primary-500 hover:bg-primary-50/50 transition-colors">Savitribai Phule Scholarships</a>
+                            <a href="/savitribai-scholarships/" class="block px-4 py-2.5 text-sm text-slate-600 hover:text-primary-500 hover:bg-primary-50/50 transition-colors">Savitribai Phule Scholarships</a>
                             
                         </div>
                     </div>
@@ -126,40 +129,56 @@
                 
                 
                 
-                <a href="/contact/" class="px-3 xl:px-3.5 py-2 text-[13px] font-medium transition-colors relative after:absolute after:bottom-0 after:left-3 after:right-3 after:h-0.5 after:bg-primary-500 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:origin-left text-primary-500 after:scale-x-100">Contact</a>
+                <a href="/contact/" class="px-3 py-2 text-[13px] font-medium transition-colors text-primary-500">Contact</a>
                 
                 
                 
-                <a href="/support/" class="ml-2 px-4 py-1.5 text-[13px] font-semibold text-white bg-primary-500 rounded-full hover:bg-primary-600 transition-colors shadow-sm shadow-primary-500/20">Support Us</a>
+                <a href="/support/" class="ml-3 px-5 py-2.5 text-[13px] font-bold text-white bg-accent-500 rounded-lg hover:bg-accent-600 transition-colors shadow-sm">
+                    <i class="fa-solid fa-heart mr-1.5 text-xs"></i>Support Us
+                </a>
                 
                 
-                <span class="ml-3 pl-3 border-l border-gray-200 text-[9px] tracking-[0.12em] uppercase font-medium text-slate-400" style="font-family:'Outfit',sans-serif;">Since <span class="text-primary-500 font-bold">1994</span></span>
             </div>
 
-            <!-- Mobile Toggle -->
-            <button id="mobile-menu-btn" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg text-slate-500 hover:text-primary-500 hover:bg-gray-50 transition-colors" aria-label="Open menu">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
-            </button>
+            <!-- Mobile: hamburger + donate button -->
+            <div class="flex items-center gap-2 lg:hidden">
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <a href="/support/" class="px-4 py-2 text-xs font-bold text-white bg-accent-500 rounded-lg hover:bg-accent-600 transition-colors">
+                    Support Us
+                </a>
+                
+                
+                <button id="mobile-menu-btn" class="w-10 h-10 flex items-center justify-center rounded-lg text-slate-700 hover:text-primary-500 hover:bg-gray-50 transition-colors" aria-label="Open menu">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
         </div>
     </div>
 </nav>
 
-<!-- Mobile Menu Overlay (full-screen slide-in) -->
+<!-- Mobile Menu Overlay -->
 <div id="mobile-overlay" class="fixed inset-0 z-[60] hidden" style="transition:background .3s;">
     <div class="absolute inset-0 bg-black/40 backdrop-blur-sm" style="opacity:0; transition:opacity .3s;"></div>
     <div id="mobile-menu-panel" class="absolute right-0 top-0 bottom-0 w-full max-w-sm bg-white shadow-2xl translate-x-full transition-transform duration-300 ease-out flex flex-col">
-        <!-- Header -->
-        <div class="flex items-center justify-between px-5 h-[60px] border-b border-gray-100 flex-shrink-0">
+        <div class="flex items-center justify-between px-5 h-[56px] border-b border-gray-100 flex-shrink-0">
             <a href="/" class="flex-shrink-0 flex items-center gap-2">
-                <div class="navlogo flex-shrink-0" style="width:38px;height:38px;"></div>
-                <span class="text-slate-800 font-extrabold text-[13px]" style="font-family:'Outfit',sans-serif; letter-spacing:-0.01em;">Premalaya <span class="font-medium text-slate-400">SDS</span></span>
+                <div class="navlogo flex-shrink-0" style="width:36px;height:36px;"></div>
+                <span class="font-heading text-primary-500 font-black text-[13px] uppercase">Premalaya</span>
             </a>
             <button id="mobile-menu-close" class="w-10 h-10 flex items-center justify-center rounded-full text-slate-400 hover:text-slate-600 hover:bg-gray-50" aria-label="Close menu">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
             </button>
         </div>
 
-        <!-- Nav Links -->
         <div class="flex-1 overflow-y-auto px-4 py-4">
             
             
@@ -216,7 +235,7 @@
             
             
             <div class="mt-4 px-3">
-                <a href="/support/" class="flex items-center justify-center w-full px-5 py-3 text-sm font-semibold text-white bg-primary-500 rounded-xl hover:bg-primary-600 transition-colors shadow-sm">
+                <a href="/support/" class="flex items-center justify-center w-full px-5 py-3 text-sm font-bold text-white bg-accent-500 rounded-xl hover:bg-accent-600 transition-colors shadow-sm">
                     <i class="fa-solid fa-heart mr-2 text-xs"></i>Support Us
                 </a>
             </div>
@@ -224,7 +243,6 @@
             
         </div>
 
-        <!-- Contact Info -->
         <div class="flex-shrink-0 border-t border-gray-100 px-5 py-5 bg-gray-50/50">
             <div class="flex items-center gap-3 text-sm text-slate-500 mb-3">
                 <i class="fa-solid fa-phone text-primary-500 text-xs w-4 text-center"></i>
@@ -242,19 +260,6 @@
         </div>
     </div>
 </div>
-
-<script>
-(function() {
-    var overlay = document.getElementById('mobile-overlay');
-    if (!overlay) return;
-    var bg = overlay.querySelector(':scope > div:first-child');
-    overlay.classList.contains = overlay.classList.contains;
-    var origAdd = overlay.classList.add.bind(overlay.classList);
-    var origRemove = overlay.classList.remove.bind(overlay.classList);
-    Object.defineProperty(overlay.classList, 'add', { value: function(c) { origAdd(c); if (c === 'active' && bg) bg.style.opacity = '1'; } });
-    Object.defineProperty(overlay.classList, 'remove', { value: function(c) { origRemove(c); if (c === 'active' && bg) bg.style.opacity = '0'; } });
-})();
-</script>
 
 
     <main class="min-h-[60vh]">
@@ -283,7 +288,7 @@
                     <svg class="w-3 h-3 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                     <span class="text-white/90">Contact Premalaya</span>
                 </nav>
-                <h1 class="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight" style="text-shadow:0 2px 16px rgba(0,0,0,.3);">
+                <h1 class="font-heading text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight" style="text-shadow:0 2px 16px rgba(0,0,0,.3);">
                     Contact Premalaya
                 </h1>
                 
@@ -296,7 +301,7 @@
 
 
 <!-- Main Content -->
-<div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-10 md:py-14">
+<div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 py-12 md:py-16">
     
 
     <div class="flex flex-col lg:flex-row gap-10 lg:gap-12">
@@ -356,7 +361,7 @@ Tamil Nadu – India.</p>
                     <h3 class="font-bold text-slate-800 mb-2">Visit Us</h3>
                     <p class="text-sm text-slate-400 mb-5 leading-relaxed">We welcome visitors to our office. Please call ahead to schedule an appointment. Our office is located in Chennai, Tamil Nadu, India.</p>
                     <div class="space-y-2.5">
-                        <a href="/support/" class="flex items-center justify-center px-5 py-2.5 bg-primary-500 text-white rounded-xl font-semibold text-sm hover:bg-primary-600 transition-colors shadow-sm shadow-primary-500/20">
+                        <a href="/support/" class="flex items-center justify-center px-5 py-2.5 bg-accent-500 text-white rounded-xl font-bold text-sm hover:bg-accent-600 transition-colors shadow-sm shadow-accent-500/20">
                             <i class="fa-solid fa-hand-holding-heart mr-2 text-xs"></i>
                             Support Us
                         </a>
@@ -400,20 +405,16 @@ Tamil Nadu – India.</p>
 </div>
 
 <!-- CTA Banner -->
-<section class="py-14 md:py-16 bg-slate-50 border-t border-slate-100">
-    <div class="max-w-3xl mx-auto px-5 sm:px-8 text-center">
-        <div class="inline-flex items-center gap-2 px-3 py-1 bg-primary-50 rounded-full text-primary-500 text-xs font-semibold tracking-wide uppercase mb-5">
-            <i class="fa-solid fa-heart text-[10px]"></i>
-            Get Involved
-        </div>
-        <h2 class="font-heading text-xl md:text-2xl font-bold text-slate-900 mb-3">Want to Make a Difference?</h2>
-        <p class="text-slate-400 mb-7 text-sm sm:text-base max-w-xl mx-auto">Your support can transform lives. Join us in creating positive change in communities across India.</p>
-        <div class="flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="/support/" class="inline-flex items-center justify-center px-7 py-3 bg-primary-500 text-white rounded-full font-semibold text-sm hover:bg-primary-600 transition-colors shadow-sm shadow-primary-500/20">
-                <i class="fa-solid fa-hand-holding-heart mr-2 text-xs"></i> Support Us
+<section class="py-16 md:py-20 bg-primary-600">
+    <div class="max-w-3xl mx-auto px-6 sm:px-8 text-center">
+        <h2 class="font-heading text-2xl md:text-3xl font-extrabold text-white mb-4">Want to Make a Difference?</h2>
+        <p class="text-primary-200 mb-8 text-base max-w-xl mx-auto leading-relaxed">Your support can transform lives. Join us in creating positive change in communities across India.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/support/" class="inline-flex items-center justify-center px-8 py-3.5 bg-accent-500 text-white rounded-full font-bold text-base hover:bg-accent-600 transition-colors shadow-lg shadow-accent-500/30">
+                <i class="fa-solid fa-hand-holding-heart mr-2"></i> Support Us
             </a>
-            <a href="/contact/" class="inline-flex items-center justify-center px-7 py-3 border border-slate-200 text-slate-600 rounded-full font-semibold text-sm hover:bg-white hover:border-slate-300 transition-all">
-                <i class="fa-solid fa-envelope mr-2 text-xs opacity-60"></i> Contact Us
+            <a href="/contact/" class="inline-flex items-center justify-center px-8 py-3.5 bg-white/15 border border-white/20 text-white rounded-full font-semibold text-base hover:bg-white/25 transition-all">
+                <i class="fa-solid fa-envelope mr-2 opacity-70"></i> Contact Us
             </a>
         </div>
     </div>
@@ -421,34 +422,53 @@ Tamil Nadu – India.</p>
 
     </main>
 
-    <!-- Footer -->
+    <!-- Footer — FA-style dark footer with trust badges -->
 <footer class="bg-slate-900 text-slate-400">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Main Grid -->
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 py-14 lg:py-16">
             <!-- About Column -->
             <div class="sm:col-span-2 lg:col-span-1">
-                <div class="navlogo brightness-0 invert opacity-70 mb-5" style="width:200px;height:40px;"></div>
-                <p class="text-sm leading-relaxed text-slate-400/90 mb-6">
-                    Working for the well-being of downtrodden and vulnerable sections through education, health, advocacy and social mobilization.
+                <div class="flex items-center gap-2.5 mb-5">
+                    <div class="navlogo brightness-0 invert opacity-80" style="width:36px;height:36px;"></div>
+                    <div class="flex flex-col leading-none">
+                        <span class="font-heading text-white font-black text-xs uppercase tracking-tight">Premalaya</span>
+                        <span class="font-heading text-slate-500 font-medium text-[7px] uppercase tracking-[0.08em]">Social Development Society</span>
+                    </div>
+                </div>
+                <p class="text-sm leading-relaxed text-slate-400/90 mb-5">
+                    Working for the well-being of downtrodden and vulnerable sections through education, health, advocacy and social mobilization since 1994.
                 </p>
-                <div class="flex gap-2.5">
+                <div class="flex gap-2.5 mb-6">
                     <a href="https://www.facebook.com/premalayasocial" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-slate-800 border border-slate-700/50 flex items-center justify-center text-slate-400 hover:bg-primary-500 hover:border-primary-500 hover:text-white transition-all duration-200">
                         <i class="fa-brands fa-facebook-f text-sm"></i>
                     </a>
+                </div>
+                <!-- Trust badges — like FA's Charity Navigator + BBB -->
+                <div class="flex flex-wrap items-center gap-4 pt-4 border-t border-slate-800">
+                    <div class="flex items-center gap-2 bg-slate-800/50 rounded-lg px-3 py-2">
+                        <i class="fa-solid fa-building-columns text-primary-400 text-xs"></i>
+                        <span class="text-[11px] text-slate-300 font-medium">Registered</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-slate-800/50 rounded-lg px-3 py-2">
+                        <i class="fa-solid fa-receipt text-primary-400 text-xs"></i>
+                        <span class="text-[11px] text-slate-300 font-medium">80G Exempt</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-slate-800/50 rounded-lg px-3 py-2">
+                        <i class="fa-solid fa-globe text-primary-400 text-xs"></i>
+                        <span class="text-[11px] text-slate-300 font-medium">FCRA</span>
+                    </div>
                 </div>
             </div>
 
             <!-- Quick Links -->
             <div>
-                <h4 class="font-heading text-white font-semibold text-sm tracking-wide mb-5">Quick Links</h4>
+                <h4 class="font-heading text-white font-semibold text-sm tracking-wide mb-5">About Us</h4>
                 <ul class="space-y-3">
-                    <li><a href="/about/" class="text-sm text-slate-400 hover:text-white transition-colors duration-200">About Us</a></li>
+                    <li><a href="/about/" class="text-sm text-slate-400 hover:text-white transition-colors duration-200">About</a></li>
                     <li><a href="/vision-mission/" class="text-sm text-slate-400 hover:text-white transition-colors duration-200">Vision & Mission</a></li>
                     <li><a href="/founder/" class="text-sm text-slate-400 hover:text-white transition-colors duration-200">Our Founder</a></li>
-                    <li><a href="/savitribai-scholarships/" class="text-sm text-slate-400 hover:text-white transition-colors duration-200">Scholarships</a></li>
+                    <li><a href="/governing-committee/" class="text-sm text-slate-400 hover:text-white transition-colors duration-200">Governing Committee</a></li>
                     <li><a href="/donors-list/" class="text-sm text-slate-400 hover:text-white transition-colors duration-200">Donors</a></li>
-                    <li><a href="/support/" class="text-sm text-slate-400 hover:text-white transition-colors duration-200">Support Us</a></li>
                 </ul>
             </div>
 
@@ -463,31 +483,31 @@ Tamil Nadu – India.</p>
                     <li><a href="/relief-operations/" class="text-sm text-slate-400 hover:text-white transition-colors duration-200">Relief Operations</a></li>
                     <li><a href="/educational-activities/" class="text-sm text-slate-400 hover:text-white transition-colors duration-200">Education</a></li>
                     <li><a href="/shankar-narayan-library/" class="text-sm text-slate-400 hover:text-white transition-colors duration-200">Library</a></li>
+                    <li><a href="/savitribai-scholarships/" class="text-sm text-slate-400 hover:text-white transition-colors duration-200">Scholarships</a></li>
                 </ul>
             </div>
 
-            <!-- Contact -->
+            <!-- Contact + Ways to Give -->
             <div>
                 <h4 class="font-heading text-white font-semibold text-sm tracking-wide mb-5">Contact Us</h4>
-                <ul class="space-y-4">
+                <ul class="space-y-4 mb-8">
                     <li class="flex items-start gap-3">
-                        <div class="w-8 h-8 rounded-full bg-slate-800 border border-slate-700/50 flex items-center justify-center flex-shrink-0 mt-0.5">
-                            <i class="fa-solid fa-location-dot text-xs text-primary-400"></i>
-                        </div>
+                        <i class="fa-solid fa-location-dot text-xs text-primary-400 mt-1 w-4 text-center flex-shrink-0"></i>
                         <span class="text-sm leading-relaxed">9/A, 6th St, 2nd Lane, Defence Enclave, Muthapudupet, IAF Avadi, Chennai - 600 055. India</span>
                     </li>
                     <li class="flex items-center gap-3">
-                        <div class="w-8 h-8 rounded-full bg-slate-800 border border-slate-700/50 flex items-center justify-center flex-shrink-0">
-                            <i class="fa-solid fa-phone text-xs text-primary-400"></i>
-                        </div>
+                        <i class="fa-solid fa-phone text-xs text-primary-400 w-4 text-center flex-shrink-0"></i>
                         <a href="tel:+91 9884204493" class="text-sm hover:text-white transition-colors">+91 9884204493</a>
                     </li>
                     <li class="flex items-center gap-3">
-                        <div class="w-8 h-8 rounded-full bg-slate-800 border border-slate-700/50 flex items-center justify-center flex-shrink-0">
-                            <i class="fa-solid fa-envelope text-xs text-primary-400"></i>
-                        </div>
+                        <i class="fa-solid fa-envelope text-xs text-primary-400 w-4 text-center flex-shrink-0"></i>
                         <a href="mailto:premalayasocial@gmail.com" class="text-sm hover:text-white transition-colors">premalayasocial@gmail.com</a>
                     </li>
+                </ul>
+                <h4 class="font-heading text-white font-semibold text-sm tracking-wide mb-4">Ways to Give</h4>
+                <ul class="space-y-3">
+                    <li><a href="/support/" class="text-sm text-slate-400 hover:text-white transition-colors duration-200">Support Us</a></li>
+                    <li><a href="/contact/" class="text-sm text-slate-400 hover:text-white transition-colors duration-200">Contact Us</a></li>
                 </ul>
             </div>
         </div>

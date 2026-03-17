@@ -9,7 +9,7 @@
     <link href="/favicon.ico" type="image/x-icon" rel="icon">
     <link href="/favicon.ico" type="image/x-icon" rel="shortcut icon">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href='https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=DM+Sans:wght@300;400;500;600;700&display=swap' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="/css/swiper/swiper.min.css">
     <script>
@@ -18,12 +18,12 @@
                 extend: {
                     colors: {
                         primary: { 50:'#f0f1ff', 100:'#e0e2ff', 200:'#c7caff', 300:'#a3a7ff', 400:'#7b7fff', 500:'#2f3192', 600:'#262a7a', 700:'#1d2062', 800:'#14174a', 900:'#0b0d32' },
-                        secondary: { 50:'#edfaff', 100:'#d6f3ff', 200:'#b5ecff', 300:'#83e0ff', 400:'#3eb8e6', 500:'#1090bf', 600:'#0d7299' },
+                        accent: { 50:'#fff7ed', 100:'#ffedd5', 200:'#fed7aa', 300:'#fdba74', 400:'#fb923c', 500:'#E97130', 600:'#c2570e' },
                         warm: { 50:'#fffbeb', 100:'#fef3c7', 400:'#fbbf24', 500:'#f59e0b' }
                     },
                     fontFamily: {
                         'sans':['DM Sans','system-ui','-apple-system','sans-serif'],
-                        'heading':['Plus Jakarta Sans','system-ui','-apple-system','sans-serif']
+                        'heading':['Outfit','system-ui','-apple-system','sans-serif']
                     }
                 }
             }
@@ -33,63 +33,51 @@
         .navlogo { background-image:url('/img/images2/premalaya-logo-square.svg'); background-size:cover; background-repeat:no-repeat; background-position:center; width:44px; height:44px; border-radius:50%; }
         @media(min-width:768px) { .navlogo { width:50px; height:50px; } }
 
-        /* Ken Burns zoom on carousel images */
-        @keyframes kenBurns { 0% { transform:scale(1); } 100% { transform:scale(1.06); } }
+        @keyframes kenBurns { 0% { transform:scale(1); } 100% { transform:scale(1.08); } }
         .swiper-slide-active .hero-img,
-        .swiper-slide-duplicate-active .hero-img { animation:kenBurns 47s ease-out forwards; }
+        .swiper-slide-duplicate-active .hero-img { animation:kenBurns 50s ease-out forwards; }
 
-        /* Carousel nav arrows -- white SVG on dark circle (Swiper 3 uses background-image for arrows) */
         .hero-carousel .swiper-button-next,
         .hero-carousel .swiper-button-prev {
-            width:40px!important; height:40px!important;
-            margin-top:-20px!important;
+            width:48px!important; height:48px!important;
+            margin-top:-24px!important;
             border-radius:50%!important; border:none!important;
-            background-color:rgba(15,15,15,0.55)!important;
-            background-size:10px 16px!important;
+            background-color:rgba(255,255,255,0.15)!important;
+            backdrop-filter:blur(4px)!important;
+            background-size:11px 18px!important;
             background-position:center!important;
             background-repeat:no-repeat!important;
-            transition:background-color .2s ease, transform .2s ease!important;
+            transition:background-color .2s ease!important;
         }
         .hero-carousel .swiper-button-prev {
-            left:10px!important;
+            left:20px!important;
             background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'%3E%3Cpath d='M0,22L22,0l2.1,2.1L4.2,22l19.9,19.9L22,44L0,22z' fill='%23ffffff'/%3E%3C/svg%3E")!important;
         }
         .hero-carousel .swiper-button-next {
-            right:10px!important;
+            right:20px!important;
             background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'%3E%3Cpath d='M27,22L5,44l-2.1-2.1L22.8,22L2.9,2.1L5,0L27,22z' fill='%23ffffff'/%3E%3C/svg%3E")!important;
         }
         .hero-carousel .swiper-button-next:hover,
-        .hero-carousel .swiper-button-prev:hover { background-color:rgba(15,15,15,0.8)!important; transform:scale(1.08)!important; }
+        .hero-carousel .swiper-button-prev:hover { background-color:rgba(255,255,255,0.3)!important; }
         @media(max-width:639px) {
             .hero-carousel .swiper-button-next,
-            .hero-carousel .swiper-button-prev { width:34px!important; height:34px!important; margin-top:-17px!important; background-size:8px 14px!important; }
-            .hero-carousel .swiper-button-next { right:8px!important; }
-            .hero-carousel .swiper-button-prev { left:8px!important; }
+            .hero-carousel .swiper-button-prev { width:36px!important; height:36px!important; margin-top:-18px!important; background-size:9px 14px!important; }
+            .hero-carousel .swiper-button-next { right:12px!important; }
+            .hero-carousel .swiper-button-prev { left:12px!important; }
         }
 
-        /* Carousel pagination */
-        .hero-dots { position:absolute; bottom:12px; left:0; right:0; text-align:center; z-index:20; }
-        .hero-dots .swiper-pagination-bullet { width:6px!important; height:6px!important; border-radius:50%!important; background:#fff!important; opacity:.4!important; transition:all .3s!important; margin:0 3px!important; }
-        .hero-dots .swiper-pagination-bullet-active { opacity:1!important; width:20px!important; border-radius:3px!important; }
+        .hero-dots { position:absolute; bottom:28px; left:0; right:0; text-align:center; z-index:20; }
+        .hero-dots .swiper-pagination-bullet { width:10px!important; height:10px!important; border-radius:50%!important; background:#fff!important; opacity:.35!important; transition:all .3s!important; margin:0 4px!important; }
+        .hero-dots .swiper-pagination-bullet-active { opacity:1!important; width:28px!important; border-radius:5px!important; }
 
-        /* Carousel progress bar */
-        .hero-progress { position:absolute; bottom:0; left:0; height:2px; background:rgba(255,255,255,0.7); z-index:25; width:0; border-radius:0 1px 1px 0; }
+        .hero-progress { position:absolute; bottom:0; left:0; height:3px; background:rgba(255,255,255,0.7); z-index:25; width:0; }
 
-        /* Slide badge animation */
-        .hero-carousel .swiper-slide-active .hero-badge,
-        .hero-carousel .swiper-slide-duplicate-active .hero-badge { animation:fadeIn .5s .2s ease forwards; }
-        .hero-badge { opacity:0; }
-        @keyframes fadeIn { to { opacity:1; } }
-
-        @keyframes countUp { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
-        .stat-animate { animation: countUp 0.6s ease-out forwards; }
-
-        /* Scroll reveal */
-        [data-reveal] { opacity:0; transform:translateY(20px); transition:opacity 0.7s ease, transform 0.7s ease; }
+        [data-reveal] { opacity:0; transform:translateY(28px); transition:opacity 0.7s ease, transform 0.7s ease; }
         [data-reveal].revealed { opacity:1; transform:translateY(0); }
         [data-reveal-delay="1"] { transition-delay:0.1s; }
         [data-reveal-delay="2"] { transition-delay:0.2s; }
         [data-reveal-delay="3"] { transition-delay:0.3s; }
+        [data-reveal-delay="4"] { transition-delay:0.4s; }
         @media(prefers-reduced-motion:reduce) { [data-reveal] { opacity:1; transform:none; transition:none; } }
     </style>
 </head>
@@ -97,187 +85,262 @@
 
     {% include "partials/nav.njk" %}
 
-    <!-- ═══════════ SECTION 1: Hero (Split Layout) ═══════════ -->
-    <section class="bg-white">
-        <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
-            <div class="flex flex-col lg:flex-row lg:items-center lg:gap-12 xl:gap-16 py-8 sm:py-10 lg:py-12">
-
-                <!-- LEFT: Text Content (appears below carousel on mobile) -->
-                <div class="order-2 lg:order-1 lg:w-[45%] xl:w-[42%] flex-shrink-0 mt-8 lg:mt-0" data-reveal>
-                    <h1 class="font-heading text-2xl sm:text-3xl lg:text-[2.25rem] xl:text-[2.5rem] font-extrabold text-slate-900 leading-[1.15] tracking-tight">
-                        Empowering Communities<br>
-                        <span class="text-primary-500">Transforming Lives</span><br>
-                        <span class="text-slate-400 text-xl sm:text-2xl lg:text-[1.75rem]">Building Hope</span>
-                    </h1>
-
-                    <p class="mt-4 lg:mt-5 text-slate-500 text-sm sm:text-[15px] leading-relaxed max-w-lg">
-                        {{ site.description | truncate(200) }}
-                    </p>
-
-                    <!-- CTAs -->
-                    <div class="flex flex-wrap gap-3 mt-7 lg:mt-8">
-                        <a href="/about/" class="inline-flex items-center px-6 py-3 bg-primary-500 text-white rounded-full text-sm font-semibold hover:bg-primary-600 transition-colors shadow-sm shadow-primary-500/20">
-                            Learn More
-                            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                        </a>
-                        <a href="/support/" class="inline-flex items-center px-6 py-3 border border-slate-200 text-slate-600 rounded-full text-sm font-semibold hover:border-slate-300 hover:bg-slate-50 transition-all">
-                            <i class="fa-solid fa-hand-holding-heart mr-2 text-xs text-primary-400"></i>
-                            Support Us
-                        </a>
+    <!-- ═══════════ 1. HERO — FA-style full-width with left-aligned text ═══════════ -->
+    <section class="relative">
+        <div class="hero-carousel relative overflow-hidden" style="min-height:560px; height:80vh; max-height:780px;">
+            <div class="swiper-container gallery-top w-full h-full">
+                <div class="swiper-wrapper">
+                    {% for slide in heroSlides %}
+                    <div class="swiper-slide relative overflow-hidden">
+                        {% set slideFocusMap = { "center":"object-center", "top":"object-top", "bottom":"object-bottom", "left":"object-left", "right":"object-right" } %}
+                        <img src="{{ slide.image }}" alt="{{ slide.alt }}" class="hero-img w-full h-full object-cover {{ slideFocusMap[slide.imageFocus] or 'object-center' }}" loading="{% if loop.index0 == 0 %}eager{% else %}lazy{% endif %}">
+                        <div class="absolute inset-0 bg-gradient-to-r from-primary-900/80 via-primary-900/50 to-transparent"></div>
                     </div>
+                    {% endfor %}
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="hero-dots swiper-pagination"></div>
+                <div id="hero-progress" class="hero-progress"></div>
+            </div>
 
-                    <!-- Quick trust badges -->
-                    <div class="mt-8 lg:mt-10 pt-6 lg:pt-8 border-t border-slate-100">
-                        <div class="flex flex-wrap gap-x-5 gap-y-3">
-                            {% if trustPoints and trustPoints | length %}
-                                {% for point in trustPoints %}
-                                <div class="flex items-center gap-2">
-                                    <div class="w-7 h-7 rounded-full bg-primary-50 flex items-center justify-center flex-shrink-0">
-                                        <i class="{{ point.icon or 'fa-solid fa-check' }} text-primary-500 text-[10px]"></i>
-                                    </div>
-                                    <span class="text-xs font-medium text-slate-500">{{ point.label }}</span>
-                                </div>
-                                {% endfor %}
-                            {% else %}
-                                <div class="flex items-center gap-2">
-                                    <div class="w-7 h-7 rounded-full bg-primary-50 flex items-center justify-center"><i class="fa-solid fa-building-columns text-primary-500 text-[10px]"></i></div>
-                                    <span class="text-xs font-medium text-slate-500">Registered Society</span>
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <div class="w-7 h-7 rounded-full bg-primary-50 flex items-center justify-center"><i class="fa-solid fa-receipt text-primary-500 text-[10px]"></i></div>
-                                    <span class="text-xs font-medium text-slate-500">80G Tax Exempt</span>
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <div class="w-7 h-7 rounded-full bg-primary-50 flex items-center justify-center"><i class="fa-solid fa-globe text-primary-500 text-[10px]"></i></div>
-                                    <span class="text-xs font-medium text-slate-500">FCRA Registered</span>
-                                </div>
-                            {% endif %}
-                        </div>
+            <div class="absolute inset-0 z-10 flex items-center pointer-events-none">
+                <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 w-full">
+                    <div class="max-w-xl lg:max-w-2xl pointer-events-auto">
+                        <p class="font-heading text-accent-400 text-lg sm:text-xl font-semibold mb-2 italic">Since 1994,</p>
+                        <h1 class="font-heading text-white text-[2.5rem] sm:text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] font-black leading-[1.05] tracking-tight">
+                            We Can<br>Transform<br>Lives
+                        </h1>
+                        <p class="mt-6 text-white/75 text-base sm:text-lg leading-relaxed max-w-md">
+                            {{ site.description | truncate(160) }}
+                        </p>
+                        <a href="/support/" class="inline-flex items-center mt-8 px-8 py-4 bg-accent-500 text-white rounded-full text-base font-bold hover:bg-accent-600 transition-colors shadow-lg shadow-accent-500/30">
+                            Support Our Mission
+                            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                        </a>
                     </div>
                 </div>
-
-                <!-- RIGHT: Image Carousel -->
-                <div class="order-1 lg:order-2 lg:w-[55%] xl:w-[58%]" data-reveal data-reveal-delay="1">
-                    <div class="hero-carousel relative rounded-2xl lg:rounded-3xl overflow-hidden shadow-2xl shadow-slate-900/10" style="aspect-ratio:16/10;">
-                        <div class="swiper-container gallery-top w-full h-full">
-                            <div class="swiper-wrapper">
-                                {% for slide in heroSlides %}
-                                <div class="swiper-slide relative overflow-hidden">
-                                    <a href="{{ slide.link }}" class="block w-full h-full" aria-label="{{ slide.heading }}">
-                                        {% set slideFocusMap = { "center":"object-center", "top":"object-top", "bottom":"object-bottom", "left":"object-left", "right":"object-right" } %}
-                                        <img src="{{ slide.image }}" alt="{{ slide.alt }}" class="hero-img w-full h-full object-cover {{ slideFocusMap[slide.imageFocus] or 'object-center' }}" loading="{% if loop.index0 == 0 %}eager{% else %}lazy{% endif %}">
-                                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
-
-                                        <!-- Overlay badge + title on image -->
-                                        <div class="absolute bottom-0 left-0 right-0 p-4 sm:p-5 z-10">
-                                            {% if slide.badge %}
-                                            <span class="hero-badge inline-flex items-center gap-1.5 px-2 py-0.5 bg-white backdrop-blur-md border border-white/10 rounded-full text-gray-800 text-xs font-semibold tracking-wide uppercase mb-2">
-                                                <span class="w-1 h-1 bg-white rounded-full"></span>
-                                                {{ slide.badge }}
-                                            </span>
-                                            {% endif %}
-                                            <h2 class="text-white font-bold text-base sm:text-lg md:text-xl leading-snug" style="text-shadow:0 1px 8px rgba(0,0,0,.3);">{{ slide.heading }}</h2>
-                                            {% if slide.subtext %}
-                                            <p class="text-white/85 text-xs sm:text-sm mt-1 hidden sm:block max-w-sm leading-relaxed">{{ slide.subtext }}</p>
-                                            {% endif %}
-                                        </div>
-                                    </a>
-                                </div>
-                                {% endfor %}
-                            </div>
-
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="hero-dots swiper-pagination"></div>
-                            <div id="hero-progress" class="hero-progress"></div>
-                        </div>
-                    </div>
-
-                    <!-- Slide counter below carousel -->
-                    <div class="flex items-center justify-center mt-3 px-1">
-                        <div class="flex items-center gap-2 text-slate-400 text-xs font-medium" style="font-variant-numeric:tabular-nums;">
-                            <span id="hero-current" class="text-slate-700 text-sm font-bold">01</span>
-                            <span class="w-4 h-px bg-slate-200"></span>
-                            <span class="text-sm">0{{ heroSlides | length }}</span>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
 
-    <!-- ═══════════ SECTION 3: Impact Stats ═══════════ -->
-    <section class="py-12 md:py-14 bg-slate-50 border-y border-slate-100">
-        <div class="max-w-5xl mx-auto px-5 sm:px-8" data-reveal>
-            {% if impactStats and impactStats | length %}
-            <div class="grid grid-cols-2 md:grid-cols-{{ impactStats | length }} gap-6 md:gap-8">
-                {% for stat in impactStats %}
-                <div class="text-center stat-animate" style="animation-delay:{{ loop.index0 * 0.15 }}s;">
-                    <div class="text-3xl sm:text-4xl md:text-[2.75rem] font-extrabold text-primary-500 leading-none mb-2">{{ stat.number }}</div>
-                    <p class="text-sm text-slate-500 font-medium">{{ stat.label }}</p>
+    <!-- ═══════════ 2. MAKE A DIFFERENCE — FA-style icon action cards ═══════════ -->
+    <section class="py-20 md:py-28 bg-white" data-reveal>
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
+            <div class="mb-12 md:mb-16">
+                <h2 class="font-heading text-3xl md:text-4xl font-black text-slate-900 leading-tight">Make a Difference</h2>
+                <p class="mt-3 text-slate-500 text-base sm:text-lg max-w-xl">Together we can transform communities when we all work together.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+                <div class="group" data-reveal data-reveal-delay="1">
+                    <div class="w-16 h-16 rounded-2xl bg-accent-100 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-hand-holding-heart text-accent-500 text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-slate-900 mb-2">Donate</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-4">Every contribution directly supports education, healthcare, and community development programs.</p>
+                    <a href="/support/" class="inline-flex items-center gap-2 text-accent-500 font-bold text-sm hover:gap-3 transition-all">
+                        Give Now <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </a>
+                </div>
+                <div class="group" data-reveal data-reveal-delay="2">
+                    <div class="w-16 h-16 rounded-2xl bg-primary-50 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-bullhorn text-primary-500 text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-slate-900 mb-2">Advocate</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-4">Help raise awareness about the needs of vulnerable communities and the impact of social development.</p>
+                    <a href="/about/" class="inline-flex items-center gap-2 text-primary-500 font-bold text-sm hover:gap-3 transition-all">
+                        Speak Out <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </a>
+                </div>
+                <div class="group" data-reveal data-reveal-delay="3">
+                    <div class="w-16 h-16 rounded-2xl bg-emerald-50 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-people-group text-emerald-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-slate-900 mb-2">Volunteer</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-4">Join our team on the ground — teaching, organizing, and building capacity in the communities we serve.</p>
+                    <a href="/contact/" class="inline-flex items-center gap-2 text-emerald-600 font-bold text-sm hover:gap-3 transition-all">
+                        Learn More <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </a>
+                </div>
+                <div class="group" data-reveal data-reveal-delay="4">
+                    <div class="w-16 h-16 rounded-2xl bg-sky-50 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-share-nodes text-sky-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-xl text-slate-900 mb-2">Spread the Word</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-4">Share our mission with your community and help us reach more people who need support.</p>
+                    <a href="/about/" class="inline-flex items-center gap-2 text-sky-600 font-bold text-sm hover:gap-3 transition-all">
+                        Get Started <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ 3. BOLD STATEMENT — FA "Hunger is a crisis" style ═══════════ -->
+    <section class="py-20 md:py-28 bg-slate-50 border-y border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
+            <div class="flex flex-col lg:flex-row lg:items-center gap-12 lg:gap-20" data-reveal>
+                <div class="lg:w-1/2">
+                    <h2 class="font-heading text-[2rem] sm:text-[2.5rem] md:text-[3rem] font-black text-slate-900 leading-[1.1]">
+                        Serving the<br>vulnerable<br>since 1994.
+                    </h2>
+                    <p class="mt-6 text-slate-500 text-base sm:text-lg leading-relaxed max-w-lg">
+                        Thousands of families across Tamil Nadu and Andhra Pradesh lack access to education, healthcare, and basic opportunities. Together, we can meet this moment.
+                    </p>
+                    <a href="/about/" class="inline-flex items-center gap-2 mt-6 text-primary-500 font-bold text-base hover:gap-3 transition-all">
+                        What We Do <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </a>
+                </div>
+                <div class="lg:w-1/2">
+                    {% if impactStats and impactStats | length %}
+                    <div class="grid grid-cols-2 gap-x-8 gap-y-10">
+                        {% for stat in impactStats %}
+                        <div>
+                            <div class="font-heading text-4xl sm:text-5xl font-black text-primary-500 leading-none">{{ stat.number }}</div>
+                            <p class="mt-2 text-slate-600 text-sm font-medium">{{ stat.label }}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                    <div class="grid grid-cols-2 gap-x-8 gap-y-10">
+                        <div>
+                            <div class="font-heading text-4xl sm:text-5xl font-black text-primary-500 leading-none">6+</div>
+                            <p class="mt-2 text-slate-600 text-sm font-medium">Active Programs</p>
+                        </div>
+                        <div>
+                            <div class="font-heading text-4xl sm:text-5xl font-black text-primary-500 leading-none">1000+</div>
+                            <p class="mt-2 text-slate-600 text-sm font-medium">Lives Impacted</p>
+                        </div>
+                        <div>
+                            <div class="font-heading text-4xl sm:text-5xl font-black text-primary-500 leading-none">30+</div>
+                            <p class="mt-2 text-slate-600 text-sm font-medium">Years of Service</p>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ 4. "WE UNITE COMMUNITIES" — FA alternating rows with labels ═══════════ -->
+    <section class="py-20 md:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
+            <div class="mb-14 md:mb-20" data-reveal>
+                <p class="font-heading text-xs font-bold tracking-[0.2em] uppercase text-primary-500 mb-3">What We Do</p>
+                <h2 class="font-heading text-3xl md:text-4xl font-black text-slate-900 leading-tight">We serve communities to build hope.</h2>
+            </div>
+
+            <div class="space-y-20 md:space-y-28">
+                {% for card in aboutCards %}
+                {% set cardFocusMap = { "center":"object-center", "top":"object-top", "bottom":"object-bottom" } %}
+                {% set labelColors = ["bg-accent-500", "bg-primary-500", "bg-emerald-600", "bg-sky-600"] %}
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center" data-reveal>
+                    {% if loop.index0 % 2 == 0 %}
+                    <div>
+                        <div class="inline-block {{ labelColors[loop.index0 % 4] }} text-white text-xs font-bold tracking-[0.15em] uppercase px-4 py-1.5 rounded mb-5">{{ card.badge or 'Our Work' }}</div>
+                        <h3 class="font-heading text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight mb-4">{{ card.title }}</h3>
+                        <p class="text-slate-500 text-base leading-relaxed mb-6">{{ card.description }}</p>
+                        <a href="{{ card.link }}" class="inline-flex items-center gap-2 text-primary-500 font-bold text-sm hover:gap-3 transition-all">
+                            Learn more <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                        </a>
+                    </div>
+                    <div>
+                        <div class="rounded-2xl overflow-hidden">
+                            <img src="{{ card.image }}" alt="{{ card.alt }}" class="w-full aspect-[4/3] object-cover {{ cardFocusMap[card.imageFocus] or 'object-center' }}" loading="lazy">
+                        </div>
+                    </div>
+                    {% else %}
+                    <div class="md:order-2">
+                        <div class="inline-block {{ labelColors[loop.index0 % 4] }} text-white text-xs font-bold tracking-[0.15em] uppercase px-4 py-1.5 rounded mb-5">{{ card.badge or 'Our Work' }}</div>
+                        <h3 class="font-heading text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight mb-4">{{ card.title }}</h3>
+                        <p class="text-slate-500 text-base leading-relaxed mb-6">{{ card.description }}</p>
+                        <a href="{{ card.link }}" class="inline-flex items-center gap-2 text-primary-500 font-bold text-sm hover:gap-3 transition-all">
+                            Learn more <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                        </a>
+                    </div>
+                    <div class="md:order-1">
+                        <div class="rounded-2xl overflow-hidden">
+                            <img src="{{ card.image }}" alt="{{ card.alt }}" class="w-full aspect-[4/3] object-cover {{ cardFocusMap[card.imageFocus] or 'object-center' }}" loading="lazy">
+                        </div>
+                    </div>
+                    {% endif %}
                 </div>
                 {% endfor %}
             </div>
-            {% else %}
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8">
-                <div class="text-center">
-                    <div class="w-12 h-12 rounded-xl bg-primary-50 flex items-center justify-center mx-auto mb-3">
-                        <i class="fa-solid fa-users text-primary-500 text-lg"></i>
-                    </div>
-                    <h3 class="font-heading text-sm font-bold text-slate-800">Community Focus</h3>
-                    <p class="text-xs text-slate-400 mt-1 max-w-[200px] mx-auto">Serving vulnerable sections across Tamil Nadu & Andhra Pradesh</p>
-                </div>
-                <div class="text-center">
-                    <div class="w-12 h-12 rounded-xl bg-secondary-50 flex items-center justify-center mx-auto mb-3">
-                        <i class="fa-solid fa-book-open text-secondary-500 text-lg"></i>
-                    </div>
-                    <h3 class="font-heading text-sm font-bold text-slate-800">Education First</h3>
-                    <p class="text-xs text-slate-400 mt-1 max-w-[200px] mx-auto">Scholarships and skill development programs</p>
-                </div>
-                <div class="text-center">
-                    <div class="w-12 h-12 rounded-xl bg-green-50 flex items-center justify-center mx-auto mb-3">
-                        <i class="fa-solid fa-heart-pulse text-green-500 text-lg"></i>
-                    </div>
-                    <h3 class="font-heading text-sm font-bold text-slate-800">Healthcare Access</h3>
-                    <p class="text-xs text-slate-400 mt-1 max-w-[200px] mx-auto">Medical camps serving underserved communities</p>
-                </div>
-            </div>
-            {% endif %}
         </div>
     </section>
 
-    <!-- ═══════════ SECTION 4: Programs Grid ═══════════ -->
-    <section class="py-16 md:py-24 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
-            <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-10 md:mb-14 gap-4" data-reveal>
-                <div>
-                    <span class="text-primary-500 text-xs font-bold tracking-[0.2em] uppercase" style="font-family:'Outfit',sans-serif;">What We Do</span>
-                    <h2 class="font-heading text-2xl md:text-[2.25rem] font-extrabold text-slate-900 mt-2 leading-tight">How We Serve</h2>
-                    <p class="mt-2 text-slate-400 max-w-lg text-sm sm:text-[15px] leading-relaxed">Transforming lives through dedicated programs in education, health, and community development.</p>
+    <!-- ═══════════ 5. OUR IMPACT — FA stats with background image ═══════════ -->
+    <section class="relative py-20 md:py-28 overflow-hidden">
+        <div class="absolute inset-0">
+            {% if heroSlides and heroSlides | length > 1 %}
+            <img src="{{ heroSlides[1].image }}" alt="" class="w-full h-full object-cover" loading="lazy">
+            {% else %}
+            <img src="/img/images2/home2.jpg" alt="" class="w-full h-full object-cover" loading="lazy">
+            {% endif %}
+            <div class="absolute inset-0 bg-primary-900/85"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 relative z-10">
+            <div class="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center" data-reveal>
+                <div class="lg:w-1/2">
+                    <p class="font-heading text-xs font-bold tracking-[0.2em] uppercase text-accent-400 mb-3">Our Impact</p>
+                    <h2 class="font-heading text-3xl md:text-4xl font-black text-white leading-tight mb-6">Our resolve to serve is stronger than ever.</h2>
+                    <blockquote class="border-l-4 border-accent-500 pl-5 py-2">
+                        <p class="text-white/80 text-base italic leading-relaxed">"{{ site.description | truncate(140) }}"</p>
+                    </blockquote>
                 </div>
-                <a href="/about/" class="hidden md:inline-flex items-center gap-2 text-primary-500 text-sm font-semibold hover:gap-3 transition-all flex-shrink-0">
-                    View all programs
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                </a>
+                <div class="lg:w-1/2">
+                    {% if impactStats and impactStats | length %}
+                    <div class="grid grid-cols-2 gap-8">
+                        {% for stat in impactStats %}
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                            <div class="font-heading text-3xl sm:text-4xl font-black text-white leading-none mb-1">{{ stat.number }}</div>
+                            <p class="text-sm text-white/60 font-medium">{{ stat.label }}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                    <div class="grid grid-cols-2 gap-8">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                            <div class="font-heading text-3xl sm:text-4xl font-black text-white leading-none mb-1">6+</div>
+                            <p class="text-sm text-white/60 font-medium">Active Programs</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                            <div class="font-heading text-3xl sm:text-4xl font-black text-white leading-none mb-1">1000+</div>
+                            <p class="text-sm text-white/60 font-medium">Lives Impacted</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                            <div class="font-heading text-3xl sm:text-4xl font-black text-white leading-none mb-1">30+</div>
+                            <p class="text-sm text-white/60 font-medium">Years of Service</p>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
+        </div>
+    </section>
+
+    <!-- ═══════════ 6. OUR PROGRAMS — FA-style grid with images ═══════════ -->
+    <section class="py-20 md:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
+            <div class="mb-12 md:mb-16" data-reveal>
+                <p class="font-heading text-xs font-bold tracking-[0.2em] uppercase text-primary-500 mb-3">Our Programs</p>
+                <h2 class="font-heading text-3xl md:text-4xl font-black text-slate-900 leading-tight">How We Serve</h2>
+                <p class="mt-3 text-slate-500 text-base sm:text-lg max-w-2xl">We are committed to creating lasting change through dedicated programs in education, health, and community development.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                 {% for card in projectCards %}
                 {% set projFocusMap = { "center":"object-center", "top":"object-top", "bottom":"object-bottom" } %}
-                <a href="{{ card.link }}" class="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-400" data-reveal data-reveal-delay="{{ (loop.index0 % 3) + 1 }}">
-                    <div class="aspect-[4/3] overflow-hidden relative">
+                <a href="{{ card.link }}" class="group block rounded-2xl overflow-hidden border border-slate-100 hover:shadow-xl hover:border-slate-200 transition-all duration-300 bg-white" data-reveal data-reveal-delay="{{ (loop.index0 % 3) + 1 }}">
+                    <div class="aspect-[3/2] overflow-hidden">
                         <img src="{{ card.image }}" alt="{{ card.alt }}" class="w-full h-full object-cover {{ projFocusMap[card.imageFocus] or 'object-center' }} group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
-                        <div class="absolute bottom-0 left-0 right-0 p-5">
-                            <h3 class="font-heading font-bold text-white text-lg leading-snug" style="text-shadow:0 1px 4px rgba(0,0,0,0.3);">{{ card.title }}</h3>
-                        </div>
                     </div>
-                    <div class="p-5">
-                        <p class="text-slate-500 text-sm leading-relaxed line-clamp-2">{{ card.description }}</p>
-                        <div class="flex items-center gap-2 text-primary-500 text-sm font-semibold mt-4 group-hover:gap-3 transition-all">
-                            Explore
-                            <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                        </div>
+                    <div class="p-6">
+                        <h3 class="font-heading font-bold text-lg text-slate-900 mb-2 group-hover:text-primary-500 transition-colors">{{ card.title }}</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed line-clamp-2 mb-4">{{ card.description }}</p>
+                        <span class="inline-flex items-center gap-2 text-primary-500 text-sm font-bold group-hover:gap-3 transition-all">
+                            Learn More <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                        </span>
                     </div>
                 </a>
                 {% endfor %}
@@ -285,112 +348,101 @@
         </div>
     </section>
 
-    <!-- ═══════════ SECTION 5: About / Who We Are ═══════════ -->
-    <section class="py-16 md:py-20 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
-            <div class="text-center mb-12" data-reveal>
-                <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-primary-50 rounded-full text-primary-500 text-xs font-semibold tracking-wide uppercase mb-4">
-                    <span class="w-1.5 h-1.5 bg-primary-500 rounded-full"></span>
-                    Who We Are
-                </div>
-                <h2 class="font-heading text-2xl md:text-3xl font-bold text-slate-900">About Our Organization</h2>
-            </div>
-            <div class="space-y-8">
-                {% for card in aboutCards %}
-                <div class="flex flex-col {% if loop.index0 % 2 == 0 %}md:flex-row{% else %}md:flex-row-reverse{% endif %} gap-6 md:gap-10 items-center bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300" data-reveal>
-                    {% set cardFocusMap = { "center":"object-center", "top":"object-top", "bottom":"object-bottom" } %}
-                    <div class="md:w-1/2 aspect-[4/3] md:aspect-auto md:h-72 overflow-hidden flex-shrink-0">
-                        <img src="{{ card.image }}" alt="{{ card.alt }}" class="w-full h-full object-cover {{ cardFocusMap[card.imageFocus] or 'object-center' }}" loading="lazy">
+    <!-- ═══════════ 7. CTA / SUPPORT — FA "$1 = 10 Meals" style ═══════════ -->
+    <section class="py-20 md:py-28 bg-slate-50 border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
+            <div class="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center" data-reveal>
+                <div class="lg:w-1/2">
+                    <p class="font-heading text-xs font-bold tracking-[0.2em] uppercase text-accent-500 mb-3">Give Today</p>
+                    <h2 class="font-heading text-3xl md:text-4xl font-black text-slate-900 leading-tight mb-6">Your Support<br>Changes Lives</h2>
+
+                    <div class="flex flex-wrap gap-4 mb-8">
+                        {% if trustPoints and trustPoints | length %}
+                        {% for point in trustPoints %}
+                        <div class="flex items-center gap-2.5 bg-white border border-slate-200 rounded-full px-4 py-2 shadow-sm">
+                            <i class="{{ point.icon or 'fa-solid fa-check' }} text-primary-500 text-xs"></i>
+                            <span class="text-slate-700 text-sm font-medium">{{ point.label }}</span>
+                        </div>
+                        {% endfor %}
+                        {% else %}
+                        <div class="flex items-center gap-2.5 bg-white border border-slate-200 rounded-full px-4 py-2 shadow-sm">
+                            <i class="fa-solid fa-building-columns text-primary-500 text-xs"></i>
+                            <span class="text-slate-700 text-sm font-medium">Registered Society</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 bg-white border border-slate-200 rounded-full px-4 py-2 shadow-sm">
+                            <i class="fa-solid fa-receipt text-primary-500 text-xs"></i>
+                            <span class="text-slate-700 text-sm font-medium">80G Tax Exempt</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 bg-white border border-slate-200 rounded-full px-4 py-2 shadow-sm">
+                            <i class="fa-solid fa-globe text-primary-500 text-xs"></i>
+                            <span class="text-slate-700 text-sm font-medium">FCRA Certified</span>
+                        </div>
+                        {% endif %}
                     </div>
-                    <div class="md:w-1/2 p-6 sm:p-8 {% if loop.index0 % 2 == 0 %}md:pr-10{% else %}md:pl-10{% endif %}">
-                        <h3 class="font-heading text-xl font-bold text-slate-800 mb-3">{{ card.title }}</h3>
-                        <p class="text-slate-500 text-sm sm:text-base leading-relaxed mb-5">{{ card.description }}</p>
-                        <a href="{{ card.link }}" class="inline-flex items-center gap-2 text-primary-500 text-sm font-semibold hover:gap-3 transition-all">
-                            Learn more
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                        </a>
-                    </div>
+
+                    <a href="/support/" class="inline-flex items-center px-8 py-4 bg-accent-500 text-white rounded-full text-base font-bold hover:bg-accent-600 transition-colors shadow-lg shadow-accent-500/30">
+                        <i class="fa-solid fa-hand-holding-heart mr-3"></i>
+                        Support Us
+                    </a>
+                    <p class="mt-4 text-slate-400 text-xs">100% of donations go directly to programs and services.</p>
                 </div>
-                {% endfor %}
+                <div class="lg:w-1/2">
+                    {% if heroSlides and heroSlides | length > 2 %}
+                    <div class="rounded-2xl overflow-hidden shadow-xl">
+                        <img src="{{ heroSlides[2].image }}" alt="Support our mission" class="w-full aspect-[4/3] object-cover" loading="lazy">
+                    </div>
+                    {% else %}
+                    <div class="rounded-2xl overflow-hidden shadow-xl">
+                        <img src="/img/images2/home3.jpg" alt="Support our mission" class="w-full aspect-[4/3] object-cover" loading="lazy">
+                    </div>
+                    {% endif %}
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- ═══════════ SECTION 6: Trust / Transparency ═══════════ -->
-    <section class="py-14 md:py-16 bg-primary-500 relative overflow-hidden">
-        <div class="absolute inset-0 opacity-5">
-            <svg width="100%" height="100%"><defs><pattern id="trust-grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="0.5"/></pattern></defs><rect width="100%" height="100%" fill="url(#trust-grid)"/></svg>
-        </div>
-        <div class="max-w-5xl mx-auto px-5 sm:px-8 relative z-10 text-center" data-reveal>
-            <h2 class="font-heading text-2xl md:text-3xl font-bold text-white mb-4">Your Support Reaches Those Who Need It Most</h2>
-            <p class="text-primary-100 text-sm sm:text-base max-w-2xl mx-auto mb-10">We are committed to transparency and accountability in every project we undertake.</p>
-
-            {% if trustPoints and trustPoints | length %}
-            <div class="flex flex-wrap justify-center gap-4 sm:gap-6 mb-10">
-                {% for point in trustPoints %}
-                <div class="flex items-center gap-3 bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl px-5 py-3">
-                    <div class="w-10 h-10 rounded-full bg-white/15 flex items-center justify-center flex-shrink-0">
-                        <i class="{{ point.icon or 'fa-solid fa-check' }} text-white text-sm"></i>
-                    </div>
-                    <span class="text-white text-sm font-medium">{{ point.label }}</span>
-                </div>
-                {% endfor %}
+    <!-- ═══════════ 8. LOCATION MAP ═══════════ -->
+    <section class="py-20 md:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
+            <div class="mb-12" data-reveal>
+                <p class="font-heading text-xs font-bold tracking-[0.2em] uppercase text-primary-500 mb-3">Location</p>
+                <h2 class="font-heading text-3xl md:text-4xl font-black text-slate-900">Find Us</h2>
+                <p class="mt-3 text-slate-500 text-base sm:text-lg max-w-xl">{{ site.address }}</p>
             </div>
-            {% else %}
-            <div class="flex flex-wrap justify-center gap-4 sm:gap-6 mb-10">
-                <div class="flex items-center gap-3 bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl px-5 py-3">
-                    <div class="w-10 h-10 rounded-full bg-white/15 flex items-center justify-center flex-shrink-0">
-                        <i class="fa-solid fa-building-columns text-white text-sm"></i>
-                    </div>
-                    <span class="text-white text-sm font-medium">Registered Society</span>
-                </div>
-                <div class="flex items-center gap-3 bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl px-5 py-3">
-                    <div class="w-10 h-10 rounded-full bg-white/15 flex items-center justify-center flex-shrink-0">
-                        <i class="fa-solid fa-receipt text-white text-sm"></i>
-                    </div>
-                    <span class="text-white text-sm font-medium">80G Tax Exemption</span>
-                </div>
-                <div class="flex items-center gap-3 bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl px-5 py-3">
-                    <div class="w-10 h-10 rounded-full bg-white/15 flex items-center justify-center flex-shrink-0">
-                        <i class="fa-solid fa-globe text-white text-sm"></i>
-                    </div>
-                    <span class="text-white text-sm font-medium">FCRA Registered</span>
-                </div>
-            </div>
-            {% endif %}
-
-            <a href="/support/" class="inline-flex items-center justify-center px-7 py-3 bg-white text-primary-600 rounded-full text-sm font-bold hover:bg-primary-50 transition-colors shadow-lg shadow-primary-900/20">
-                <i class="fa-solid fa-hand-holding-heart mr-2"></i>
-                Support Us
-            </a>
-        </div>
-    </section>
-
-    <!-- ═══════════ SECTION 7: Location Map ═══════════ -->
-    <section class="py-16 md:py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
-            <div class="text-center mb-10" data-reveal>
-                <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-primary-50 rounded-full text-primary-500 text-xs font-semibold tracking-wide uppercase mb-4">
-                    <span class="w-1.5 h-1.5 bg-primary-500 rounded-full"></span>
-                    Location
-                </div>
-                <h2 class="font-heading text-2xl md:text-3xl font-bold text-slate-900">Find Us</h2>
-                <p class="mt-3 text-slate-400 text-sm sm:text-base">{{ site.address }}</p>
-            </div>
-            <div class="rounded-2xl overflow-hidden border border-slate-100 shadow-sm" data-reveal data-reveal-delay="1">
-                <iframe width="100%" height="400" frameborder="0" style="border:0;" src="{{ site.mapEmbedUrl }}" allowfullscreen loading="lazy"></iframe>
+            <div class="rounded-2xl overflow-hidden shadow-lg" data-reveal>
+                <iframe width="100%" height="450" frameborder="0" style="border:0;" src="{{ site.mapEmbedUrl }}" allowfullscreen loading="lazy"></iframe>
             </div>
         </div>
     </section>
 
-    <!-- ═══════════ SECTION 8: Footer ═══════════ -->
+    <!-- ═══════════ 9. JOIN US CTA BAR — FA-style before footer ═══════════ -->
+    <section class="py-14 md:py-16 bg-primary-600">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <h2 class="font-heading text-2xl md:text-3xl font-black text-white text-center md:text-left">Join Us to Transform Communities</h2>
+                <div class="flex flex-wrap items-center justify-center gap-6">
+                    <a href="/support/" class="flex items-center gap-2 text-white/80 hover:text-white transition-colors text-sm font-semibold">
+                        <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                        Donate
+                    </a>
+                    <a href="/about/" class="flex items-center gap-2 text-white/80 hover:text-white transition-colors text-sm font-semibold">
+                        <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center"><i class="fa-solid fa-bullhorn"></i></div>
+                        Advocate
+                    </a>
+                    <a href="/contact/" class="flex items-center gap-2 text-white/80 hover:text-white transition-colors text-sm font-semibold">
+                        <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center"><i class="fa-solid fa-people-group"></i></div>
+                        Volunteer
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     {% include "partials/footer.njk" %}
 
-    <!-- Scripts -->
     <script src="/js/swiper/swiper.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Mobile menu
             var btn = document.getElementById('mobile-menu-btn');
             var overlay = document.getElementById('mobile-overlay');
             var menuPanel = document.getElementById('mobile-menu-panel');
@@ -426,11 +478,8 @@
                 });
             });
 
-            var autoplayDuration = 55000;
+            var autoplayDuration = 8000;
             var progressBar = document.getElementById('hero-progress');
-            var currentEl = document.getElementById('hero-current');
-
-            function pad(n) { return n < 10 ? '0' + n : '' + n; }
 
             function startProgress() {
                 if (!progressBar) return;
@@ -444,23 +493,17 @@
                 });
             }
 
-            var heroSwiper = new Swiper('.gallery-top', {
+            new Swiper('.gallery-top', {
                 navigation: { nextEl: '.hero-carousel .swiper-button-next', prevEl: '.hero-carousel .swiper-button-prev' },
                 pagination: { el: '.hero-dots', clickable: true },
                 loop: true,
                 effect: 'fade',
                 fadeEffect: { crossFade: true },
                 autoplay: { delay: autoplayDuration, disableOnInteraction: false, pauseOnMouseEnter: true },
-                speed: 2500,
+                speed: 1200,
                 grabCursor: true,
-                on: {
-                    slideChange: function() {
-                        if (currentEl) currentEl.textContent = pad(this.realIndex + 1);
-                    },
-                    slideChangeTransitionEnd: startProgress
-                }
+                on: { slideChangeTransitionEnd: startProgress }
             });
-
             startProgress();
         });
     </script>
@@ -489,7 +532,7 @@
                     observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
         els.forEach(function(el) { observer.observe(el); });
     })();
     </script>

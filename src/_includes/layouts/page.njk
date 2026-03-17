@@ -26,7 +26,7 @@ layout: layouts/base.njk
                     <svg class="w-3 h-3 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                     <span class="text-white/90">{{ title }}</span>
                 </nav>
-                <h1 class="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight" style="text-shadow:0 2px 16px rgba(0,0,0,.3);">
+                <h1 class="font-heading text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight" style="text-shadow:0 2px 16px rgba(0,0,0,.3);">
                     {{ title }}
                 </h1>
                 {% if lead %}
@@ -53,10 +53,10 @@ layout: layouts/base.njk
 {% endif %}
 
 <!-- Main Content -->
-<div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-10 md:py-14">
+<div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 py-12 md:py-16">
     {% if not bannerImage %}
     <div class="mb-10">
-        <h1 class="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900">{{ title }}</h1>
+        <h1 class="font-heading text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900">{{ title }}</h1>
         {% if lead %}
         <p class="mt-3 text-lg text-slate-400 max-w-3xl">{{ lead }}</p>
         {% endif %}
@@ -140,7 +140,7 @@ layout: layouts/base.njk
                     <h3 class="font-bold text-slate-800 mb-2">{{ sidebarCta.title or "Support This Program" }}</h3>
                     <p class="text-sm text-slate-400 mb-5 leading-relaxed">{{ sidebarCta.text or "Your support can make a significant difference in the lives of those we serve." }}</p>
                     <div class="space-y-2.5">
-                        <a href="/support/" class="flex items-center justify-center px-5 py-2.5 bg-primary-500 text-white rounded-xl font-semibold text-sm hover:bg-primary-600 transition-colors shadow-sm shadow-primary-500/20">
+                        <a href="/support/" class="flex items-center justify-center px-5 py-2.5 bg-accent-500 text-white rounded-xl font-bold text-sm hover:bg-accent-600 transition-colors shadow-sm shadow-accent-500/20">
                             <i class="fa-solid fa-hand-holding-heart mr-2 text-xs"></i>
                             {{ sidebarCta.primaryButton or "Support Us" }}
                         </a>
@@ -184,20 +184,16 @@ layout: layouts/base.njk
 </div>
 
 <!-- CTA Banner -->
-<section class="py-14 md:py-16 bg-slate-50 border-t border-slate-100">
-    <div class="max-w-3xl mx-auto px-5 sm:px-8 text-center">
-        <div class="inline-flex items-center gap-2 px-3 py-1 bg-primary-50 rounded-full text-primary-500 text-xs font-semibold tracking-wide uppercase mb-5">
-            <i class="fa-solid fa-heart text-[10px]"></i>
-            Get Involved
-        </div>
-        <h2 class="font-heading text-xl md:text-2xl font-bold text-slate-900 mb-3">Want to Make a Difference?</h2>
-        <p class="text-slate-400 mb-7 text-sm sm:text-base max-w-xl mx-auto">Your support can transform lives. Join us in creating positive change in communities across India.</p>
-        <div class="flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="/support/" class="inline-flex items-center justify-center px-7 py-3 bg-primary-500 text-white rounded-full font-semibold text-sm hover:bg-primary-600 transition-colors shadow-sm shadow-primary-500/20">
-                <i class="fa-solid fa-hand-holding-heart mr-2 text-xs"></i> Support Us
+<section class="py-16 md:py-20 bg-primary-600">
+    <div class="max-w-3xl mx-auto px-6 sm:px-8 text-center">
+        <h2 class="font-heading text-2xl md:text-3xl font-extrabold text-white mb-4">Want to Make a Difference?</h2>
+        <p class="text-primary-200 mb-8 text-base max-w-xl mx-auto leading-relaxed">Your support can transform lives. Join us in creating positive change in communities across India.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/support/" class="inline-flex items-center justify-center px-8 py-3.5 bg-accent-500 text-white rounded-full font-bold text-base hover:bg-accent-600 transition-colors shadow-lg shadow-accent-500/30">
+                <i class="fa-solid fa-hand-holding-heart mr-2"></i> Support Us
             </a>
-            <a href="/contact/" class="inline-flex items-center justify-center px-7 py-3 border border-slate-200 text-slate-600 rounded-full font-semibold text-sm hover:bg-white hover:border-slate-300 transition-all">
-                <i class="fa-solid fa-envelope mr-2 text-xs opacity-60"></i> Contact Us
+            <a href="/contact/" class="inline-flex items-center justify-center px-8 py-3.5 bg-white/15 border border-white/20 text-white rounded-full font-semibold text-base hover:bg-white/25 transition-all">
+                <i class="fa-solid fa-envelope mr-2 opacity-70"></i> Contact Us
             </a>
         </div>
     </div>
