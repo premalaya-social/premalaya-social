@@ -2,7 +2,7 @@
 layout: layouts/page.njk
 title: Scholarship Recipients
 lead: Meet the students who have benefited from our Savitribai Scholarship program.
-bannerImage: /img/images2/savitriheader.png
+bannerImage: /img/uploads/savitrbai.png
 permalink: /scholarship-recipients/
 ---
 
