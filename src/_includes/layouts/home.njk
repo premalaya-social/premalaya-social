@@ -9,7 +9,7 @@
     <link href="/favicon.ico" type="image/x-icon" rel="icon">
     <link href="/favicon.ico" type="image/x-icon" rel="shortcut icon">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="/css/swiper/swiper.min.css">
     <script>
@@ -21,39 +21,48 @@
                         secondary: { 50:'#edfaff', 100:'#d6f3ff', 200:'#b5ecff', 300:'#83e0ff', 400:'#3eb8e6', 500:'#1090bf', 600:'#0d7299' },
                         warm: { 50:'#fffbeb', 100:'#fef3c7', 400:'#fbbf24', 500:'#f59e0b' }
                     },
-                    fontFamily: { 'sans':['Inter','system-ui','-apple-system','sans-serif'] }
+                    fontFamily: {
+                        'sans':['DM Sans','system-ui','-apple-system','sans-serif'],
+                        'heading':['Plus Jakarta Sans','system-ui','-apple-system','sans-serif']
+                    }
                 }
             }
         }
     </script>
     <style>
-        .navlogo { background-image:url('/img/images2/premalayalogos.png'); background-size:contain; background-repeat:no-repeat; background-position:center left; width:180px; height:44px; }
-        @media(min-width:768px) { .navlogo { background-image:url('/img/images2/premalayalogol.png'); width:280px; height:48px; } }
+        .navlogo { background-image:url('/img/images2/premalaya-logo-square.svg'); background-size:cover; background-repeat:no-repeat; background-position:center; width:44px; height:44px; border-radius:50%; }
+        @media(min-width:768px) { .navlogo { width:50px; height:50px; } }
 
         /* Ken Burns zoom on carousel images */
         @keyframes kenBurns { 0% { transform:scale(1); } 100% { transform:scale(1.06); } }
         .swiper-slide-active .hero-img,
-        .swiper-slide-duplicate-active .hero-img { animation:kenBurns 32s ease-out forwards; }
+        .swiper-slide-duplicate-active .hero-img { animation:kenBurns 47s ease-out forwards; }
 
-        /* Carousel nav arrows -- always visible, solid dark circles */
+        /* Carousel nav arrows -- white SVG on dark circle (Swiper 3 uses background-image for arrows) */
         .hero-carousel .swiper-button-next,
         .hero-carousel .swiper-button-prev {
-            width:36px!important; height:36px!important;
-            background:rgba(15,15,15,0.5)!important;
+            width:40px!important; height:40px!important;
+            margin-top:-20px!important;
             border-radius:50%!important; border:none!important;
-            transition:background .2s ease, transform .2s ease!important;
+            background-color:rgba(15,15,15,0.55)!important;
+            background-size:10px 16px!important;
+            background-position:center!important;
+            background-repeat:no-repeat!important;
+            transition:background-color .2s ease, transform .2s ease!important;
         }
-        .hero-carousel .swiper-button-next:after,
-        .hero-carousel .swiper-button-prev:after { font-size:12px!important; color:#fff!important; font-weight:700!important; }
+        .hero-carousel .swiper-button-prev {
+            left:10px!important;
+            background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'%3E%3Cpath d='M0,22L22,0l2.1,2.1L4.2,22l19.9,19.9L22,44L0,22z' fill='%23ffffff'/%3E%3C/svg%3E")!important;
+        }
+        .hero-carousel .swiper-button-next {
+            right:10px!important;
+            background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'%3E%3Cpath d='M27,22L5,44l-2.1-2.1L22.8,22L2.9,2.1L5,0L27,22z' fill='%23ffffff'/%3E%3C/svg%3E")!important;
+        }
         .hero-carousel .swiper-button-next:hover,
-        .hero-carousel .swiper-button-prev:hover { background:rgba(15,15,15,0.7)!important; transform:scale(1.1)!important; }
-        .hero-carousel .swiper-button-next { right:10px!important; }
-        .hero-carousel .swiper-button-prev { left:10px!important; }
+        .hero-carousel .swiper-button-prev:hover { background-color:rgba(15,15,15,0.8)!important; transform:scale(1.08)!important; }
         @media(max-width:639px) {
             .hero-carousel .swiper-button-next,
-            .hero-carousel .swiper-button-prev { width:32px!important; height:32px!important; }
-            .hero-carousel .swiper-button-next:after,
-            .hero-carousel .swiper-button-prev:after { font-size:10px!important; }
+            .hero-carousel .swiper-button-prev { width:34px!important; height:34px!important; margin-top:-17px!important; background-size:8px 14px!important; }
             .hero-carousel .swiper-button-next { right:8px!important; }
             .hero-carousel .swiper-button-prev { left:8px!important; }
         }
@@ -91,18 +100,14 @@
     <!-- ═══════════ SECTION 1: Hero (Split Layout) ═══════════ -->
     <section class="bg-white">
         <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
-            <div class="flex flex-col lg:flex-row lg:items-center lg:gap-12 xl:gap-16 py-8 sm:py-10 lg:py-16">
+            <div class="flex flex-col lg:flex-row lg:items-center lg:gap-12 xl:gap-16 py-8 sm:py-10 lg:py-12">
 
                 <!-- LEFT: Text Content (appears below carousel on mobile) -->
                 <div class="order-2 lg:order-1 lg:w-[45%] xl:w-[42%] flex-shrink-0 mt-8 lg:mt-0" data-reveal>
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-primary-50 rounded-full text-primary-500 text-xs font-semibold tracking-wide uppercase mb-5">
-                        <span class="w-1.5 h-1.5 bg-primary-500 rounded-full"></span>
-                        Welcome to Premalaya
-                    </div>
-
-                    <h1 class="text-2xl sm:text-3xl lg:text-[2.25rem] xl:text-[2.5rem] font-extrabold text-slate-900 leading-[1.15] tracking-tight">
-                        Compassion in Action,<br>
-                        <span class="text-primary-500">Hope for Communities</span>
+                    <h1 class="font-heading text-2xl sm:text-3xl lg:text-[2.25rem] xl:text-[2.5rem] font-extrabold text-slate-900 leading-[1.15] tracking-tight">
+                        Empowering Communities<br>
+                        <span class="text-primary-500">Transforming Lives</span><br>
+                        <span class="text-slate-400 text-xl sm:text-2xl lg:text-[1.75rem]">Building Hope</span>
                     </h1>
 
                     <p class="mt-4 lg:mt-5 text-slate-500 text-sm sm:text-[15px] leading-relaxed max-w-lg">
@@ -144,7 +149,7 @@
                                 </div>
                                 <div class="flex items-center gap-2">
                                     <div class="w-7 h-7 rounded-full bg-primary-50 flex items-center justify-center"><i class="fa-solid fa-globe text-primary-500 text-[10px]"></i></div>
-                                    <span class="text-xs font-medium text-slate-500">FCRA Certified</span>
+                                    <span class="text-xs font-medium text-slate-500">FCRA Registered</span>
                                 </div>
                             {% endif %}
                         </div>
@@ -166,14 +171,14 @@
                                         <!-- Overlay badge + title on image -->
                                         <div class="absolute bottom-0 left-0 right-0 p-4 sm:p-5 z-10">
                                             {% if slide.badge %}
-                                            <span class="hero-badge inline-flex items-center gap-1.5 px-3 py-1 bg-white/15 backdrop-blur-md border border-white/10 rounded-full text-white text-[11px] font-medium tracking-wide uppercase mb-2">
+                                            <span class="hero-badge inline-flex items-center gap-1.5 px-2 py-0.5 bg-white backdrop-blur-md border border-white/10 rounded-full text-gray-800 text-xs font-semibold tracking-wide uppercase mb-2">
                                                 <span class="w-1 h-1 bg-white rounded-full"></span>
                                                 {{ slide.badge }}
                                             </span>
                                             {% endif %}
                                             <h2 class="text-white font-bold text-base sm:text-lg md:text-xl leading-snug" style="text-shadow:0 1px 8px rgba(0,0,0,.3);">{{ slide.heading }}</h2>
                                             {% if slide.subtext %}
-                                            <p class="text-white/65 text-xs sm:text-sm mt-1 hidden sm:block max-w-sm leading-relaxed">{{ slide.subtext }}</p>
+                                            <p class="text-white/85 text-xs sm:text-sm mt-1 hidden sm:block max-w-sm leading-relaxed">{{ slide.subtext }}</p>
                                             {% endif %}
                                         </div>
                                     </a>
@@ -189,16 +194,12 @@
                     </div>
 
                     <!-- Slide counter below carousel -->
-                    <div class="flex items-center justify-between mt-3 px-1">
+                    <div class="flex items-center justify-center mt-3 px-1">
                         <div class="flex items-center gap-2 text-slate-400 text-xs font-medium" style="font-variant-numeric:tabular-nums;">
                             <span id="hero-current" class="text-slate-700 text-sm font-bold">01</span>
                             <span class="w-4 h-px bg-slate-200"></span>
                             <span class="text-sm">0{{ heroSlides | length }}</span>
                         </div>
-                        <a href="/pdf/savithribaischolarship.pdf" class="inline-flex items-center text-xs text-slate-400 hover:text-primary-500 transition-colors gap-1.5">
-                            <i class="fa-solid fa-download text-[10px]"></i>
-                            Scholarship Form
-                        </a>
                     </div>
                 </div>
 
@@ -224,21 +225,21 @@
                     <div class="w-12 h-12 rounded-xl bg-primary-50 flex items-center justify-center mx-auto mb-3">
                         <i class="fa-solid fa-users text-primary-500 text-lg"></i>
                     </div>
-                    <h3 class="text-sm font-bold text-slate-800">Community Focus</h3>
+                    <h3 class="font-heading text-sm font-bold text-slate-800">Community Focus</h3>
                     <p class="text-xs text-slate-400 mt-1 max-w-[200px] mx-auto">Serving vulnerable sections across Tamil Nadu & Andhra Pradesh</p>
                 </div>
                 <div class="text-center">
                     <div class="w-12 h-12 rounded-xl bg-secondary-50 flex items-center justify-center mx-auto mb-3">
                         <i class="fa-solid fa-book-open text-secondary-500 text-lg"></i>
                     </div>
-                    <h3 class="text-sm font-bold text-slate-800">Education First</h3>
+                    <h3 class="font-heading text-sm font-bold text-slate-800">Education First</h3>
                     <p class="text-xs text-slate-400 mt-1 max-w-[200px] mx-auto">Scholarships and skill development programs</p>
                 </div>
                 <div class="text-center">
                     <div class="w-12 h-12 rounded-xl bg-green-50 flex items-center justify-center mx-auto mb-3">
                         <i class="fa-solid fa-heart-pulse text-green-500 text-lg"></i>
                     </div>
-                    <h3 class="text-sm font-bold text-slate-800">Healthcare Access</h3>
+                    <h3 class="font-heading text-sm font-bold text-slate-800">Healthcare Access</h3>
                     <p class="text-xs text-slate-400 mt-1 max-w-[200px] mx-auto">Medical camps serving underserved communities</p>
                 </div>
             </div>
@@ -247,30 +248,36 @@
     </section>
 
     <!-- ═══════════ SECTION 4: Programs Grid ═══════════ -->
-    <section class="py-16 md:py-20 bg-white">
+    <section class="py-16 md:py-24 bg-slate-50">
         <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
-            <div class="text-center mb-12" data-reveal>
-                <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-primary-50 rounded-full text-primary-500 text-xs font-semibold tracking-wide uppercase mb-4">
-                    <span class="w-1.5 h-1.5 bg-primary-500 rounded-full"></span>
-                    What We Do
+            <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-10 md:mb-14 gap-4" data-reveal>
+                <div>
+                    <span class="text-primary-500 text-xs font-bold tracking-[0.2em] uppercase" style="font-family:'Outfit',sans-serif;">What We Do</span>
+                    <h2 class="font-heading text-2xl md:text-[2.25rem] font-extrabold text-slate-900 mt-2 leading-tight">How We Serve</h2>
+                    <p class="mt-2 text-slate-400 max-w-lg text-sm sm:text-[15px] leading-relaxed">Transforming lives through dedicated programs in education, health, and community development.</p>
                 </div>
-                <h2 class="text-2xl md:text-3xl font-bold text-slate-900">How We Serve</h2>
-                <p class="mt-3 text-slate-400 max-w-xl mx-auto text-sm sm:text-base">Transforming lives through dedicated programs in education, health, and community development.</p>
+                <a href="/about/" class="hidden md:inline-flex items-center gap-2 text-primary-500 text-sm font-semibold hover:gap-3 transition-all flex-shrink-0">
+                    View all programs
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-7">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
                 {% for card in projectCards %}
                 {% set projFocusMap = { "center":"object-center", "top":"object-top", "bottom":"object-bottom" } %}
-                <a href="{{ card.link }}" class="group bg-white rounded-2xl overflow-hidden border border-slate-100 hover:border-slate-200 hover:shadow-lg hover:shadow-slate-100 transition-all duration-300" data-reveal data-reveal-delay="{{ (loop.index0 % 3) + 1 }}">
-                    <div class="aspect-[16/10] overflow-hidden">
-                        <img src="{{ card.image }}" alt="{{ card.alt }}" class="w-full h-full object-cover {{ projFocusMap[card.imageFocus] or 'object-center' }} group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                <a href="{{ card.link }}" class="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-400" data-reveal data-reveal-delay="{{ (loop.index0 % 3) + 1 }}">
+                    <div class="aspect-[4/3] overflow-hidden relative">
+                        <img src="{{ card.image }}" alt="{{ card.alt }}" class="w-full h-full object-cover {{ projFocusMap[card.imageFocus] or 'object-center' }} group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-5">
+                            <h3 class="font-heading font-bold text-white text-lg leading-snug" style="text-shadow:0 1px 4px rgba(0,0,0,0.3);">{{ card.title }}</h3>
+                        </div>
                     </div>
-                    <div class="p-5 sm:p-6">
-                        <h3 class="font-semibold text-slate-800 mb-1.5 group-hover:text-primary-500 transition-colors">{{ card.title }}</h3>
-                        <p class="text-slate-400 text-sm leading-relaxed line-clamp-2">{{ card.description }}</p>
-                        <span class="inline-flex items-center gap-1.5 text-primary-500 text-sm font-medium mt-4 group-hover:gap-2.5 transition-all">
-                            Learn more
-                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                        </span>
+                    <div class="p-5">
+                        <p class="text-slate-500 text-sm leading-relaxed line-clamp-2">{{ card.description }}</p>
+                        <div class="flex items-center gap-2 text-primary-500 text-sm font-semibold mt-4 group-hover:gap-3 transition-all">
+                            Explore
+                            <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                        </div>
                     </div>
                 </a>
                 {% endfor %}
@@ -286,7 +293,7 @@
                     <span class="w-1.5 h-1.5 bg-primary-500 rounded-full"></span>
                     Who We Are
                 </div>
-                <h2 class="text-2xl md:text-3xl font-bold text-slate-900">About Our Organization</h2>
+                <h2 class="font-heading text-2xl md:text-3xl font-bold text-slate-900">About Our Organization</h2>
             </div>
             <div class="space-y-8">
                 {% for card in aboutCards %}
@@ -296,7 +303,7 @@
                         <img src="{{ card.image }}" alt="{{ card.alt }}" class="w-full h-full object-cover {{ cardFocusMap[card.imageFocus] or 'object-center' }}" loading="lazy">
                     </div>
                     <div class="md:w-1/2 p-6 sm:p-8 {% if loop.index0 % 2 == 0 %}md:pr-10{% else %}md:pl-10{% endif %}">
-                        <h3 class="text-xl font-bold text-slate-800 mb-3">{{ card.title }}</h3>
+                        <h3 class="font-heading text-xl font-bold text-slate-800 mb-3">{{ card.title }}</h3>
                         <p class="text-slate-500 text-sm sm:text-base leading-relaxed mb-5">{{ card.description }}</p>
                         <a href="{{ card.link }}" class="inline-flex items-center gap-2 text-primary-500 text-sm font-semibold hover:gap-3 transition-all">
                             Learn more
@@ -315,7 +322,7 @@
             <svg width="100%" height="100%"><defs><pattern id="trust-grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="0.5"/></pattern></defs><rect width="100%" height="100%" fill="url(#trust-grid)"/></svg>
         </div>
         <div class="max-w-5xl mx-auto px-5 sm:px-8 relative z-10 text-center" data-reveal>
-            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Your Support Reaches Those Who Need It Most</h2>
+            <h2 class="font-heading text-2xl md:text-3xl font-bold text-white mb-4">Your Support Reaches Those Who Need It Most</h2>
             <p class="text-primary-100 text-sm sm:text-base max-w-2xl mx-auto mb-10">We are committed to transparency and accountability in every project we undertake.</p>
 
             {% if trustPoints and trustPoints | length %}
@@ -347,7 +354,7 @@
                     <div class="w-10 h-10 rounded-full bg-white/15 flex items-center justify-center flex-shrink-0">
                         <i class="fa-solid fa-globe text-white text-sm"></i>
                     </div>
-                    <span class="text-white text-sm font-medium">FCRA Certified</span>
+                    <span class="text-white text-sm font-medium">FCRA Registered</span>
                 </div>
             </div>
             {% endif %}
@@ -367,7 +374,7 @@
                     <span class="w-1.5 h-1.5 bg-primary-500 rounded-full"></span>
                     Location
                 </div>
-                <h2 class="text-2xl md:text-3xl font-bold text-slate-900">Find Us</h2>
+                <h2 class="font-heading text-2xl md:text-3xl font-bold text-slate-900">Find Us</h2>
                 <p class="mt-3 text-slate-400 text-sm sm:text-base">{{ site.address }}</p>
             </div>
             <div class="rounded-2xl overflow-hidden border border-slate-100 shadow-sm" data-reveal data-reveal-delay="1">
@@ -419,7 +426,7 @@
                 });
             });
 
-            var autoplayDuration = 30000;
+            var autoplayDuration = 55000;
             var progressBar = document.getElementById('hero-progress');
             var currentEl = document.getElementById('hero-current');
 
@@ -444,7 +451,7 @@
                 effect: 'fade',
                 fadeEffect: { crossFade: true },
                 autoplay: { delay: autoplayDuration, disableOnInteraction: false, pauseOnMouseEnter: true },
-                speed: 1200,
+                speed: 2500,
                 grabCursor: true,
                 on: {
                     slideChange: function() {
