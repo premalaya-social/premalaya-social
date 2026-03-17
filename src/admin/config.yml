@@ -124,6 +124,24 @@ collections:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "text" }
               - { label: "Link", name: "link", widget: "string" }
+          - label: "Impact Stats"
+            name: "impactStats"
+            widget: "list"
+            required: false
+            hint: "Large counter numbers shown in the stats section (e.g. '6+', '1000+', '2'). Leave empty to show default icons instead."
+            summary: "{{fields.number}} - {{fields.label}}"
+            fields:
+              - { label: "Number", name: "number", widget: "string", hint: "The big number to display (e.g. '6+', '1000+', '30+')" }
+              - { label: "Label", name: "label", widget: "string", hint: "Short description below the number (e.g. 'Programs', 'Lives Impacted')" }
+          - label: "Trust Points"
+            name: "trustPoints"
+            widget: "list"
+            required: false
+            hint: "Trust badges shown in the blue section (e.g. 'Registered Society', '80G Tax Exemption'). Leave empty to show defaults."
+            summary: "{{fields.label}}"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Icon CSS Class", name: "icon", widget: "string", required: false, hint: "Font Awesome class (e.g. 'fa-solid fa-building-columns'). Leave blank for default checkmark." }
 
   # ===========================
   # ABOUT PAGES

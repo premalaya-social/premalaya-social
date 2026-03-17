@@ -1,75 +1,125 @@
 <!-- Navigation -->
-<nav class="bg-white sticky top-0 z-50 border-b border-gray-200/60" style="box-shadow:0 1px 2px rgba(0,0,0,0.04);">
+<nav class="bg-white/95 backdrop-blur-md sticky top-0 z-50" style="box-shadow:0 1px 0 0 rgba(0,0,0,0.1), 0 2px 6px rgba(0,0,0,0.04);">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-16 lg:h-[70px]">
+        <div class="flex items-center justify-between h-16 lg:h-[68px]">
+            <!-- Logo -->
             <a href="/" class="flex-shrink-0" aria-label="Home">
                 <div class="navlogo"></div>
             </a>
 
-            <!-- Desktop -->
-            <div class="hidden lg:flex items-center gap-1">
+            <!-- Desktop Nav -->
+            <div class="hidden lg:flex items-center gap-0.5">
                 {% for item in navigation.main %}
                 {% if item.children %}
                 <div class="relative group/nav">
-                    <button class="px-3 py-2 text-[14px] font-medium text-gray-600 hover:text-primary-500 rounded-lg hover:bg-gray-50 transition-all flex items-center gap-1">
+                    <button class="px-3 xl:px-4 py-2 text-sm font-medium text-slate-600 hover:text-primary-500 transition-colors flex items-center gap-1 relative after:absolute after:bottom-0 after:left-3 after:right-3 after:h-0.5 after:bg-primary-500 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:origin-left">
                         {{ item.label }}
-                        <svg class="w-3.5 h-3.5 opacity-40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        <svg class="w-3.5 h-3.5 opacity-40 group-hover/nav:opacity-60 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </button>
-                    <div class="absolute left-0 top-full pt-2 w-56 opacity-0 invisible group-hover/nav:opacity-100 group-hover/nav:visible transition-all duration-150">
-                        <div class="bg-white rounded-lg py-1 border border-gray-200/80" style="box-shadow:0 4px 24px rgba(0,0,0,0.08);">
+                    <div class="absolute left-0 top-full pt-2 w-52 opacity-0 invisible group-hover/nav:opacity-100 group-hover/nav:visible transition-all duration-200 translate-y-1 group-hover/nav:translate-y-0">
+                        <div class="bg-white rounded-xl py-2 shadow-lg shadow-black/5 border border-gray-100/80 ring-1 ring-black/[0.03]">
                             {% for child in item.children %}
-                            <a href="{{ child.url }}" class="block px-4 py-2 text-[13px] text-gray-500 hover:text-primary-500 hover:bg-gray-50 transition-colors">{{ child.label }}</a>
+                            <a href="{{ child.url }}" class="block px-4 py-2.5 text-sm text-slate-500 hover:text-primary-500 hover:bg-primary-50/50 transition-colors">{{ child.label }}</a>
                             {% endfor %}
                         </div>
                     </div>
                 </div>
-                {% elif item.url == '/' %}
-                <a href="{{ item.url }}" class="px-3 py-2 text-[14px] font-medium rounded-lg transition-all {% if page.url == item.url %}text-primary-500 bg-primary-50/60{% else %}text-gray-600 hover:text-primary-500 hover:bg-gray-50{% endif %}">{{ item.label }}</a>
                 {% elif item.highlight %}
-                <a href="{{ item.url }}" class="ml-2 px-5 py-2 text-[14px] font-semibold text-white bg-primary-500 rounded-lg hover:bg-primary-600 transition-colors">{{ item.label }}</a>
+                <a href="{{ item.url }}" class="ml-3 px-5 py-2 text-sm font-semibold text-white bg-primary-500 rounded-full hover:bg-primary-600 transition-colors shadow-sm shadow-primary-500/20">{{ item.label }}</a>
                 {% else %}
-                <a href="{{ item.url }}" class="px-3 py-2 text-[14px] font-medium rounded-lg transition-all {% if page.url == item.url %}text-primary-500 bg-primary-50/60{% else %}text-gray-600 hover:text-primary-500 hover:bg-gray-50{% endif %}">{{ item.label }}</a>
+                <a href="{{ item.url }}" class="px-3 xl:px-4 py-2 text-sm font-medium transition-colors relative after:absolute after:bottom-0 after:left-3 after:right-3 after:h-0.5 after:bg-primary-500 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:origin-left {% if page.url == item.url %}text-primary-500 after:scale-x-100{% else %}text-slate-600 hover:text-primary-500{% endif %}">{{ item.label }}</a>
                 {% endif %}
                 {% endfor %}
             </div>
 
-            <!-- Mobile -->
-            <div class="flex items-center gap-1 lg:hidden">
-                <a href="tel:{{ site.phone }}" class="md:hidden w-9 h-9 flex items-center justify-center rounded-lg text-gray-400 hover:text-primary-500 hover:bg-gray-50" aria-label="Call">
-                    <i class="fa-solid fa-phone text-sm"></i>
-                </a>
-                <button id="mobile-menu-btn" class="w-9 h-9 flex items-center justify-center rounded-lg text-gray-500 hover:text-primary-500 hover:bg-gray-50 transition-colors">
-                    <svg id="menu-icon-open" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
-                    <svg id="menu-icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
-                </button>
-            </div>
+            <!-- Mobile Toggle -->
+            <button id="mobile-menu-btn" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-full text-slate-500 hover:text-primary-500 hover:bg-gray-50 transition-colors" aria-label="Open menu">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
         </div>
     </div>
+    <!-- Serving Since strip (sticks with nav) -->
+    <div class="bg-primary-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center py-1.5">
+            <span class="flex items-center gap-2.5 text-[10px] sm:text-[11px] tracking-[0.2em] uppercase font-medium text-white/80">
+                <span class="hidden sm:inline w-5 h-px bg-white/30"></span>
+                Serving communities since
+                <span class="text-white font-bold">1994</span>
+                <span class="hidden sm:inline w-5 h-px bg-white/30"></span>
+            </span>
+        </div>
+    </div>
+</nav>
 
-    <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden lg:hidden border-t border-gray-100 bg-white">
-        <div class="px-4 py-2 max-h-[80vh] overflow-y-auto">
+<!-- Mobile Menu Overlay (full-screen slide-in) -->
+<div id="mobile-overlay" class="fixed inset-0 z-[60] hidden" style="transition:background .3s;">
+    <div class="absolute inset-0 bg-black/40 backdrop-blur-sm" style="opacity:0; transition:opacity .3s;"></div>
+    <div id="mobile-menu-panel" class="absolute right-0 top-0 bottom-0 w-full max-w-sm bg-white shadow-2xl translate-x-full transition-transform duration-300 ease-out flex flex-col">
+        <!-- Header -->
+        <div class="flex items-center justify-between px-5 h-16 border-b border-gray-100 flex-shrink-0">
+            <a href="/" class="flex-shrink-0">
+                <div class="navlogo" style="width:160px;height:38px;"></div>
+            </a>
+            <button id="mobile-menu-close" class="w-10 h-10 flex items-center justify-center rounded-full text-slate-400 hover:text-slate-600 hover:bg-gray-50" aria-label="Close menu">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+        </div>
+
+        <!-- Nav Links -->
+        <div class="flex-1 overflow-y-auto px-4 py-4">
             {% for item in navigation.main %}
             {% if item.children %}
-            <div>
-                <button class="mobile-dropdown-btn w-full flex items-center justify-between px-3 py-3 text-[15px] font-medium text-gray-600 hover:text-primary-500 transition-colors">
+            <div class="mb-1">
+                <button class="mobile-dropdown-btn w-full flex items-center justify-between px-3 py-3 text-[15px] font-medium text-slate-700 hover:text-primary-500 rounded-lg hover:bg-gray-50 transition-colors">
                     {{ item.label }}
-                    <svg class="dropdown-icon w-4 h-4 opacity-30 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    <svg class="dropdown-icon w-4 h-4 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                 </button>
-                <div class="hidden pb-2 pl-3 border-l border-gray-100 ml-3">
+                <div class="hidden ml-3 pl-4 border-l-2 border-primary-100 mb-2">
                     {% for child in item.children %}
-                    <a href="{{ child.url }}" class="block px-3 py-2 text-[14px] text-gray-400 hover:text-primary-500 transition-colors">{{ child.label }}</a>
+                    <a href="{{ child.url }}" class="block px-3 py-2.5 text-sm text-slate-500 hover:text-primary-500 transition-colors">{{ child.label }}</a>
                     {% endfor %}
                 </div>
             </div>
             {% elif item.highlight %}
-            <div class="py-2 mt-1">
-                <a href="{{ item.url }}" class="block text-center px-4 py-2.5 text-[15px] font-semibold text-white bg-primary-500 rounded-lg hover:bg-primary-600 transition-colors">{{ item.label }}</a>
+            <div class="mt-4 px-3">
+                <a href="{{ item.url }}" class="flex items-center justify-center w-full px-5 py-3 text-sm font-semibold text-white bg-primary-500 rounded-xl hover:bg-primary-600 transition-colors shadow-sm">
+                    <i class="fa-solid fa-heart mr-2 text-xs"></i>{{ item.label }}
+                </a>
             </div>
             {% else %}
-            <a href="{{ item.url }}" class="block px-3 py-3 text-[15px] font-medium text-gray-600 hover:text-primary-500 transition-colors">{{ item.label }}</a>
+            <a href="{{ item.url }}" class="block px-3 py-3 text-[15px] font-medium text-slate-700 hover:text-primary-500 rounded-lg hover:bg-gray-50 transition-colors {% if page.url == item.url %}text-primary-500 bg-primary-50/50{% endif %}">{{ item.label }}</a>
             {% endif %}
             {% endfor %}
         </div>
+
+        <!-- Contact Info -->
+        <div class="flex-shrink-0 border-t border-gray-100 px-5 py-5 bg-gray-50/50">
+            <div class="flex items-center gap-3 text-sm text-slate-500 mb-3">
+                <i class="fa-solid fa-phone text-primary-500 text-xs w-4 text-center"></i>
+                <a href="tel:{{ site.phone }}" class="hover:text-primary-500 transition-colors">{{ site.phone }}</a>
+            </div>
+            <div class="flex items-center gap-3 text-sm text-slate-500 mb-4">
+                <i class="fa-solid fa-envelope text-primary-500 text-xs w-4 text-center"></i>
+                <a href="mailto:{{ site.email }}" class="hover:text-primary-500 transition-colors">{{ site.email }}</a>
+            </div>
+            <div class="flex gap-3">
+                <a href="{{ site.facebook }}" target="_blank" class="w-9 h-9 rounded-full bg-white border border-gray-200 flex items-center justify-center text-slate-400 hover:text-primary-500 hover:border-primary-200 transition-colors">
+                    <i class="fa-brands fa-facebook-f text-sm"></i>
+                </a>
+            </div>
+        </div>
     </div>
-</nav>
+</div>
+
+<script>
+(function() {
+    var overlay = document.getElementById('mobile-overlay');
+    if (!overlay) return;
+    var bg = overlay.querySelector(':scope > div:first-child');
+    overlay.classList.contains = overlay.classList.contains;
+    var origAdd = overlay.classList.add.bind(overlay.classList);
+    var origRemove = overlay.classList.remove.bind(overlay.classList);
+    Object.defineProperty(overlay.classList, 'add', { value: function(c) { origAdd(c); if (c === 'active' && bg) bg.style.opacity = '1'; } });
+    Object.defineProperty(overlay.classList, 'remove', { value: function(c) { origRemove(c); if (c === 'active' && bg) bg.style.opacity = '0'; } });
+})();
+</script>

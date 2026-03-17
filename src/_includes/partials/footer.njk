@@ -1,61 +1,80 @@
 <!-- Footer -->
-<footer class="bg-slate-900 text-gray-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+<footer class="bg-slate-900 text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Main Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 py-14 lg:py-16">
             <!-- About Column -->
-            <div>
-                <div class="navlogo mb-4 brightness-0 invert opacity-80" style="width:200px;height:40px;"></div>
-                <p class="text-sm text-gray-400 leading-relaxed">{{ site.description | truncate(150) }}</p>
-                <div class="flex gap-3 mt-4">
-                    <a href="{{ site.facebook }}" target="_blank" class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-primary-500 transition-colors">
+            <div class="sm:col-span-2 lg:col-span-1">
+                <div class="navlogo brightness-0 invert opacity-70 mb-5" style="width:200px;height:40px;"></div>
+                <p class="text-sm leading-relaxed text-slate-400/90 mb-6">
+                    Working for the well-being of downtrodden and vulnerable sections through education, health, advocacy and social mobilization.
+                </p>
+                <div class="flex gap-2.5">
+                    <a href="{{ site.facebook }}" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-slate-800 border border-slate-700/50 flex items-center justify-center text-slate-400 hover:bg-primary-500 hover:border-primary-500 hover:text-white transition-all duration-200">
                         <i class="fa-brands fa-facebook-f text-sm"></i>
                     </a>
                 </div>
             </div>
+
             <!-- Quick Links -->
             <div>
-                <h4 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Quick Links</h4>
-                <ul class="space-y-2">
-                    <li><a href="/about/" class="text-sm text-gray-400 hover:text-white transition-colors">About Us</a></li>
-                    <li><a href="/vision-mission/" class="text-sm text-gray-400 hover:text-white transition-colors">Vision & Mission</a></li>
-                    <li><a href="/founder/" class="text-sm text-gray-400 hover:text-white transition-colors">Our Founder</a></li>
-                    <li><a href="/savitribai-scholarships/" class="text-sm text-gray-400 hover:text-white transition-colors">Scholarships</a></li>
-                    <li><a href="/support/" class="text-sm text-gray-400 hover:text-white transition-colors">Support Us</a></li>
+                <h4 class="text-white font-semibold text-sm tracking-wide mb-5">Quick Links</h4>
+                <ul class="space-y-3">
+                    <li><a href="/about/" class="text-sm text-slate-400 hover:text-white transition-colors duration-200">About Us</a></li>
+                    <li><a href="/vision-mission/" class="text-sm text-slate-400 hover:text-white transition-colors duration-200">Vision & Mission</a></li>
+                    <li><a href="/founder/" class="text-sm text-slate-400 hover:text-white transition-colors duration-200">Our Founder</a></li>
+                    <li><a href="/savitribai-scholarships/" class="text-sm text-slate-400 hover:text-white transition-colors duration-200">Scholarships</a></li>
+                    <li><a href="/donors-list/" class="text-sm text-slate-400 hover:text-white transition-colors duration-200">Donors</a></li>
+                    <li><a href="/support/" class="text-sm text-slate-400 hover:text-white transition-colors duration-200">Support Us</a></li>
                 </ul>
             </div>
+
             <!-- Programs -->
             <div>
-                <h4 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Programs</h4>
-                <ul class="space-y-2">
-                    <li><a href="/women-empowerment/" class="text-sm text-gray-400 hover:text-white transition-colors">Women Empowerment</a></li>
-                    <li><a href="/children-home/" class="text-sm text-gray-400 hover:text-white transition-colors">Children's Home</a></li>
-                    <li><a href="/health-care/" class="text-sm text-gray-400 hover:text-white transition-colors">Health Care</a></li>
-                    <li><a href="/medical-camps/" class="text-sm text-gray-400 hover:text-white transition-colors">Medical Camps</a></li>
-                    <li><a href="/educational-activities/" class="text-sm text-gray-400 hover:text-white transition-colors">Education</a></li>
+                <h4 class="text-white font-semibold text-sm tracking-wide mb-5">Programs</h4>
+                <ul class="space-y-3">
+                    <li><a href="/women-empowerment/" class="text-sm text-slate-400 hover:text-white transition-colors duration-200">Women Empowerment</a></li>
+                    <li><a href="/children-home/" class="text-sm text-slate-400 hover:text-white transition-colors duration-200">Children's Home</a></li>
+                    <li><a href="/health-care/" class="text-sm text-slate-400 hover:text-white transition-colors duration-200">Health Care</a></li>
+                    <li><a href="/medical-camps/" class="text-sm text-slate-400 hover:text-white transition-colors duration-200">Medical Camps</a></li>
+                    <li><a href="/relief-operations/" class="text-sm text-slate-400 hover:text-white transition-colors duration-200">Relief Operations</a></li>
+                    <li><a href="/educational-activities/" class="text-sm text-slate-400 hover:text-white transition-colors duration-200">Education</a></li>
+                    <li><a href="/shankar-narayan-library/" class="text-sm text-slate-400 hover:text-white transition-colors duration-200">Library</a></li>
                 </ul>
             </div>
+
             <!-- Contact -->
             <div>
-                <h4 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Contact</h4>
-                <ul class="space-y-3">
-                    <li class="flex items-start gap-3 text-sm text-gray-400">
-                        <i class="fa-solid fa-location-dot text-secondary-400 mt-1 flex-shrink-0"></i>
-                        {{ site.address }}
+                <h4 class="text-white font-semibold text-sm tracking-wide mb-5">Contact Us</h4>
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-full bg-slate-800 border border-slate-700/50 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <i class="fa-solid fa-location-dot text-xs text-primary-400"></i>
+                        </div>
+                        <span class="text-sm leading-relaxed">{{ site.address }}</span>
                     </li>
-                    <li class="flex items-center gap-3 text-sm text-gray-400">
-                        <i class="fa-solid fa-phone text-secondary-400 flex-shrink-0"></i>
-                        {{ site.phone }}
+                    <li class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-full bg-slate-800 border border-slate-700/50 flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-phone text-xs text-primary-400"></i>
+                        </div>
+                        <a href="tel:{{ site.phone }}" class="text-sm hover:text-white transition-colors">{{ site.phone }}</a>
                     </li>
-                    <li class="flex items-center gap-3 text-sm text-gray-400">
-                        <i class="fa-solid fa-envelope text-secondary-400 flex-shrink-0"></i>
-                        {{ site.contactEmail }}
+                    <li class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-full bg-slate-800 border border-slate-700/50 flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-envelope text-xs text-primary-400"></i>
+                        </div>
+                        <a href="mailto:{{ site.contactEmail }}" class="text-sm hover:text-white transition-colors">{{ site.contactEmail }}</a>
                     </li>
                 </ul>
             </div>
         </div>
-        <div class="border-t border-slate-800 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3">
-            <p class="text-sm text-gray-500">{{ site.copyright }}</p>
-            <p class="text-sm text-gray-500"><a href="{{ site.poweredByUrl }}" class="hover:text-white transition-colors">{{ site.poweredBy }}</a></p>
+
+        <!-- Bottom Bar -->
+        <div class="border-t border-slate-800/80 py-6 flex flex-col sm:flex-row justify-between items-center gap-3">
+            <p class="text-xs text-slate-500">{{ site.copyright }}</p>
+            {% if site.poweredBy and site.poweredBy != "--" %}
+            <p class="text-xs text-slate-500"><a href="{{ site.poweredByUrl }}" class="hover:text-slate-300 transition-colors">{{ site.poweredBy }}</a></p>
+            {% endif %}
         </div>
     </div>
 </footer>

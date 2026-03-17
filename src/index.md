@@ -117,4 +117,18 @@ projectCards:
       cities, bringing healthcare to those who need it most.
     link: /medical-camps/
     imageFocus: center
+impactStats:
+  - number: "6+"
+    label: "Active Programs"
+  - number: "1000+"
+    label: "Lives Impacted"
+  - number: "30+"
+    label: "Years of Service"
+trustPoints:
+  - label: "Registered Society"
+    icon: "fa-solid fa-building-columns"
+  - label: "80G Tax Exemption"
+    icon: "fa-solid fa-receipt"
+  - label: "FCRA Certified"
+    icon: "fa-solid fa-globe"
 ---

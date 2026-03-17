@@ -14,25 +14,16 @@
       ]
     },
     {
-      "label": "Savitribai Scholarships",
-      "url": "/savitribai-scholarships/",
-      "children": [
-        { "label": "About Savitribai Phule", "url": "/savitribai-phule/" },
-        { "label": "Appeal", "url": "/savitribai-scholarships/" },
-        { "label": "Download Scholarship Form", "url": "/pdf/savithribaischolarship.pdf" }
-      ]
-    },
-    {
       "label": "Programs",
       "url": "/women-empowerment/",
       "children": [
         { "label": "Women Empowerment", "url": "/women-empowerment/" },
         { "label": "Children's Home", "url": "/children-home/" },
         { "label": "Health Care", "url": "/health-care/" },
-        { "label": "Medical Camps", "url": "/medical-camps/" },
         { "label": "Relief Operations", "url": "/relief-operations/" },
         { "label": "Educational Activities", "url": "/educational-activities/" },
-        { "label": "Shankar Narayan Library", "url": "/shankar-narayan-library/" }
+        { "label": "Shankar Narayan Library", "url": "/shankar-narayan-library/" },
+        { "label": "Savitribai Phule Scholarships", "url": "/savitribai-scholarships/" }
       ]
     },
     {
@@ -46,4 +37,3 @@
     }
   ]
 }
-
