@@ -32,23 +32,23 @@
         .navlogo { background-image:url('/img/images2/premalaya-logo-square.svg'); background-size:cover; background-repeat:no-repeat; background-position:center; width:44px; height:44px; border-radius:50%; }
         @media(min-width:768px) { .navlogo { width:75px; height:75px; } }
 
-        .content-area h2 { font-family:'Outfit',system-ui,sans-serif; font-size:1.5rem; font-weight:700; color:#1e293b; margin:2rem 0 0.75rem; padding-bottom:0.5rem; border-bottom:1px solid #f1f5f9; }
-        .content-area h3 { font-family:'Outfit',system-ui,sans-serif; font-size:1.25rem; font-weight:600; color:#334155; margin:1.5rem 0 0.5rem; }
-        .content-area h4 { font-family:'Outfit',system-ui,sans-serif; font-size:1.0625rem; font-weight:600; color:#475569; margin:1.25rem 0 0.5rem; }
-        .content-area p { color:#64748b; line-height:1.8; margin-bottom:1rem; font-size:0.9375rem; }
-        .content-area ul, .content-area ol { color:#64748b; margin:0.75rem 0 1rem 1.25rem; font-size:0.9375rem; }
+        .content-area h2 { font-family:'Outfit',system-ui,sans-serif; font-size:1.625rem; font-weight:800; color:#0f172a; margin:2.5rem 0 0.75rem; padding-bottom:0.625rem; border-bottom:2px solid #f1f5f9; }
+        .content-area h3 { font-family:'Outfit',system-ui,sans-serif; font-size:1.375rem; font-weight:700; color:#1e293b; margin:2rem 0 0.5rem; }
+        .content-area h4 { font-family:'Outfit',system-ui,sans-serif; font-size:1.125rem; font-weight:700; color:#334155; margin:1.5rem 0 0.5rem; }
+        .content-area p { color:#64748b; line-height:1.85; margin-bottom:1.125rem; font-size:0.9375rem; }
+        .content-area ul, .content-area ol { color:#64748b; margin:0.75rem 0 1.25rem 1.25rem; font-size:0.9375rem; }
         .content-area ul { list-style-type:disc; }
         .content-area ol { list-style-type:decimal; }
-        .content-area li { margin-bottom:0.375rem; line-height:1.7; }
-        .content-area a { color:#2f3192; text-decoration:underline; text-underline-offset:3px; text-decoration-color:#c7caff; }
-        .content-area a:hover { color:#1090bf; text-decoration-color:#1090bf; }
-        .content-area strong { color:#334155; }
-        .content-area blockquote { border-left:3px solid #2f3192; padding:0.75rem 1.25rem; margin:1.25rem 0; background:#f8fafc; border-radius:0 0.5rem 0.5rem 0; color:#475569; }
-        .content-area img { border-radius:0.75rem; margin:1.25rem 0; }
-        .content-area table { width:100%; border-collapse:collapse; margin:1.25rem 0; font-size:0.875rem; }
-        .content-area th, .content-area td { border:1px solid #e2e8f0; padding:0.625rem 0.875rem; text-align:left; }
-        .content-area th { background:#f8fafc; font-weight:600; color:#334155; }
-        .content-area tr:nth-child(even) td { background:#fafbfc; }
+        .content-area li { margin-bottom:0.5rem; line-height:1.75; }
+        .content-area a { color:#2f3192; font-weight:500; text-decoration:underline; text-underline-offset:3px; text-decoration-color:#c7caff; }
+        .content-area a:hover { color:#E97130; text-decoration-color:#E97130; }
+        .content-area strong { color:#1e293b; font-weight:600; }
+        .content-area blockquote { border-left:4px solid #E97130; padding:1rem 1.5rem; margin:1.5rem 0; background:#fffbeb; border-radius:0 0.75rem 0.75rem 0; color:#475569; font-style:italic; }
+        .content-area img { border-radius:1rem; margin:1.5rem 0; }
+        .content-area table { width:100%; border-collapse:collapse; margin:1.5rem 0; font-size:0.875rem; border-radius:0.75rem; overflow:hidden; }
+        .content-area th, .content-area td { border:1px solid #e2e8f0; padding:0.75rem 1rem; text-align:left; }
+        .content-area th { background:#2f3192; color:#fff; font-weight:600; border-color:#262a7a; }
+        .content-area tr:nth-child(even) td { background:#f8fafc; }
 
         .lightbox-overlay { position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,0.92); backdrop-filter:blur(8px); display:flex; flex-direction:column; opacity:0; pointer-events:none; transition:opacity .3s ease; }
         .lightbox-overlay.active { opacity:1; pointer-events:auto; }
@@ -255,41 +255,40 @@
 
 
 <style>
-    .page-banner { height: 220px; }
-    @media(min-width:640px) { .page-banner { height: clamp(220px, 45vw, 300px); } }
-    @media(min-width:1024px) { .page-banner { height: 300px; } }
+    .page-banner { height: 240px; }
+    @media(min-width:640px) { .page-banner { height: clamp(240px, 45vw, 320px); } }
+    @media(min-width:1024px) { .page-banner { height: 320px; } }
 </style>
 <div class="page-banner relative w-full overflow-hidden">
     <img src="/img/images2/savitriheader.png" alt="Scholarship Recipients" class="w-full h-full object-cover object-center scale-[1.01]" >
-    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-slate-900/25 to-transparent"></div>
-    <div class="absolute inset-0 flex items-end">
-        <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 w-full pb-8 sm:pb-10">
-            <div class="max-w-2xl">
-                <nav class="flex items-center gap-2 text-xs text-white/60 mb-3">
-                    <a href="/" class="hover:text-white transition-colors">Home</a>
-                    <svg class="w-3 h-3 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-                    <span class="text-white/90">Scholarship Recipients</span>
-                </nav>
-                <h1 class="font-heading text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight" style="text-shadow:0 2px 16px rgba(0,0,0,.3);">
-                    Scholarship Recipients
-                </h1>
-                
-                <p class="mt-3 text-sm sm:text-base text-white/80 leading-relaxed max-w-xl" style="text-shadow:0 1px 6px rgba(0,0,0,.3);">Meet the students who have benefited from our Savitribai Scholarship program.</p>
-                
-            </div>
+    <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+</div>
+
+<div class="relative -mt-16 sm:-mt-20 z-10">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
+        <div class="bg-white rounded-t-3xl shadow-xl px-8 sm:px-10 lg:px-12 pt-8 sm:pt-10 pb-6 sm:pb-8 border-t-4 border-accent-500">
+            <nav class="flex items-center gap-2 text-xs text-slate-400 mb-3">
+                <a href="/" class="hover:text-primary-500 transition-colors">Home</a>
+                <svg class="w-3 h-3 opacity-40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                <span class="text-slate-600 font-medium">Scholarship Recipients</span>
+            </nav>
+            <h1 class="font-heading text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 leading-tight">
+                Scholarship Recipients
+            </h1>
+            
+            <p class="mt-3 text-base sm:text-lg text-slate-500 leading-relaxed max-w-2xl">Meet the students who have benefited from our Savitribai Scholarship program.</p>
+            
         </div>
     </div>
 </div>
 
 
 <!-- Main Content -->
-<div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 py-12 md:py-16">
-    
-
-    <div class="flex flex-col lg:flex-row gap-10 lg:gap-12">
+<div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 py-14 md:py-20">
+    <div class="flex flex-col lg:flex-row gap-10 lg:gap-14">
         <!-- Content Column -->
-        <div class="w-full max-w-3xl">
-            <div class="content-area bg-white rounded-2xl border border-slate-100 p-6 sm:p-8 md:p-10 shadow-sm">
+        <div class="w-full max-w-4xl">
+            <div class="content-area">
                 <p>This page contains information about our scholarship recipients and how it relates to our mission of serving the community through social development programs.</p>
 <p>For more information about our programs and services, please visit our other pages or <a href="/contact/">contact us</a> directly.</p>
 
@@ -304,18 +303,22 @@
     
 </div>
 
-<!-- CTA Banner -->
-<section class="py-16 md:py-20 bg-primary-600">
-    <div class="max-w-3xl mx-auto px-6 sm:px-8 text-center">
-        <h2 class="font-heading text-2xl md:text-3xl font-extrabold text-white mb-4">Want to Make a Difference?</h2>
-        <p class="text-primary-200 mb-8 text-base max-w-xl mx-auto leading-relaxed">Your support can transform lives. Join us in creating positive change in communities across India.</p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/support/" class="inline-flex items-center justify-center px-8 py-3.5 bg-accent-500 text-white rounded-full font-bold text-base hover:bg-accent-600 transition-colors shadow-lg shadow-accent-500/30">
-                <i class="fa-solid fa-hand-holding-heart mr-2"></i> Support Us
-            </a>
-            <a href="/contact/" class="inline-flex items-center justify-center px-8 py-3.5 bg-white/15 border border-white/20 text-white rounded-full font-semibold text-base hover:bg-white/25 transition-all">
-                <i class="fa-solid fa-envelope mr-2 opacity-70"></i> Contact Us
-            </a>
+<!-- CTA Banner — matches home "Join Us" bar -->
+<section class="py-14 md:py-16 bg-primary-600">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+                <h2 class="font-heading text-2xl md:text-3xl font-black text-white text-center md:text-left">Want to Make a Difference?</h2>
+                <p class="text-primary-200 text-sm mt-2 text-center md:text-left max-w-lg">Your support can transform lives. Join us in creating positive change.</p>
+            </div>
+            <div class="flex flex-wrap items-center gap-3">
+                <a href="/support/" class="inline-flex items-center px-7 py-3.5 bg-accent-500 text-white rounded-full font-bold text-sm hover:bg-accent-600 transition-colors shadow-lg shadow-accent-500/30">
+                    <i class="fa-solid fa-hand-holding-heart mr-2"></i> Support Us
+                </a>
+                <a href="/contact/" class="inline-flex items-center px-7 py-3.5 bg-white/15 border border-white/20 text-white rounded-full font-semibold text-sm hover:bg-white/25 transition-all">
+                    <i class="fa-solid fa-envelope mr-2 opacity-70"></i> Contact Us
+                </a>
+            </div>
         </div>
     </div>
 </section>
@@ -397,7 +400,11 @@
                     </li>
                     <li class="flex items-center gap-3">
                         <i class="fa-solid fa-phone text-xs text-primary-400 w-4 text-center flex-shrink-0"></i>
-                        <a href="tel:+91 9884204493" class="text-sm hover:text-white transition-colors">+91 9884204493</a>
+                        <a href="tel:+919600037927" class="text-sm hover:text-white transition-colors">+91 9600037927</a>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fa-brands fa-whatsapp text-xs text-primary-400 w-4 text-center flex-shrink-0"></i>
+                        <a href="https://wa.me/919884204493" class="text-sm hover:text-white transition-colors">+91 9884204493</a>
                     </li>
                     <li class="flex items-center gap-3">
                         <i class="fa-solid fa-envelope text-xs text-primary-400 w-4 text-center flex-shrink-0"></i>
