@@ -31,11 +31,11 @@
     </script>
     <style>
         .navlogo { background-image:url('/img/images2/premalaya-logo-square.svg'); background-size:cover; background-repeat:no-repeat; background-position:center; width:44px; height:44px; border-radius:50%; }
-        @media(min-width:768px) { .navlogo { width:50px; height:50px; } }
+        @media(min-width:768px) { .navlogo { width:75px; height:75px; } }
 
-        @keyframes kenBurns { 0% { transform:scale(1); } 100% { transform:scale(1.08); } }
+        @keyframes kenBurns { 0% { transform:scale(1); } 100% { transform:scale(1.06); } }
         .swiper-slide-active .hero-img,
-        .swiper-slide-duplicate-active .hero-img { animation:kenBurns 50s ease-out forwards; }
+        .swiper-slide-duplicate-active .hero-img { animation:kenBurns 18s ease-out forwards; }
 
         .hero-carousel .swiper-button-next,
         .hero-carousel .swiper-button-prev {
@@ -86,13 +86,12 @@
     <!-- Navigation — FA-style thin clean header -->
 <nav class="bg-white sticky top-0 z-50" style="box-shadow:0 1px 3px rgba(0,0,0,0.06);">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-[56px] lg:h-[60px]">
+        <div class="flex items-center justify-between h-[64px] lg:h-[96px]">
             <!-- Logo -->
             <a href="/" class="flex-shrink-0 flex items-center gap-2.5" aria-label="Home">
                 <div class="navlogo flex-shrink-0"></div>
                 <div class="flex flex-col leading-none">
-                    <span class="font-heading text-primary-500 font-black text-[13px] sm:text-[14px] lg:text-[15px] whitespace-nowrap tracking-tight uppercase">Premalaya</span>
-                    <span class="font-heading text-slate-400 font-medium text-[8px] sm:text-[9px] whitespace-nowrap tracking-[0.08em] uppercase">Social Development Society</span>
+                    <span class="font-heading text-primary-500 font-black text-xs sm:text-lg lg:text-2xl tracking-wide uppercase" style="word-spacing:0.15em;">Premalaya Social Development Society</span>
                 </div>
             </a>
 
@@ -163,27 +162,10 @@
                 
             </div>
 
-            <!-- Mobile: hamburger + donate button -->
-            <div class="flex items-center gap-2 lg:hidden">
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                <a href="/support/" class="px-4 py-2 text-xs font-bold text-white bg-accent-500 rounded-lg hover:bg-accent-600 transition-colors">
-                    Support Us
-                </a>
-                
-                
-                <button id="mobile-menu-btn" class="w-10 h-10 flex items-center justify-center rounded-lg text-slate-700 hover:text-primary-500 hover:bg-gray-50 transition-colors" aria-label="Open menu">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
-                </button>
-            </div>
+            <!-- Mobile: hamburger only -->
+            <button id="mobile-menu-btn" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg text-slate-700 hover:text-primary-500 hover:bg-gray-50 transition-colors" aria-label="Open menu">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
         </div>
     </div>
 </nav>
@@ -330,17 +312,19 @@
 
             <div class="absolute inset-0 z-10 flex items-center pointer-events-none">
                 <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 w-full">
-                    <div class="max-w-xl lg:max-w-2xl pointer-events-auto">
-                        <p class="font-heading text-accent-400 text-lg sm:text-xl font-semibold mb-2 italic">Since 1994,</p>
-                        <h1 class="font-heading text-white text-[2.5rem] sm:text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] font-black leading-[1.05] tracking-tight">
-                            We Can<br>Transform<br>Lives
+                    <div class="pointer-events-auto">
+                        <p class="font-heading text-accent-400 text-lg sm:text-xl font-semibold mb-3 italic">Since 1994,</p>
+                        <h1 class="font-heading text-white text-[2rem] sm:text-[2.75rem] md:text-[3.5rem] lg:text-[4.25rem] font-black leading-[1.1] tracking-tight">
+                            Empowering Communities.<br>
+                            <span class="text-accent-400">Transforming Lives.</span><br>
+                            Building Hope.
                         </h1>
-                        <p class="mt-6 text-white/75 text-base sm:text-lg leading-relaxed max-w-md">
+                        <p class="mt-6 text-white/75 text-base sm:text-lg leading-relaxed max-w-xl">
                             Premalaya Social Development Society works for the well-being of downtrodden and vulnerable sections in Tiruvallur, Chennai Districts of Tamilnadu and in...
                         </p>
                         <a href="/support/" class="inline-flex items-center mt-8 px-8 py-4 bg-accent-500 text-white rounded-full text-base font-bold hover:bg-accent-600 transition-colors shadow-lg shadow-accent-500/30">
                             Support Our Mission
-                            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
                         </a>
                     </div>
                 </div>
@@ -348,100 +332,7 @@
         </div>
     </section>
 
-    <!-- ═══════════ 2. MAKE A DIFFERENCE — FA-style icon action cards ═══════════ -->
-    <section class="py-20 md:py-28 bg-white" data-reveal>
-        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
-            <div class="mb-12 md:mb-16">
-                <h2 class="font-heading text-3xl md:text-4xl font-black text-slate-900 leading-tight">Make a Difference</h2>
-                <p class="mt-3 text-slate-500 text-base sm:text-lg max-w-xl">Together we can transform communities when we all work together.</p>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-                <div class="group" data-reveal data-reveal-delay="1">
-                    <div class="w-16 h-16 rounded-2xl bg-accent-100 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-hand-holding-heart text-accent-500 text-2xl"></i>
-                    </div>
-                    <h3 class="font-heading font-bold text-xl text-slate-900 mb-2">Donate</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed mb-4">Every contribution directly supports education, healthcare, and community development programs.</p>
-                    <a href="/support/" class="inline-flex items-center gap-2 text-accent-500 font-bold text-sm hover:gap-3 transition-all">
-                        Give Now <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                    </a>
-                </div>
-                <div class="group" data-reveal data-reveal-delay="2">
-                    <div class="w-16 h-16 rounded-2xl bg-primary-50 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-bullhorn text-primary-500 text-2xl"></i>
-                    </div>
-                    <h3 class="font-heading font-bold text-xl text-slate-900 mb-2">Advocate</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed mb-4">Help raise awareness about the needs of vulnerable communities and the impact of social development.</p>
-                    <a href="/about/" class="inline-flex items-center gap-2 text-primary-500 font-bold text-sm hover:gap-3 transition-all">
-                        Speak Out <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                    </a>
-                </div>
-                <div class="group" data-reveal data-reveal-delay="3">
-                    <div class="w-16 h-16 rounded-2xl bg-emerald-50 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-people-group text-emerald-600 text-2xl"></i>
-                    </div>
-                    <h3 class="font-heading font-bold text-xl text-slate-900 mb-2">Volunteer</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed mb-4">Join our team on the ground — teaching, organizing, and building capacity in the communities we serve.</p>
-                    <a href="/contact/" class="inline-flex items-center gap-2 text-emerald-600 font-bold text-sm hover:gap-3 transition-all">
-                        Learn More <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                    </a>
-                </div>
-                <div class="group" data-reveal data-reveal-delay="4">
-                    <div class="w-16 h-16 rounded-2xl bg-sky-50 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-share-nodes text-sky-600 text-2xl"></i>
-                    </div>
-                    <h3 class="font-heading font-bold text-xl text-slate-900 mb-2">Spread the Word</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed mb-4">Share our mission with your community and help us reach more people who need support.</p>
-                    <a href="/about/" class="inline-flex items-center gap-2 text-sky-600 font-bold text-sm hover:gap-3 transition-all">
-                        Get Started <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ═══════════ 3. BOLD STATEMENT — FA "Hunger is a crisis" style ═══════════ -->
-    <section class="py-20 md:py-28 bg-slate-50 border-y border-slate-100">
-        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
-            <div class="flex flex-col lg:flex-row lg:items-center gap-12 lg:gap-20" data-reveal>
-                <div class="lg:w-1/2">
-                    <h2 class="font-heading text-[2rem] sm:text-[2.5rem] md:text-[3rem] font-black text-slate-900 leading-[1.1]">
-                        Serving the<br>vulnerable<br>since 1994.
-                    </h2>
-                    <p class="mt-6 text-slate-500 text-base sm:text-lg leading-relaxed max-w-lg">
-                        Thousands of families across Tamil Nadu and Andhra Pradesh lack access to education, healthcare, and basic opportunities. Together, we can meet this moment.
-                    </p>
-                    <a href="/about/" class="inline-flex items-center gap-2 mt-6 text-primary-500 font-bold text-base hover:gap-3 transition-all">
-                        What We Do <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                    </a>
-                </div>
-                <div class="lg:w-1/2">
-                    
-                    <div class="grid grid-cols-2 gap-x-8 gap-y-10">
-                        
-                        <div>
-                            <div class="font-heading text-4xl sm:text-5xl font-black text-primary-500 leading-none">6+</div>
-                            <p class="mt-2 text-slate-600 text-sm font-medium">Active Programs</p>
-                        </div>
-                        
-                        <div>
-                            <div class="font-heading text-4xl sm:text-5xl font-black text-primary-500 leading-none">1000+</div>
-                            <p class="mt-2 text-slate-600 text-sm font-medium">Lives Impacted</p>
-                        </div>
-                        
-                        <div>
-                            <div class="font-heading text-4xl sm:text-5xl font-black text-primary-500 leading-none">30+</div>
-                            <p class="mt-2 text-slate-600 text-sm font-medium">Years of Service</p>
-                        </div>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ═══════════ 4. "WE UNITE COMMUNITIES" — FA alternating rows with labels ═══════════ -->
+    <!-- ═══════════ 2. "WE UNITE COMMUNITIES" — FA alternating rows with labels ═══════════ -->
     <section class="py-20 md:py-28 bg-white">
         <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
             <div class="mb-14 md:mb-20" data-reveal>
@@ -460,7 +351,7 @@
                         <h3 class="font-heading text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight mb-4">About Rev. A. Isaiah</h3>
                         <p class="text-slate-500 text-base leading-relaxed mb-6">Founder &amp; President of Premalaya Social Development Society, leading with compassion and dedication.</p>
                         <a href="/founder/" class="inline-flex items-center gap-2 text-primary-500 font-bold text-sm hover:gap-3 transition-all">
-                            Learn more <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                            Learn more <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
                         </a>
                     </div>
                     <div>
@@ -480,7 +371,7 @@
                         <h3 class="font-heading text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight mb-4">About Premalaya</h3>
                         <p class="text-slate-500 text-base leading-relaxed mb-6">Details about Premalaya Social Development Society and our commitment to community development.</p>
                         <a href="/about/" class="inline-flex items-center gap-2 text-primary-500 font-bold text-sm hover:gap-3 transition-all">
-                            Learn more <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                            Learn more <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
                         </a>
                     </div>
                     <div class="md:order-1">
@@ -500,7 +391,7 @@
                         <h3 class="font-heading text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight mb-4">Mission &amp; Vision</h3>
                         <p class="text-slate-500 text-base leading-relaxed mb-6">Share love, by caring for the poor, needy and the helpless through our dedicated mission.</p>
                         <a href="/vision-mission/" class="inline-flex items-center gap-2 text-primary-500 font-bold text-sm hover:gap-3 transition-all">
-                            Learn more <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                            Learn more <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
                         </a>
                     </div>
                     <div>
@@ -577,7 +468,7 @@
                         <h3 class="font-heading font-bold text-lg text-slate-900 mb-2 group-hover:text-primary-500 transition-colors">Women Empowerment</h3>
                         <p class="text-slate-500 text-sm leading-relaxed line-clamp-2 mb-4">Premalaya equips women with practical skills such as tailoring, computer training, and other livelihood-oriented activities to promote economic independence.</p>
                         <span class="inline-flex items-center gap-2 text-primary-500 text-sm font-bold group-hover:gap-3 transition-all">
-                            Learn More <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                            Learn More <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
                         </span>
                     </div>
                 </a>
@@ -591,7 +482,7 @@
                         <h3 class="font-heading font-bold text-lg text-slate-900 mb-2 group-hover:text-primary-500 transition-colors">Children Home</h3>
                         <p class="text-slate-500 text-sm leading-relaxed line-clamp-2 mb-4">Premalaya Children has taken care of orphans and semi-orphans, providing them with care, education and hope.</p>
                         <span class="inline-flex items-center gap-2 text-primary-500 text-sm font-bold group-hover:gap-3 transition-all">
-                            Learn More <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                            Learn More <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
                         </span>
                     </div>
                 </a>
@@ -605,7 +496,7 @@
                         <h3 class="font-heading font-bold text-lg text-slate-900 mb-2 group-hover:text-primary-500 transition-colors">Health Care</h3>
                         <p class="text-slate-500 text-sm leading-relaxed line-clamp-2 mb-4">Premalaya provides basic health care services for the benefit of society, ensuring wellness for all.</p>
                         <span class="inline-flex items-center gap-2 text-primary-500 text-sm font-bold group-hover:gap-3 transition-all">
-                            Learn More <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                            Learn More <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
                         </span>
                     </div>
                 </a>
@@ -619,7 +510,7 @@
                         <h3 class="font-heading font-bold text-lg text-slate-900 mb-2 group-hover:text-primary-500 transition-colors">Relief Operations</h3>
                         <p class="text-slate-500 text-sm leading-relaxed line-clamp-2 mb-4">In times of natural calamities, Premalaya has provided manpower and material support to affected communities.</p>
                         <span class="inline-flex items-center gap-2 text-primary-500 text-sm font-bold group-hover:gap-3 transition-all">
-                            Learn More <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                            Learn More <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
                         </span>
                     </div>
                 </a>
@@ -633,7 +524,7 @@
                         <h3 class="font-heading font-bold text-lg text-slate-900 mb-2 group-hover:text-primary-500 transition-colors">Educational Activities</h3>
                         <p class="text-slate-500 text-sm leading-relaxed line-clamp-2 mb-4">Premalaya has been instrumental in sending a number of children to school, ensuring access to quality education.</p>
                         <span class="inline-flex items-center gap-2 text-primary-500 text-sm font-bold group-hover:gap-3 transition-all">
-                            Learn More <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                            Learn More <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
                         </span>
                     </div>
                 </a>
@@ -647,7 +538,7 @@
                         <h3 class="font-heading font-bold text-lg text-slate-900 mb-2 group-hover:text-primary-500 transition-colors">Medical Camps</h3>
                         <p class="text-slate-500 text-sm leading-relaxed line-clamp-2 mb-4">Premalaya conducts periodical medical camps in villages, slums and cities, bringing healthcare to those who need it most.</p>
                         <span class="inline-flex items-center gap-2 text-primary-500 text-sm font-bold group-hover:gap-3 transition-all">
-                            Learn More <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                            Learn More <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
                         </span>
                     </div>
                 </a>
@@ -656,53 +547,89 @@
         </div>
     </section>
 
-    <!-- ═══════════ 7. CTA / SUPPORT — FA "$1 = 10 Meals" style ═══════════ -->
+    <!-- ═══════════ MAKE A DIFFERENCE / SUPPORT ═══════════ -->
     <section class="py-20 md:py-28 bg-slate-50 border-t border-slate-100">
         <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
-            <div class="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center" data-reveal>
-                <div class="lg:w-1/2">
-                    <p class="font-heading text-xs font-bold tracking-[0.2em] uppercase text-accent-500 mb-3">Give Today</p>
-                    <h2 class="font-heading text-3xl md:text-4xl font-black text-slate-900 leading-tight mb-6">Your Support<br>Changes Lives</h2>
+            <div class="text-center mb-14 md:mb-16" data-reveal>
+                <p class="font-heading text-xs font-bold tracking-[0.2em] uppercase text-accent-500 mb-3">Get Involved</p>
+                <h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 leading-tight">Make a Difference</h2>
+                <p class="mt-4 text-slate-500 text-base sm:text-lg max-w-2xl mx-auto">Your support changes lives. Together we can transform communities when we all work together.</p>
+            </div>
 
-                    <div class="flex flex-wrap gap-4 mb-8">
-                        
-                        
-                        <div class="flex items-center gap-2.5 bg-white border border-slate-200 rounded-full px-4 py-2 shadow-sm">
-                            <i class="fa-solid fa-building-columns text-primary-500 text-xs"></i>
-                            <span class="text-slate-700 text-sm font-medium">Registered Society</span>
-                        </div>
-                        
-                        <div class="flex items-center gap-2.5 bg-white border border-slate-200 rounded-full px-4 py-2 shadow-sm">
-                            <i class="fa-solid fa-receipt text-primary-500 text-xs"></i>
-                            <span class="text-slate-700 text-sm font-medium">80G Tax Exemption</span>
-                        </div>
-                        
-                        <div class="flex items-center gap-2.5 bg-white border border-slate-200 rounded-full px-4 py-2 shadow-sm">
-                            <i class="fa-solid fa-globe text-primary-500 text-xs"></i>
-                            <span class="text-slate-700 text-sm font-medium">FCRA Certified</span>
-                        </div>
-                        
-                        
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-16">
+                <div class="group bg-white rounded-2xl p-6 border border-slate-100 hover:shadow-lg hover:border-slate-200 transition-all" data-reveal data-reveal-delay="1">
+                    <div class="w-14 h-14 rounded-2xl bg-accent-100 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-hand-holding-heart text-accent-500 text-xl"></i>
                     </div>
-
-                    <a href="/support/" class="inline-flex items-center px-8 py-4 bg-accent-500 text-white rounded-full text-base font-bold hover:bg-accent-600 transition-colors shadow-lg shadow-accent-500/30">
-                        <i class="fa-solid fa-hand-holding-heart mr-3"></i>
-                        Support Us
+                    <h3 class="font-heading font-bold text-lg text-slate-900 mb-2">Donate</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-4">Every contribution directly supports education, healthcare, and community development programs.</p>
+                    <a href="/support/" class="inline-flex items-center gap-2 text-accent-500 font-bold text-sm hover:gap-3 transition-all">
+                        Give Now <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
                     </a>
-                    <p class="mt-4 text-slate-400 text-xs">100% of donations go directly to programs and services.</p>
                 </div>
-                <div class="lg:w-1/2">
+                <div class="group bg-white rounded-2xl p-6 border border-slate-100 hover:shadow-lg hover:border-slate-200 transition-all" data-reveal data-reveal-delay="2">
+                    <div class="w-14 h-14 rounded-2xl bg-primary-50 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-bullhorn text-primary-500 text-xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-slate-900 mb-2">Advocate</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-4">Help raise awareness about the needs of vulnerable communities and the impact of social development.</p>
+                    <a href="/about/" class="inline-flex items-center gap-2 text-primary-500 font-bold text-sm hover:gap-3 transition-all">
+                        Speak Out <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+                <div class="group bg-white rounded-2xl p-6 border border-slate-100 hover:shadow-lg hover:border-slate-200 transition-all" data-reveal data-reveal-delay="3">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-50 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-people-group text-emerald-600 text-xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-slate-900 mb-2">Volunteer</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-4">Join our team on the ground — teaching, organizing, and building capacity in the communities we serve.</p>
+                    <a href="/contact/" class="inline-flex items-center gap-2 text-emerald-600 font-bold text-sm hover:gap-3 transition-all">
+                        Learn More <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+                <div class="group bg-white rounded-2xl p-6 border border-slate-100 hover:shadow-lg hover:border-slate-200 transition-all" data-reveal data-reveal-delay="4">
+                    <div class="w-14 h-14 rounded-2xl bg-sky-50 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-share-nodes text-sky-600 text-xl"></i>
+                    </div>
+                    <h3 class="font-heading font-bold text-lg text-slate-900 mb-2">Spread the Word</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-4">Share our mission with your community and help us reach more people who need support.</p>
+                    <a href="/about/" class="inline-flex items-center gap-2 text-sky-600 font-bold text-sm hover:gap-3 transition-all">
+                        Get Started <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-center" data-reveal>
+                <div class="flex flex-wrap justify-center gap-3 mb-8">
                     
-                    <div class="rounded-2xl overflow-hidden shadow-xl">
-                        <img src="/img/uploads/dsc_4067.jpg" alt="Support our mission" class="w-full aspect-[4/3] object-cover" loading="lazy">
+                    
+                    <div class="flex items-center gap-2.5 bg-white border border-slate-200 rounded-full px-4 py-2 shadow-sm">
+                        <i class="fa-solid fa-building-columns text-primary-500 text-xs"></i>
+                        <span class="text-slate-700 text-sm font-medium">Registered Society</span>
                     </div>
                     
+                    <div class="flex items-center gap-2.5 bg-white border border-slate-200 rounded-full px-4 py-2 shadow-sm">
+                        <i class="fa-solid fa-receipt text-primary-500 text-xs"></i>
+                        <span class="text-slate-700 text-sm font-medium">80G Tax Exemption</span>
+                    </div>
+                    
+                    <div class="flex items-center gap-2.5 bg-white border border-slate-200 rounded-full px-4 py-2 shadow-sm">
+                        <i class="fa-solid fa-globe text-primary-500 text-xs"></i>
+                        <span class="text-slate-700 text-sm font-medium">FCRA Certified</span>
+                    </div>
+                    
+                    
                 </div>
+                <a href="/support/" class="inline-flex items-center px-10 py-4 bg-accent-500 text-white rounded-full text-lg font-bold hover:bg-accent-600 transition-colors shadow-lg shadow-accent-500/30">
+                    <i class="fa-solid fa-hand-holding-heart mr-3"></i>
+                    Support Us
+                </a>
+                <p class="mt-4 text-slate-400 text-xs">100% of donations go directly to programs and services.</p>
             </div>
         </div>
     </section>
 
-    <!-- ═══════════ 8. LOCATION MAP ═══════════ -->
+    <!-- ═══════════ LOCATION MAP ═══════════ -->
     <section class="py-20 md:py-28 bg-white">
         <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
             <div class="mb-12" data-reveal>
@@ -876,7 +803,9 @@
                 });
             });
 
-            var autoplayDuration = 8000;
+            var autoplayDuration = 25000;
+            var autoSpeed = 2000;
+            var clickSpeed = 400;
             var progressBar = document.getElementById('hero-progress');
 
             function startProgress() {
@@ -891,18 +820,25 @@
                 });
             }
 
-            new Swiper('.gallery-top', {
+            var heroSwiper = new Swiper('.gallery-top', {
                 navigation: { nextEl: '.hero-carousel .swiper-button-next', prevEl: '.hero-carousel .swiper-button-prev' },
                 pagination: { el: '.hero-dots', clickable: true },
                 loop: true,
                 effect: 'fade',
                 fadeEffect: { crossFade: true },
                 autoplay: { delay: autoplayDuration, disableOnInteraction: false, pauseOnMouseEnter: true },
-                speed: 1200,
+                speed: autoSpeed,
                 grabCursor: true,
                 on: { slideChangeTransitionEnd: startProgress }
             });
             startProgress();
+
+            document.querySelectorAll('.hero-carousel .swiper-button-next, .hero-carousel .swiper-button-prev, .hero-dots').forEach(function(el) {
+                el.addEventListener('click', function() {
+                    heroSwiper.params.speed = clickSpeed;
+                    setTimeout(function() { heroSwiper.params.speed = autoSpeed; }, clickSpeed + 50);
+                });
+            });
         });
     </script>
 

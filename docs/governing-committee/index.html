@@ -30,7 +30,7 @@
     </script>
     <style>
         .navlogo { background-image:url('/img/images2/premalaya-logo-square.svg'); background-size:cover; background-repeat:no-repeat; background-position:center; width:44px; height:44px; border-radius:50%; }
-        @media(min-width:768px) { .navlogo { width:50px; height:50px; } }
+        @media(min-width:768px) { .navlogo { width:75px; height:75px; } }
 
         .content-area h2 { font-family:'Outfit',system-ui,sans-serif; font-size:1.5rem; font-weight:700; color:#1e293b; margin:2rem 0 0.75rem; padding-bottom:0.5rem; border-bottom:1px solid #f1f5f9; }
         .content-area h3 { font-family:'Outfit',system-ui,sans-serif; font-size:1.25rem; font-weight:600; color:#334155; margin:1.5rem 0 0.5rem; }
@@ -63,13 +63,12 @@
     <!-- Navigation — FA-style thin clean header -->
 <nav class="bg-white sticky top-0 z-50" style="box-shadow:0 1px 3px rgba(0,0,0,0.06);">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-[56px] lg:h-[60px]">
+        <div class="flex items-center justify-between h-[64px] lg:h-[96px]">
             <!-- Logo -->
             <a href="/" class="flex-shrink-0 flex items-center gap-2.5" aria-label="Home">
                 <div class="navlogo flex-shrink-0"></div>
                 <div class="flex flex-col leading-none">
-                    <span class="font-heading text-primary-500 font-black text-[13px] sm:text-[14px] lg:text-[15px] whitespace-nowrap tracking-tight uppercase">Premalaya</span>
-                    <span class="font-heading text-slate-400 font-medium text-[8px] sm:text-[9px] whitespace-nowrap tracking-[0.08em] uppercase">Social Development Society</span>
+                    <span class="font-heading text-primary-500 font-black text-xs sm:text-lg lg:text-2xl tracking-wide uppercase" style="word-spacing:0.15em;">Premalaya Social Development Society</span>
                 </div>
             </a>
 
@@ -140,27 +139,10 @@
                 
             </div>
 
-            <!-- Mobile: hamburger + donate button -->
-            <div class="flex items-center gap-2 lg:hidden">
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                <a href="/support/" class="px-4 py-2 text-xs font-bold text-white bg-accent-500 rounded-lg hover:bg-accent-600 transition-colors">
-                    Support Us
-                </a>
-                
-                
-                <button id="mobile-menu-btn" class="w-10 h-10 flex items-center justify-center rounded-lg text-slate-700 hover:text-primary-500 hover:bg-gray-50 transition-colors" aria-label="Open menu">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
-                </button>
-            </div>
+            <!-- Mobile: hamburger only -->
+            <button id="mobile-menu-btn" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg text-slate-700 hover:text-primary-500 hover:bg-gray-50 transition-colors" aria-label="Open menu">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
         </div>
     </div>
 </nav>
