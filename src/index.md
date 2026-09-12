@@ -28,7 +28,7 @@ projectCards:
     description: In times of natural calamities, Premalaya has provided manpower and
       material support to affected communities.
     link: /relief-operations/
-    imageFocus: center
+    imageFocus: top
   - image: /img/uploads/dsc_0193.jpg
     alt: Educational Activities
     title: Educational Activities
