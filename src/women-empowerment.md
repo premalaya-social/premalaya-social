@@ -3,9 +3,6 @@ layout: layouts/page.njk
 title: Women Empowerment
 lead: Our women ministry program is designed to make a positive impact in the
   community.
-bannerImage: /img/images2/inwomen.jpg
-bannerHeight: xtall
-bannerFocus: center-top
 sidebar: true
 sidebarInfo:
   title: Program Information
@@ -22,8 +19,20 @@ sidebarCta:
     serve.
   primaryButton: Donate Now
   secondaryButton: Learn More
+gallery:
+  - src: /img/images2/women/1.jpg
+    alt: Women empowerment 1
+  - src: /img/images2/women/2.jpg
+    alt: Women empowerment 2
+  - src: /img/images2/women/3.jpg
+    alt: Women empowerment 3
+  - src: /img/images2/women/4.jpg
+    alt: Women empowerment 4
 permalink: /women-empowerment/
 ---
+
+<img src="/img/images2/women/5.jpg" alt="Women Empowerment" style="width:100%;height:auto;display:block;margin:0 0 2rem;border-radius:1rem;box-shadow:0 10px 30px rgba(0,0,0,0.12);">
+
 ## Women Empowerment
 
 •      Formation of Self-Help Groups (SHG's).
