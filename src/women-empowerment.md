@@ -31,7 +31,7 @@ gallery:
 permalink: /women-empowerment/
 ---
 
-<img src="/img/images2/women/5.jpg" alt="Women Empowerment" style="width:100%;height:auto;display:block;margin:0 0 2rem;border-radius:1rem;box-shadow:0 10px 30px rgba(0,0,0,0.12);">
+<img src="/img/images2/women/5.jpg" alt="Women Empowerment" style="width:100%;height:auto;display:block;margin:-2.5rem auto 2rem;border-radius:1rem;box-shadow:0 10px 30px rgba(0,0,0,0.12);">
 
 ## Women Empowerment
 
