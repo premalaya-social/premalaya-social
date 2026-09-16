@@ -4,43 +4,41 @@ projectCards:
   - image: /img/images2/homewomen.jpg
     alt: Women Empowerment
     title: Women Empowerment
-    description: Premalaya equips women with practical skills such as tailoring,
-      computer training, and other livelihood-oriented activities to promote
-      economic independence.
+    description: Empowering women with skills like tailoring and computer
+      training for true economic independence.
     link: /women-empowerment/
     imageFocus: top
   - image: /img/images2/homechildren.jpg
     alt: Children Home
     title: Children Home
-    description: Premalaya Children has taken care of orphans and semi-orphans,
-      providing them with care, education and hope.
+    description: Caring for orphans and semi-orphans with love, education, and
+      hope.
     link: /children-home/
   - image: /img/uploads/dsc_0578.jpg
     alt: Health Care
     title: Health Care
-    description: Premalaya provides basic health care services for the benefit of
-      society, ensuring wellness for all.
+    description: Providing essential health care services that strengthen
+      community wellness.
     link: /health-care/
     imageFocus: center
   - image: /img/uploads/img_20200421_170957.jpg
     alt: Relief Operations
     title: Relief Operations
-    description: In times of natural calamities, Premalaya has provided manpower and
-      material support to affected communities.
+    description: Delivering manpower and material support to communities struck
+      by natural calamities.
     link: /relief-operations/
     imageFocus: top
   - image: /img/uploads/dsc_0193.jpg
     alt: Educational Activities
     title: Educational Activities
-    description: Premalaya has been instrumental in sending a number of children to
-      school, ensuring access to quality education.
+    description: Helping children access quality education and stay in school.
     link: /educational-activities/
     imageFocus: center
   - image: /img/uploads/dsc_0588.jpg
     alt: Medical Camps
     title: Medical Camps
-    description: Premalaya conducts periodical medical camps in villages, slums and
-      cities, bringing healthcare to those who need it most.
+    description: Bringing regular medical camps and healthcare to villages,
+      slums, and cities.
     link: /medical-camps/
     imageFocus: center
 permalink: /
