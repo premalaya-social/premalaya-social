@@ -90,9 +90,10 @@
         <div class="hero-carousel relative overflow-hidden" style="min-height:560px; height:80vh; max-height:780px;">
             <div class="swiper-container gallery-top w-full h-full">
                 <div class="swiper-wrapper">
+{% set buttonColorMap = { "primary":"bg-primary-500 hover:bg-primary-600 shadow-primary-500/30", "secondary":"bg-accent-500 hover:bg-accent-600 shadow-accent-500/30", "purple":"bg-purple-600 hover:bg-purple-700 shadow-purple-600/30", "green":"bg-emerald-600 hover:bg-emerald-700 shadow-emerald-600/30", "red":"bg-red-500 hover:bg-red-600 shadow-red-500/30" } %}
                     {% for slide in heroSlides %}
-                    <div class="swiper-slide relative overflow-hidden">
-                        {% set slideFocusMap = { "center":"object-center", "top":"object-top", "bottom":"object-bottom", "left":"object-left", "right":"object-right" } %}
+                    {% set slideFocusMap = { "center":"object-center", "top":"object-top", "bottom":"object-bottom", "left":"object-left", "right":"object-right" } %}
+                    <div class="swiper-slide relative overflow-hidden" data-subtext="{{ slide.subtext }}" data-cta-text="{{ slide.buttonText }}" data-cta-link="{{ slide.link }}" data-cta-class="{{ buttonColorMap[slide.buttonColor] or 'bg-accent-500 hover:bg-accent-600 shadow-accent-500/30' }}">
                         <img src="{{ slide.image }}" alt="{{ slide.alt }}" class="hero-img w-full h-full object-cover {{ slideFocusMap[slide.imageFocus] or 'object-center' }}" loading="{% if loop.index0 == 0 %}eager{% else %}lazy{% endif %}">
                         <div class="absolute inset-0 bg-gradient-to-r from-primary-900/80 via-primary-900/50 to-transparent"></div>
                     </div>
@@ -113,13 +114,15 @@
                             <span class="text-accent-400">Transforming Lives.</span><br>
                             Building Hope.
                         </h1>
-                        <p class="mt-6 text-white/75 text-base sm:text-lg leading-relaxed max-w-xl">
-                            {{ site.description | truncate(160) }}
-                        </p>
-                        <a href="/support/" class="inline-flex items-center mt-8 px-8 py-4 bg-accent-500 text-white rounded-full text-base font-bold hover:bg-accent-600 transition-colors shadow-lg shadow-accent-500/30">
-                            Support Our Mission
-                            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
-                        </a>
+                        <p id="hero-subtext" class="mt-6 text-white/85 text-base sm:text-lg leading-relaxed max-w-xl">Caring for the community with compassion and dedication</p>
+                        <div class="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                            <a id="hero-cta" href="/about/" class="inline-flex items-center px-8 py-4 bg-primary-500 hover:bg-primary-600 text-white rounded-full text-base font-bold transition-colors shadow-lg shadow-primary-500/30">
+                                Learn More <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                            </a>
+                            <a href="/support/" class="inline-flex items-center gap-2 text-white/85 hover:text-white font-semibold text-sm transition-colors">
+                                <i class="fa-solid fa-hand-holding-heart"></i> Support Our Mission
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -190,15 +193,16 @@
                     <p class="font-heading text-xs font-bold tracking-[0.2em] uppercase text-accent-400 mb-3">Our Impact</p>
                     <h2 class="font-heading text-3xl md:text-4xl font-black text-white leading-tight mb-6">Our resolve to serve is stronger than ever.</h2>
                     <blockquote class="border-l-4 border-accent-500 pl-5 py-2">
-                        <p class="text-white/80 text-base italic leading-relaxed">"{{ site.description | truncate(140) }}"</p>
+                        <p class="text-white/90 text-base italic leading-relaxed">"Share love, by caring for the poor, needy and the helpless."</p>
+                        <footer class="mt-2 text-accent-400 text-sm font-semibold">Rev. Dr. A. Isaiah, Founder</footer>
                     </blockquote>
                 </div>
                 <div class="lg:w-1/2">
                     {% if impactStats and impactStats | length %}
-                    <div class="grid grid-cols-2 gap-8">
+                    <div class="grid grid-cols-2 gap-8 {% if impactStats | length == 3 %}sm:grid-cols-3{% elif impactStats | length == 4 %}sm:grid-cols-2 lg:grid-cols-4{% endif %}">
                         {% for stat in impactStats %}
                         <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                            <div class="font-heading text-3xl sm:text-4xl font-black text-white leading-none mb-1">{{ stat.number }}</div>
+                            <div class="font-heading text-3xl sm:text-4xl font-black text-white leading-none mb-1" {% if stat.number | replace('+', '') | int %}data-count="{{ stat.number | replace('+', '') | int }}" data-suffix="{{ '+' if '+' in stat.number else '' }}" data-format="{{ 'comma' if stat.number | replace('+', '') | int >= 1000 else 'plain' }}"{% endif %}>{{ stat.number }}</div>
                             <p class="text-sm text-white/60 font-medium">{{ stat.label }}</p>
                         </div>
                         {% endfor %}
@@ -232,7 +236,7 @@
                 <h2 class="font-heading text-3xl md:text-4xl font-black text-slate-900 leading-tight">How We Serve</h2>
                 <p class="mt-3 text-slate-500 text-base sm:text-lg max-w-2xl">We are committed to creating lasting change through dedicated programs in education, health, and community development.</p>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
                 {% for card in projectCards %}
                 {% set projFocusMap = { "center":"object-center", "top":"object-top", "bottom":"object-bottom" } %}
                 <a href="{{ card.link }}" class="group block rounded-2xl overflow-hidden border border-slate-100 hover:shadow-xl hover:border-slate-200 transition-all duration-300 bg-white" data-reveal data-reveal-delay="{{ (loop.index0 % 3) + 1 }}">
@@ -455,6 +459,24 @@
             });
             startProgress();
 
+            (function() {
+                var slides = heroSwiper.slides;
+                var heroSub = document.getElementById('hero-subtext');
+                var heroCta = document.getElementById('hero-cta');
+                if (!heroCta) return;
+                var arrow = '<svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>';
+                function applyHeroContent(i) {
+                    var s = slides[i];
+                    if (!s) return;
+                    if (heroSub) heroSub.textContent = s.getAttribute('data-subtext') || '';
+                    heroCta.setAttribute('href', s.getAttribute('data-cta-link') || '/');
+                    heroCta.innerHTML = (s.getAttribute('data-cta-text') || 'Learn More') + ' ' + arrow;
+                    heroCta.className = 'inline-flex items-center px-8 py-4 text-white rounded-full text-base font-bold transition-colors shadow-lg ' + (s.getAttribute('data-cta-class') || 'bg-accent-500 hover:bg-accent-600 shadow-accent-500/30');
+                }
+                heroSwiper.on('slideChangeTransitionEnd', function() { applyHeroContent(heroSwiper.activeIndex); });
+                applyHeroContent(heroSwiper.activeIndex || 0);
+            })();
+
             document.querySelectorAll('.hero-carousel .swiper-button-next, .hero-carousel .swiper-button-prev, .hero-dots').forEach(function(el) {
                 el.addEventListener('click', function() {
                     heroSwiper.params.speed = clickSpeed;
@@ -473,6 +495,42 @@
         var origRemove = overlay.classList.remove.bind(overlay.classList);
         Object.defineProperty(overlay.classList, 'add', { value: function(c) { origAdd(c); if (c === 'active' && bg) bg.style.opacity = '1'; } });
         Object.defineProperty(overlay.classList, 'remove', { value: function(c) { origRemove(c); if (c === 'active' && bg) bg.style.opacity = '0'; } });
+    })();
+    </script>
+
+    <script>
+    (function() {
+        var els = document.querySelectorAll('[data-count]');
+        if (!els.length) return;
+        var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        function renderValue(el, val) {
+            var out = (el.getAttribute('data-format') === 'comma') ? val.toLocaleString('en-IN') : val.toLocaleString('en-US');
+            el.textContent = out + (el.getAttribute('data-suffix') || '');
+        }
+        function animate(el) {
+            var target = parseInt(el.getAttribute('data-count'), 10);
+            if (isNaN(target)) return;
+            if (reduceMotion) { renderValue(el, target); return; }
+            var dur = 1500, start = null;
+            function step(ts) {
+                if (!start) start = ts;
+                var p = Math.min((ts - start) / dur, 1);
+                var eased = 1 - Math.pow(1 - p, 3);
+                renderValue(el, target * eased);
+                if (p < 1) requestAnimationFrame(step);
+            }
+            requestAnimationFrame(step);
+        }
+        if ('IntersectionObserver' in window) {
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) { animate(entry.target); observer.unobserve(entry.target); }
+                });
+            }, { threshold: 0.4 });
+            els.forEach(function(el) { observer.observe(el); });
+        } else {
+            els.forEach(animate);
+        }
     })();
     </script>
 

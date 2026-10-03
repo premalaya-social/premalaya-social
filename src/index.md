@@ -41,6 +41,19 @@ projectCards:
       slums, and cities.
     link: /medical-camps/
     imageFocus: center
+  - image: /img/images2/inlibrary.jpg
+    alt: Shankar Narayan Library
+    title: Shankar Narayan Library
+    description: A community library nurturing knowledge, reading habits, and
+      learning for all.
+    link: /shankar-narayan-library/
+  - image: /img/images2/savitriheader.png
+    alt: Savitribai Scholarships
+    title: Savitribai Scholarships
+    description: Scholarships that help deserving students stay in school and
+      pursue their dreams.
+    link: /savitribai-scholarships/
+    imageFocus: top
 permalink: /
 title: Premalaya Social Development Society
 description: "Premalaya Social Development Society (PSDS), meaning Temple of
@@ -118,7 +131,7 @@ aboutCards:
 impactStats:
   - number: 6+
     label: Active Programs
-  - number: 10000+
+  - number: 15000+
     label: Lives Impacted
   - number: 30+
     label: Years of Service
