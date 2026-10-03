@@ -107,6 +107,15 @@ heroSlides:
     image: /img/uploads/dsc_0690.jpg
     imageFocus: center
     buttonText: Medical Services →
+  - heading: Relief Operations
+    badge: Emergency Response
+    alt: Relief Operations
+    subtext: Delivering manpower and material support to communities struck by calamities
+    buttonColor: secondary
+    link: /relief-operations/
+    image: /img/images2/reliefwork1.jpg
+    imageFocus: center
+    buttonText: Relief Programs →
 aboutCards:
   - image: /img/uploads/isaiah-individual.jpg
     alt: Rev. A. Isaiah
