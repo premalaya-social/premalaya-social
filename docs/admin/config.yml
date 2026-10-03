@@ -463,7 +463,7 @@ collections:
           - { label: "Body Content", name: "body", widget: "markdown" }
 
       - name: "children-home"
-        label: "Children's Home"
+        label: "Children Home"
         file: "src/children-home.md"
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.njk" }

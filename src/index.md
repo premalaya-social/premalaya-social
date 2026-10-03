@@ -89,15 +89,15 @@ heroSlides:
     image: /img/uploads/dsc_4067.jpg
     imageFocus: top
     buttonText: Meet Our Founder →
-  - heading: Children's Home
-    badge: Children's Care
-    alt: Children's Home
+  - heading: Children Home
+    badge: Children Care
+    alt: Children Home
     subtext: Caring for our future, nurturing young minds
     buttonColor: green
     link: /children-home/
     image: /img/images2/home3.jpg
     imageFocus: center
-    buttonText: Children's Programs →
+    buttonText: Children Programs →
   - heading: Medical Camps
     badge: Healthcare Services
     alt: Medical Camps

@@ -1,6 +1,6 @@
 ---
 layout: layouts/page.njk
-title: "Children's Home"
+title: "Children Home"
 lead: Our children ministry program is designed to make a positive impact in the community.
 bannerImage: /img/images2/inchildren.jpg
 sidebar: true
