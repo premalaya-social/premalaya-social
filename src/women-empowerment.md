@@ -35,12 +35,10 @@ permalink: /women-empowerment/
 
 ## Women Empowerment
 
-•      Formation of Self-Help Groups (SHG's).
-
-•      Free Tailoring training centers.
-
-•      Free distribution of sewing machines.
-
-•      Monthly groceries and clothing support for widows and vulnerable women, helping them live with dignity. 
-
-•      Awareness programs on women’s rights.
+<ul style="color:#1e293b;margin:0.5rem 0 1.25rem 1.25rem;">
+<li style="margin-bottom:0.375rem;line-height:1.6;">Formation of Self-Help Groups (SHG's).</li>
+<li style="margin-bottom:0.375rem;line-height:1.6;">Free Tailoring training centers.</li>
+<li style="margin-bottom:0.375rem;line-height:1.6;">Free distribution of sewing machines.</li>
+<li style="margin-bottom:0.375rem;line-height:1.6;">Monthly groceries and clothing support for widows and vulnerable women, helping them live with dignity.</li>
+<li style="margin-bottom:0.375rem;line-height:1.6;">Awareness programs on women's rights.</li>
+</ul>
