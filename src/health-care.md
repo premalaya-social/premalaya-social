@@ -1,7 +1,7 @@
 ---
 layout: layouts/page.njk
-title: Health Care
-lead: Our health care program is designed to make a positive impact in the community.
+title: Healthcare
+lead: Our healthcare program is designed to make a positive impact in the community.
 bannerImage: /img/images2/inhealth.jpg
 bannerHeight: hd
 bannerFocus: center-top
@@ -10,7 +10,7 @@ sidebarInfo:
   title: Program Information
   items:
     - label: Focus Area
-      value: Health Care
+      value: Healthcare
     - label: Target Group
       value: Community members in need
     - label: Approach

@@ -15,9 +15,9 @@ projectCards:
       hope.
     link: /children-home/
   - image: /img/uploads/dsc_0578.jpg
-    alt: Health Care
-    title: Health Care
-    description: Providing essential health care services that strengthen
+    alt: Healthcare
+    title: Healthcare
+    description: Providing essential healthcare services that strengthen
       community wellness.
     link: /health-care/
     imageFocus: center

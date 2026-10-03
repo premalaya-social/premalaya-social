@@ -9,7 +9,7 @@ Premalaya Social Development Society is dedicated to serving the community throu
 - Children Ministry
 - Women Ministry  
 - Educational Support
-- Health Care
+- Healthcare
 - Medical Camps
 - Relief Work
 - Library Services

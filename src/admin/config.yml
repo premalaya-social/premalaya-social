@@ -517,7 +517,7 @@ collections:
           - { label: "Body Content", name: "body", widget: "markdown" }
 
       - name: "health-care"
-        label: "Health Care"
+        label: "Healthcare"
         file: "src/health-care.md"
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.njk" }
