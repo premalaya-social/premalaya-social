@@ -18,7 +18,7 @@ sidebarCta:
   text: Your support can make a significant difference in the lives of those we
     serve.
   primaryButton: Donate Now
-  secondaryButton: Learn More
+  secondaryButton:
 gallery:
   - src: /img/images2/women/1.jpg
     alt: Women empowerment 1

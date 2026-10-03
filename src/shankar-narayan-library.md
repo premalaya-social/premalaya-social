@@ -22,7 +22,7 @@ sidebarCta:
   text: Your support can make a significant difference in the lives of those we
     serve.
   primaryButton: Donate Now
-  secondaryButton: Learn More
+  secondaryButton:
 permalink: /shankar-narayan-library/
 ---
 ## Library  
