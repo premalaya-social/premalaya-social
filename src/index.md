@@ -28,7 +28,7 @@ projectCards:
       by natural calamities.
     link: /relief-operations/
     imageFocus: top
-  - image: /img/uploads/dsc_0193.jpg
+  - image: /img/images2/education/education1.jpg
     alt: Educational Activities
     title: Educational Activities
     description: Helping children access quality education and stay in school.
@@ -41,19 +41,19 @@ projectCards:
       slums, and cities.
     link: /medical-camps/
     imageFocus: center
-  - image: /img/images2/inlibrary.jpg
+  - image: /img/images2/library/library1.jpg
     alt: Shankar Narayan Library
     title: Shankar Narayan Library
     description: A community library nurturing knowledge, reading habits, and
       learning for all.
     link: /shankar-narayan-library/
-  - image: /img/images2/savitriheader.png
+  - image: /img/uploads/dsc_0193.jpg
     alt: Savitribai Scholarships
     title: Savitribai Scholarships
     description: Scholarships that help deserving students stay in school and
       pursue their dreams.
     link: /savitribai-scholarships/
-    imageFocus: top
+    imageFocus: center
 permalink: /
 title: Premalaya Social Development Society
 description: "Premalaya Social Development Society (PSDS), meaning Temple of
