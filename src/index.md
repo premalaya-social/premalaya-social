@@ -8,7 +8,7 @@ projectCards:
       training for true economic independence.
     link: /women-empowerment/
     imageFocus: top
-  - image: /img/images2/homechildren.jpg
+  - image: /img/images2/children/children-home1.jpg
     alt: Children Home
     title: Children Home
     description: Caring for orphans and semi-orphans with love, education, and
