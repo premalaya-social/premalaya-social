@@ -117,13 +117,6 @@ heroSlides:
     imageFocus: center
     buttonText: Relief Programs →
 aboutCards:
-  - image: /img/uploads/isaiah-individual.jpg
-    alt: Rev. A. Isaiah
-    title: About Rev. A. Isaiah
-    description: Founder & President of Premalaya Social Development Society,
-      leading with compassion and dedication.
-    link: /founder/
-    imageFocus: center
   - image: /img/uploads/dsc07302.jpg
     alt: About Premalaya
     title: About Premalaya
@@ -137,6 +130,13 @@ aboutCards:
     description: Share love, by caring for the poor, needy and the helpless through
       our dedicated mission.
     link: /vision-mission/
+  - image: /img/uploads/isaiah-individual.jpg
+    alt: Rev. A. Isaiah
+    title: About Rev. A. Isaiah
+    description: Founder & President of Premalaya Social Development Society,
+      leading with compassion and dedication.
+    link: /founder/
+    imageFocus: center
 impactStats:
   - number: 6+
     label: Active Programs
