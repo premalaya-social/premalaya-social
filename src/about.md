@@ -1,8 +1,9 @@
 ---
 layout: layouts/page.njk
-title: About Premalaya Social Development Society
-lead: Dedicated to serving the community through compassionate social
-  development programs.
+title: About Premalaya
+titleSize: text-2xl sm:text-3xl md:text-4xl
+contentPadding: pt-6 pb-14 md:pt-8 md:pb-20
+darkenText: true
 bannerImage: /img/uploads/dsc_4067.jpg
 bannerHeight: hd
 bannerFocus: center-top
@@ -11,61 +12,56 @@ sidebarInfo:
   title: Quick Facts
   items:
     - label: Founded
-      value: Serving the community for years
+      value: 1994, Chennai
+    - label: Founder
+      value: Rev. Dr. A. Isaiah
+    - label: Status
+      value: Registered Society, 80G Exempt, FCRA
     - label: Focus
-      value: Social Development
-    - label: Areas
       value: Education, Healthcare, Women & Children
-    - label: Approach
-      value: Community-centered development
 sidebarCta:
   title: Get Involved
   text: Join us in making a difference in our community. There are many ways to
     support our work.
   primaryButton: Support Us
   secondaryButton: Contact Us
-gallery:
-  - src: /img/images2/about/1.jpg
-    alt: About 1
-    caption: Test caption
-  - src: /img/images2/about/2.jpg
-    alt: About 2
-  - src: /img/images2/about/3.jpg
-    alt: About 3
-  - src: /img/images2/about/4.jpg
-    alt: About 4
-  - src: /img/images2/about/5.jpg
-    alt: About 5
-  - src: /img/images2/about/6.jpg
-    alt: About 6
-  - src: /img/images2/about/7.jpg
-    alt: About 7
-  - src: /img/images2/about/8.jpg
-    alt: About 8
 permalink: /about/
 ---
 
-## Our Story
+## Who We Are
 
-Premalaya Social Development Society was founded with a vision to create positive change in our community. We believe in the power of collective action and the importance of supporting those who need it most.
+Premalaya Social Development Society (PSDS), meaning “Temple of Love,” is a registered non-profit organization founded in 1994 by Rev. Dr. A. Isaiah.
+Premalaya is committed to serving with compassion, dignity, and dedication to uplift rural and urban poor communities, marginalized groups, scavengers, women, children, persons with disabilities, and other vulnerable sections of society.
 
-Our organization focuses on holistic development, addressing various aspects of community welfare including education, healthcare, women's empowerment, and children's welfare. We work tirelessly to bridge gaps in society and provide opportunities for growth and development.
+Through its social development initiatives, PSDS strives to empower disadvantaged communities, promote equality and human dignity, and create opportunities for individuals and families to build safer, healthier, and more sustainable lives. Its work is rooted in the belief that every person deserves love, dignity, justice, and the opportunity to live with hope and self-respect.
 
-### Our Approach
+## What We Do
 
-- Community-centered development programs
-- Sustainable and long-term solutions
-- Collaborative partnerships with local organizations
-- Focus on education and capacity building
-- Healthcare and wellness initiatives
+We run seven ongoing programmes, each designed to address a specific gap rather than offer short-term relief:
 
-### Impact Areas
+- **Children Home** — residential care, education, and protection for orphans and semi-orphans
+- **Healthcare** — medical camps and health awareness in villages, slums, and cities
+- **Medical Camps** — regular clinical outreach to populations without easy access to care
+- **Educational Activities** — keeping children in school and improving learning outcomes
+- **Savitribai Scholarships** — scholarships that let deserving students continue their education
+- **Shankar Narayan Library** — a community library nurturing reading habits and lifelong learning
+- **Relief Operations** — emergency manpower and material support when natural calamities strike
 
-We work across multiple sectors to ensure comprehensive community development:
+## Legal Status & Compliance
 
-- **Education:** Supporting children and adults with educational opportunities
-- **Healthcare:** Providing medical camps and health awareness programs
-- **Women Empowerment:** Skills development and support for women
-- **Child Welfare:** Programs focused on children's development and protection
-- **Relief Work:** Emergency support during natural disasters and crises
+Premalaya Social Development Society is registered under:
 
+- Societies Registration Act, Government of Tamil Nadu
+- Section 80G, Income Tax Act of India
+- Foreign Contribution Regulation Act (FCRA), Government of India
+
+## Our Approach
+
+- **Community-centered.** Programmes begin with what a village tells us it needs, not with a plan written elsewhere.
+- **Long-term over episodic.** We stay with communities across years, not campaigns.
+- **Partnership-led.** We work alongside local organisations and volunteers who already have the trust of the people they serve.
+- **Dignity and inclusion.** Service is offered without discrimination of caste, creed, gender, or religion.
+
+## Get Involved
+
+Whether you give, volunteer, partner, or simply spread the word, there is a place for you here. [Support our work](/support/) or [get in touch](/contact/).
