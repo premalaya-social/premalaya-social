@@ -144,8 +144,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center" data-reveal>
                     {% if loop.index0 % 2 == 0 %}
                     <div>
-                        <div class="inline-block {{ labelColors[loop.index0 % 4] }} text-white text-xs font-bold tracking-[0.15em] uppercase px-4 py-1.5 rounded mb-5">{{ card.badge or 'Our Work' }}</div>
-                        <h3 class="font-heading text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight mb-4">{{ card.title }}</h3>
+                        <h3 class="inline-block {{ labelColors[loop.index0 % 4] }} text-white font-heading text-2xl md:text-3xl font-extrabold leading-tight px-6 py-3 rounded-lg mb-5">{{ card.title }}</h3>
                         <p class="text-slate-500 text-base leading-relaxed mb-6">{{ card.description }}</p>
                         <a href="{{ card.link }}" class="inline-flex items-center gap-2 text-primary-500 font-bold text-sm hover:gap-3 transition-all">
                             Learn more <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
@@ -158,8 +157,7 @@
                     </div>
                     {% else %}
                     <div class="md:order-2">
-                        <div class="inline-block {{ labelColors[loop.index0 % 4] }} text-white text-xs font-bold tracking-[0.15em] uppercase px-4 py-1.5 rounded mb-5">{{ card.badge or 'Our Work' }}</div>
-                        <h3 class="font-heading text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight mb-4">{{ card.title }}</h3>
+                        <h3 class="inline-block {{ labelColors[loop.index0 % 4] }} text-white font-heading text-2xl md:text-3xl font-extrabold leading-tight px-6 py-3 rounded-lg mb-5">{{ card.title }}</h3>
                         <p class="text-slate-500 text-base leading-relaxed mb-6">{{ card.description }}</p>
                         <a href="{{ card.link }}" class="inline-flex items-center gap-2 text-primary-500 font-bold text-sm hover:gap-3 transition-all">
                             Learn more <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
