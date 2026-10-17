@@ -10,7 +10,6 @@ permalink: /founder/
   </div>
   <div class="w-full md:w-1/2 lg:w-[60%] content-area text-slate-700">
     <p class="text-slate-700 leading-relaxed">Premalaya Social Development Society (PSDS), meaning <em>Temple of Love</em>, is a registered non-profit organization founded in 1994 by Rev. Dr. A. Isaiah.</p>
-    <p class="text-slate-700 leading-relaxed mt-4">A visionary leader with a deep commitment to the gospel of love and justice, Rev. Dr. A. Isaiah felt called to move beyond the pulpit to serve those living on the margins of society. With compassion at the heart of his ministry, he envisioned an organization that would bring holistic transformation to the rural and urban poor, the marginalized, women, children, persons with disabilities, and the most vulnerable.</p>
-    <p class="text-slate-700 leading-relaxed mt-4">Under his leadership, Premalaya was born out of the conviction that faith must be expressed through action. What began as a small initiative to respond to the needs of neglected communities has grown into a sustained mission of care, dignity, and empowerment. His vision continues to guide the organization's work across Tamil Nadu and Andhra Pradesh, rooted in the belief that every person deserves love, dignity, justice, and hope for a better future.</p>
+    <p class="text-slate-700 leading-relaxed mt-4">Premalaya works with compassion and commitment to uplift rural and urban poor, marginalized communities, scavengers, women, children, persons with disabilities, and other vulnerable sections of society.</p>
   </div>
 </div>
