@@ -1,7 +1,6 @@
 ---
 layout: layouts/page.njk
 title: Founder - Rev. A. Isaiah
-lead: Spiritual leadership and guidance for our community development programs.
 permalink: /founder/
 ---
 
