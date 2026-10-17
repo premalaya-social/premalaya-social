@@ -51,8 +51,8 @@ permalink: /vision-mission/
     }
 
     .vm-lead {
-        font-size: 1.0625rem !important;
-        line-height: 1.85 !important;
+        font-size: 1.25rem !important;
+        line-height: 1.6 !important;
         color: #1e293b !important;
         max-width: 46rem;
     }
