@@ -2,6 +2,17 @@
 layout: layouts/base.njk
 ---
 
+{% if heroStrip and heroStrip.length %}
+<!-- Decorative image strip -->
+<div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 pt-10 md:pt-14">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
+        {% for image in heroStrip %}
+        <img src="{{ image }}" alt="" class="w-full aspect-[16/9] object-cover rounded-2xl shadow-lg shadow-slate-900/10" loading="eager">
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+
 <!-- Page Banner -->
 {% if bannerImage %}
 {% set mobileMap = { "short": "160px", "medium": "240px", "tall": "280px", "xtall": "320px", "hd": "400px", "xxtall": "480px" } %}
