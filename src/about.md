@@ -37,7 +37,7 @@ Through its social development initiatives, PSDS strives to empower disadvantage
 
 ## What We Do
 
-We run six ongoing programs, each designed to address a specific gap rather than offer short-term relief:
+Our work spans several areas, each designed to address a specific gap rather than offer short-term relief:
 
 - **Children Home** — residential care, education, and protection for orphans and semi-orphans
 - **Healthcare** — medical camps, health awareness, medicines and spectacles, and cataract surgeries in villages, slums, and cities
