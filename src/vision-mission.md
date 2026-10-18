@@ -56,13 +56,39 @@ permalink: /vision-mission/
         color: #1e293b !important;
         max-width: 46rem;
     }
+    .vm-callout {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        background: #f0f1ff;
+        border-left: 4px solid #2f3192;
+        border-radius: 0 1rem 1rem 0;
+        padding: 1.25rem 1.5rem;
+        margin: 3rem auto 0;
+        max-width: 46rem;
+        text-align: center;
+    }
+    .vm-callout > i {
+        color: #2f3192;
+        font-size: 1.25rem;
+        line-height: 1.5;
+        flex-shrink: 0;
+    }
+    .vm-callout p {
+        margin: 0 !important;
+        font-size: 1.0625rem !important;
+        line-height: 1.6 !important;
+        color: #1e293b !important;
+        font-weight: 600;
+    }
     .content-area p { color: #475569; }
 
     .vm-grid {
         display: grid;
         grid-template-columns: 1fr;
         gap: 1.25rem;
-        margin: 2.5rem 0 0;
+        margin: 1.5rem 0 0;
     }
     @media (min-width: 640px) { .vm-grid { grid-template-columns: 1fr 1fr; } }
 
@@ -132,9 +158,14 @@ permalink: /vision-mission/
     </section>
 
     <section class="mt-14 md:mt-20">
-        <h2>Our Mission</h2>
-        <p class="vm-lead">Our mission is rooted in equality, dignity, compassion, and inclusive development. We are committed to serving humanity without discrimination based on caste, creed, gender, religion, or social and economic status.</p>
-        <p>We work to empower underprivileged and marginalized communities through four pillars of work.</p>
+        <p class="vm-eyebrow">Our Mission</p>
+        <div class="vm-statement">
+            <p>Our mission is rooted in equality, dignity, compassion, and inclusive development. We are committed to serving humanity without discrimination based on caste, creed, gender, religion, or social and economic status.</p>
+        </div>
+        <div class="vm-callout">
+            <i class="fa-solid fa-layer-group"></i>
+            <p>We work to empower underprivileged and marginalized communities through four pillars of work.</p>
+        </div>
 
         <div class="vm-grid">
             <div class="vm-pillar">
