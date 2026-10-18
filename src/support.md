@@ -67,7 +67,7 @@ permalink: /support/
 <div id="upi" style="background:#fff;border:1px solid #eef2f7;border-radius:1rem;box-shadow:0 6px 24px rgba(15,23,42,0.06);padding:1.75rem;margin:0 0 1.75rem;scroll-margin-top:100px;">
 <h2 style="margin:0 0 1.25rem;border:none;padding:0;">Donate by UPI</h2>
 <div style="display:flex;flex-wrap:wrap;gap:1.75rem;align-items:center;">
-<img src="/img/uploads/psds-upi-qr.png" alt="PNB UPI QR code to donate to Premalaya" style="width:260px;max-width:100%;height:auto;border-radius:0.75rem;border:1px solid #eef2f7;margin:0;">
+<img src="/img/uploads/psds-upi-qr.png?v=2" alt="PNB UPI QR code to donate to Premalaya" style="width:260px;max-width:100%;height:auto;border-radius:0.75rem;border:1px solid #eef2f7;margin:0;">
 <div style="flex:1;min-width:220px;">
 <div style="font-weight:800;color:#0f172a;font-size:1.05rem;margin-bottom:0.5rem;">Scan to pay with any UPI app</div>
 <p style="margin:0 0 0.9rem;">Open GPay, PhonePe, Paytm, BHIM, or any UPI app and scan the code to donate to <strong>PREMALAYA SOCIAL DEVELOPMENT SOCIETY</strong>.</p>
