@@ -39,7 +39,7 @@ projectCards:
     title: Medical Camps
     description: Bringing regular medical camps and healthcare to villages,
       slums, and cities.
-    link: /medical-camps/
+    link: /health-care/
     imageFocus: center
   - image: /img/images2/library/library1.jpg
     alt: Shankar Narayan Library
@@ -103,7 +103,7 @@ heroSlides:
     alt: Medical Camps
     subtext: Healthcare for all, serving communities with care
     buttonColor: red
-    link: /medical-camps/
+    link: /health-care/
     image: /img/uploads/dsc_0690.jpg
     imageFocus: center
     buttonText: Medical Services →

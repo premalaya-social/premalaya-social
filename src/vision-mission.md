@@ -192,7 +192,6 @@ permalink: /vision-mission/
                 <p>Promoting access to healthcare, rehabilitation, and support services for vulnerable individuals and communities.</p>
                 <div class="vm-pillar-links">
                     <a href="/health-care/">Healthcare</a>
-                    <a href="/medical-camps/">Medical Camps</a>
                 </div>
             </div>
             <div class="vm-pillar">

@@ -1,7 +1,7 @@
 ---
 layout: layouts/page.njk
 title: Healthcare
-lead: Our healthcare program is designed to make a positive impact in the community.
+lead: Free medical camps, medicines, spectacles, and cataract surgeries for those who cannot afford care.
 bannerImage: /img/images2/inhealth.jpg
 bannerHeight: hd
 bannerFocus: center-top
@@ -11,26 +11,30 @@ sidebarInfo:
   items:
     - label: Focus Area
       value: Healthcare
-    - label: Target Group
-      value: Community members in need
+    - label: Who It Serves
+      value: Underserved patients and families
     - label: Approach
-      value: Sustainable development
+      value: Free medical camps and treatment
     - label: Duration
       value: Ongoing program
 sidebarCta:
   title: Support This Program
-  text: Your support can make a significant difference in the lives of those we
-    serve.
+  text: Your support can make a significant difference in the lives of those we serve.
   primaryButton: Donate Now
   secondaryButton:
 permalink: /health-care/
 ---
-## Healthcare Services 
+## Healthcare for Those Who Cannot Afford It
 
-•      Free Eye, Dental, Medical, and Diabetic camps.
+Good healthcare is out of reach for many of the families we serve. Our healthcare programme brings doctors, medicines, and treatment directly to underserved communities — free of cost.
 
-•      Distribution of medicines and spectacles.
+### What We Do
 
-•      Free cataract surgeries.
+- Organise free eye, dental, medical, and diabetic camps
+- Distribute medicines and spectacles to those in need
+- Provide free cataract surgeries
+- Run awareness programmes on HIV/AIDS and STD prevention
 
-•      Awareness programs on HIV/AIDS and STD prevention.
+### How You Can Help
+
+Your support helps us reach more patients with free treatment. [Donate](/support/) or [contact us](/contact/) to learn more.
