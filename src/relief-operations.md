@@ -28,10 +28,16 @@ permalink: /relief-operations/
 
 When disaster strikes — a flood, a famine, or a pandemic — the families who are already struggling are hit hardest. Our relief operations move quickly to bring them food, supplies, and medicine when they need it most.
 
+### Why It Matters
+
+Families affected by a disaster often lose everything in a matter of hours — their homes, their belongings, and their livelihoods. In the first days after a crisis, timely relief can mean the difference between survival and despair. We respond when help is needed most.
+
 ### What We Do
 
 - Respond to disasters such as COVID-19, floods, and famine
-- Distribute food, groceries, clothing, and medicines
+- Distribute food, groceries, clothing, and medicines to affected families
+- Provide essential supplies such as blankets and household items
+- Reach remote and hard-to-access communities
 - Support families in crisis across India
 
 ### How You Can Help

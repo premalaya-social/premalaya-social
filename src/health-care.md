@@ -26,14 +26,23 @@ permalink: /health-care/
 ---
 ## Healthcare for Those Who Cannot Afford It
 
-Good healthcare is out of reach for many of the families we serve. Our healthcare programme brings doctors, medicines, and treatment directly to underserved communities — free of cost.
+For many of the families we serve, seeing a doctor is a luxury they cannot afford. Our healthcare program brings doctors, medicines, and treatment directly to underserved communities — completely free of cost.
+
+### Why It Matters
+
+In rural villages and urban slums, even a routine check-up can mean a day's lost wages, a long journey, and an expense that many families simply cannot bear. As a result, small problems become serious, and conditions that could easily be treated are left to worsen. Free, accessible medical care changes that.
 
 ### What We Do
 
-- Organise free eye, dental, medical, and diabetic camps
-- Distribute medicines and spectacles to those in need
-- Provide free cataract surgeries
-- Run awareness programmes on HIV/AIDS and STD prevention
+- Organize free eye, dental, medical, and diabetic camps in villages, slums, and cities
+- Distribute medicines and spectacles to patients at no cost
+- Arrange free cataract surgeries for those who need them
+- Run awareness programs on HIV/AIDS and STD prevention
+- Provide basic check-ups and referrals to specialist care
+
+### How It Works
+
+Our teams work with local leaders and volunteers to identify villages and neighborhoods with little or no access to healthcare. Camps are announced in advance, held in accessible community spaces, and staffed by doctors and volunteers. Patients who need further treatment are referred onward and followed up.
 
 ### How You Can Help
 

@@ -39,16 +39,24 @@ permalink: /children-home/
 
 ## A Safe Home and a Bright Future
 
-Our Children Home offers orphaned and semi-orphaned children a safe, stable place to live, learn, and grow. For children who have lost the care of their families, it becomes a home where they are protected, educated, and encouraged to build a future with dignity and hope.
+Our Children Home offers orphaned and semi-orphaned children a safe, stable place to live, learn, and grow. For children who have lost the care of their families, it becomes more than a shelter — it becomes a home where they are protected, educated, and encouraged to build a future with dignity and hope.
+
+### Why It Matters
+
+A child without a family is vulnerable to neglect, exploitation, and a lifetime of poverty. Without support, many are forced to work instead of study, and their potential is lost before it has a chance to grow. By meeting a child's basic needs and investing in their education, we help break that cycle and give them a real start in life.
 
 ### What We Do
 
 - Provide residential care in a secure, family-like environment
-- Support the children's schooling and education
-- Ensure nutritious food and basic healthcare
-- Offer guidance and encouragement as they grow
+- Give children nutritious food, clean clothing, and a safe place to sleep
+- Support their schooling, including books, uniforms, and study materials
+- Meet their basic healthcare needs and arrange medical care when required
+- Offer guidance, encouragement, and mentorship as they grow
+
+### Our Goal
+
+That every child in our care grows up healthy, educated, and confident — ready to stand on their own feet and, one day, give back to the community that raised them.
 
 ### How You Can Help
 
 Your support gives these children the care and education they deserve. [Donate](/support/) or [contact us](/contact/) to learn more.
-

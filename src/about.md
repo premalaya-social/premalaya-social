@@ -37,7 +37,7 @@ Through its social development initiatives, PSDS strives to empower disadvantage
 
 ## What We Do
 
-We run six ongoing programmes, each designed to address a specific gap rather than offer short-term relief:
+We run six ongoing programs, each designed to address a specific gap rather than offer short-term relief:
 
 - **Children Home** — residential care, education, and protection for orphans and semi-orphans
 - **Healthcare** — medical camps, health awareness, medicines and spectacles, and cataract surgeries in villages, slums, and cities
@@ -56,7 +56,7 @@ Premalaya Social Development Society is registered under:
 
 ## Our Approach
 
-- **Community-centered.** Programmes begin with what a village tells us it needs, not with a plan written elsewhere.
+- **Community-centered.** Programs begin with what a village tells us it needs, not with a plan written elsewhere.
 - **Long-term over episodic.** We stay with communities across years, not campaigns.
 - **Partnership-led.** We work alongside local organisations and volunteers who already have the trust of the people they serve.
 - **Dignity and inclusion.** Service is offered without discrimination of caste, creed, gender, or religion.
