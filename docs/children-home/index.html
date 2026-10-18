@@ -254,26 +254,14 @@
 
 
 
-<style>
-    .page-banner { height: 240px; }
-    @media(min-width:640px) { .page-banner { height: clamp(240px, 45vw, 320px); } }
-    @media(min-width:1024px) { .page-banner { height: 320px; } }
-</style>
-<div class="page-banner relative w-full overflow-hidden">
-    <img src="/img/images2/inchildren.jpg" alt="Children Home" class="w-full h-full object-cover object-center scale-[1.01]" >
-    <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
-</div>
-
-<div class="relative -mt-16 sm:-mt-20 z-10">
-    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
-        <div class="bg-white rounded-t-3xl shadow-xl px-8 sm:px-10 lg:px-12 pt-8 sm:pt-10 pb-6 sm:pb-8 border-t-4 border-accent-500">
-            <h1 class="font-heading text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 leading-tight">
-                Children Home
-            </h1>
-            
-            <p class="mt-3 text-base sm:text-lg text-slate-500 leading-relaxed max-w-2xl">A safe home, education, and care for orphaned and semi-orphaned children.</p>
-            
+<!-- No-banner header -->
+<div class="bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 py-12 md:py-16">
+        <div class="flex items-center gap-4 mb-1">
+            <div class="w-10 h-1 bg-accent-500 rounded-full"></div>
         </div>
+        <h1 class="font-heading text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 leading-tight">Children Home</h1>
+        <p class="mt-3 text-base sm:text-lg text-slate-500 max-w-2xl leading-relaxed">A safe home, education, and care for orphaned and semi-orphaned children.</p>
     </div>
 </div>
 
@@ -284,6 +272,7 @@
         <!-- Content Column -->
         <div class="lg:w-2/3">
             <div class="content-area">
+                <img src="/img/uploads/dsc_0221.jpg" alt="Children Home" style="width:100%;height:auto;display:block;margin:-2.5rem auto 2rem;border-radius:1rem;box-shadow:0 10px 30px rgba(0,0,0,0.12);">
                 <h2>A Safe Home and a Bright Future</h2>
 <p>Our Children Home offers orphaned and semi-orphaned children a safe, stable place to live, learn, and grow. For children who have lost the care of their families, it becomes more than a shelter — it becomes a home where they are protected, educated, and encouraged to build a future with dignity and hope.</p>
 <h3>Why It Matters</h3>
@@ -307,56 +296,48 @@
             <div class="mt-16">
                 <p class="font-heading text-xs font-bold tracking-[0.2em] uppercase text-primary-500 mb-2">Gallery</p>
                 <h2 class="font-heading text-2xl md:text-3xl font-black text-slate-900 mb-8">Photo Gallery</h2>
-                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
-                    <button type="button" class="gallery-thumb group relative aspect-[4/3] rounded-2xl overflow-hidden border border-slate-100 hover:shadow-lg transition-all duration-300 cursor-pointer text-left" data-gallery-index="0">
-                        <img src="/img/images2/children/1.jpg" alt="Children Home 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 items-start">
+                    <button type="button" class="gallery-thumb group relative rounded-2xl overflow-hidden border border-slate-100 hover:shadow-lg transition-all duration-300 cursor-pointer text-left" data-gallery-index="0">
+                        <img src="/img/images2/children/children-home-1.jpg" alt="Children Home 1" class="block w-full h-auto group-hover:scale-105 transition-transform duration-500" loading="lazy">
                         <div class="absolute inset-0 bg-black/0 group-hover:bg-black/25 transition-colors duration-300 flex items-center justify-center">
                             <i class="fa-solid fa-expand text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-lg"></i>
                         </div>
                     </button>
-                    <button type="button" class="gallery-thumb group relative aspect-[4/3] rounded-2xl overflow-hidden border border-slate-100 hover:shadow-lg transition-all duration-300 cursor-pointer text-left" data-gallery-index="1">
-                        <img src="/img/images2/children/2.jpg" alt="Children Home 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                    <button type="button" class="gallery-thumb group relative rounded-2xl overflow-hidden border border-slate-100 hover:shadow-lg transition-all duration-300 cursor-pointer text-left" data-gallery-index="1">
+                        <img src="/img/images2/children/children-home-2.jpg" alt="Children Home 2" class="block w-full h-auto group-hover:scale-105 transition-transform duration-500" loading="lazy">
                         <div class="absolute inset-0 bg-black/0 group-hover:bg-black/25 transition-colors duration-300 flex items-center justify-center">
                             <i class="fa-solid fa-expand text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-lg"></i>
                         </div>
                     </button>
-                    <button type="button" class="gallery-thumb group relative aspect-[4/3] rounded-2xl overflow-hidden border border-slate-100 hover:shadow-lg transition-all duration-300 cursor-pointer text-left" data-gallery-index="2">
-                        <img src="/img/images2/children/3.jpg" alt="Children Home 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                    <button type="button" class="gallery-thumb group relative rounded-2xl overflow-hidden border border-slate-100 hover:shadow-lg transition-all duration-300 cursor-pointer text-left" data-gallery-index="2">
+                        <img src="/img/images2/children/children-home-3.jpg" alt="Children Home 3" class="block w-full h-auto group-hover:scale-105 transition-transform duration-500" loading="lazy">
                         <div class="absolute inset-0 bg-black/0 group-hover:bg-black/25 transition-colors duration-300 flex items-center justify-center">
                             <i class="fa-solid fa-expand text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-lg"></i>
                         </div>
                     </button>
-                    <button type="button" class="gallery-thumb group relative aspect-[4/3] rounded-2xl overflow-hidden border border-slate-100 hover:shadow-lg transition-all duration-300 cursor-pointer text-left" data-gallery-index="3">
-                        <img src="/img/images2/children/4.jpg" alt="Children Home 4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                    <button type="button" class="gallery-thumb group relative rounded-2xl overflow-hidden border border-slate-100 hover:shadow-lg transition-all duration-300 cursor-pointer text-left" data-gallery-index="3">
+                        <img src="/img/images2/children/children-home-4.jpg" alt="Children Home 4" class="block w-full h-auto group-hover:scale-105 transition-transform duration-500" loading="lazy">
                         <div class="absolute inset-0 bg-black/0 group-hover:bg-black/25 transition-colors duration-300 flex items-center justify-center">
                             <i class="fa-solid fa-expand text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-lg"></i>
                         </div>
                     </button>
-                    <button type="button" class="gallery-thumb group relative aspect-[4/3] rounded-2xl overflow-hidden border border-slate-100 hover:shadow-lg transition-all duration-300 cursor-pointer text-left" data-gallery-index="4">
-                        <img src="/img/images2/children/5.jpg" alt="Children Home 5" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                    <button type="button" class="gallery-thumb group relative rounded-2xl overflow-hidden border border-slate-100 hover:shadow-lg transition-all duration-300 cursor-pointer text-left" data-gallery-index="4">
+                        <img src="/img/images2/children/children-home-5.jpg" alt="Children Home 5" class="block w-full h-auto group-hover:scale-105 transition-transform duration-500" loading="lazy">
                         <div class="absolute inset-0 bg-black/0 group-hover:bg-black/25 transition-colors duration-300 flex items-center justify-center">
                             <i class="fa-solid fa-expand text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-lg"></i>
                         </div>
                     </button>
-                    <button type="button" class="gallery-thumb group relative aspect-[4/3] rounded-2xl overflow-hidden border border-slate-100 hover:shadow-lg transition-all duration-300 cursor-pointer text-left" data-gallery-index="5">
-                        <img src="/img/images2/children/6.jpg" alt="Children Home 6" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                    <button type="button" class="gallery-thumb group relative rounded-2xl overflow-hidden border border-slate-100 hover:shadow-lg transition-all duration-300 cursor-pointer text-left" data-gallery-index="5">
+                        <img src="/img/images2/children/children-home-6.png" alt="Children Home 6" class="block w-full h-auto group-hover:scale-105 transition-transform duration-500" loading="lazy">
                         <div class="absolute inset-0 bg-black/0 group-hover:bg-black/25 transition-colors duration-300 flex items-center justify-center">
                             <i class="fa-solid fa-expand text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-lg"></i>
                         </div>
                     </button>
-                </div>
-                <div class="mt-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
                 </div>
             </div>
 
             <script type="application/json" id="gallery-data">
-            [{"src":"/img/images2/children/1.jpg","alt":"Children Home 1","caption":""},{"src":"/img/images2/children/2.jpg","alt":"Children Home 2","caption":""},{"src":"/img/images2/children/3.jpg","alt":"Children Home 3","caption":""},{"src":"/img/images2/children/4.jpg","alt":"Children Home 4","caption":""},{"src":"/img/images2/children/5.jpg","alt":"Children Home 5","caption":""},{"src":"/img/images2/children/6.jpg","alt":"Children Home 6","caption":""}]
+            [{"src":"/img/images2/children/children-home-1.jpg","alt":"Children Home 1","caption":""},{"src":"/img/images2/children/children-home-2.jpg","alt":"Children Home 2","caption":""},{"src":"/img/images2/children/children-home-3.jpg","alt":"Children Home 3","caption":""},{"src":"/img/images2/children/children-home-4.jpg","alt":"Children Home 4","caption":""},{"src":"/img/images2/children/children-home-5.jpg","alt":"Children Home 5","caption":""},{"src":"/img/images2/children/children-home-6.png","alt":"Children Home 6","caption":""}]
             </script>
         </div>
 

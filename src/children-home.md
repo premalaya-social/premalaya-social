@@ -2,7 +2,6 @@
 layout: layouts/page.njk
 title: "Children Home"
 lead: A safe home, education, and care for orphaned and semi-orphaned children.
-bannerImage: /img/images2/inchildren.jpg
 sidebar: true
 sidebarInfo:
   title: Program Information
@@ -21,21 +20,24 @@ sidebarCta:
   primaryButton: Donate Now
   secondaryButton:
 gallery:
-  - src: /img/images2/children/1.jpg
+  - src: /img/images2/children/children-home-1.jpg
     alt: Children Home 1
-  - src: /img/images2/children/2.jpg
+  - src: /img/images2/children/children-home-2.jpg
     alt: Children Home 2
-  - src: /img/images2/children/3.jpg
+  - src: /img/images2/children/children-home-3.jpg
     alt: Children Home 3
-  - src: /img/images2/children/4.jpg
+  - src: /img/images2/children/children-home-4.jpg
     alt: Children Home 4
-  - src: /img/images2/children/5.jpg
+  - src: /img/images2/children/children-home-5.jpg
     alt: Children Home 5
-  - src: /img/images2/children/6.jpg
+  - src: /img/images2/children/children-home-6.png
     alt: Children Home 6
+galleryLayout: collage
 galleryRatio: "4/3"
 permalink: /children-home/
 ---
+
+<img src="/img/uploads/dsc_0221.jpg" alt="Children Home" style="width:100%;height:auto;display:block;margin:-2.5rem auto 2rem;border-radius:1rem;box-shadow:0 10px 30px rgba(0,0,0,0.12);">
 
 ## A Safe Home and a Bright Future
 
