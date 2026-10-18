@@ -24,6 +24,8 @@ gallery:
     alt: Women empowerment
   - src: /img/images2/women/rice-distribution.jpg
     alt: Women empowerment
+  - src: /img/images2/women/5.jpg
+    alt: Women empowerment
 permalink: /women-empowerment/
 ---
 
