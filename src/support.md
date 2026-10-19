@@ -1,16 +1,21 @@
 ---
 layout: layouts/page.njk
 title: Sustainability & Support
-lead: Premalaya is funded entirely by donations and partnerships. Whether you give once or regularly — as an individual, business, or institution in India or abroad — your support goes directly to our programs.
+lead: Donations and partnerships play a vital role in keeping Premalaya running. Whether you give once or regularly — as an individual, business, or institution in India or abroad — your support goes directly to our programs.
 bannerImage: /img/uploads/dsc_4067.jpg
 bannerHeight: tall
 bannerFocus: center-top
+leadJustify: true
+leadFull: true
 permalink: /support/
 ---
 <div style="background:#fff;border:1px solid #eef2f7;border-radius:1rem;box-shadow:0 6px 24px rgba(15,23,42,0.06);padding:1.75rem;margin:0 0 1.75rem;">
-<h2 style="margin:0 0 0.5rem;border:none;padding:0;">Registered &amp; Compliant</h2>
-<p style="margin:0 0 1.25rem;">Premalaya Social Development Society is a registered non-profit. Donations within India qualify for tax exemption, and we are registered to receive contributions from abroad.</p>
+<h2 style="margin:0 0 1.25rem;border:none;padding:0;">Registered &amp; Compliant</h2>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;">
+<div style="display:flex;gap:1rem;background:#f8fafc;border:1px solid #eef2f7;border-radius:0.75rem;padding:1.25rem;">
+<i class="fa-solid fa-building-columns" style="color:#2f3192;font-size:1.5rem;line-height:1;"></i>
+<div><div style="font-weight:700;color:#0f172a;margin-bottom:0.35rem;">Registered Society</div><p style="margin:0;color:#64748b;font-size:0.9rem;line-height:1.6;">Registered as a society under the Societies Registration Act, Government of Tamil Nadu.</p></div>
+</div>
 <div style="display:flex;gap:1rem;background:#f8fafc;border:1px solid #eef2f7;border-radius:0.75rem;padding:1.25rem;">
 <i class="fa-solid fa-receipt" style="color:#2f3192;font-size:1.5rem;line-height:1;"></i>
 <div><div style="font-weight:700;color:#0f172a;margin-bottom:0.35rem;">Section 80G</div><p style="margin:0;color:#64748b;font-size:0.9rem;line-height:1.6;">Donations made to Premalaya qualify for tax exemption under Section 80G of the Income Tax Act.</p></div>
@@ -18,10 +23,6 @@ permalink: /support/
 <div style="display:flex;gap:1rem;background:#f8fafc;border:1px solid #eef2f7;border-radius:0.75rem;padding:1.25rem;">
 <i class="fa-solid fa-globe" style="color:#2f3192;font-size:1.5rem;line-height:1;"></i>
 <div><div style="font-weight:700;color:#0f172a;margin-bottom:0.35rem;">FCRA Registration</div><p style="margin:0;color:#64748b;font-size:0.9rem;line-height:1.6;">Registered under the Foreign Contribution Regulation Act (FCRA), Government of India, to receive foreign contributions.</p></div>
-</div>
-<div style="display:flex;gap:1rem;background:#f8fafc;border:1px solid #eef2f7;border-radius:0.75rem;padding:1.25rem;">
-<i class="fa-solid fa-building-columns" style="color:#2f3192;font-size:1.5rem;line-height:1;"></i>
-<div><div style="font-weight:700;color:#0f172a;margin-bottom:0.35rem;">Registered Society</div><p style="margin:0;color:#64748b;font-size:0.9rem;line-height:1.6;">Registered as a society under the Societies Registration Act, Government of Tamil Nadu.</p></div>
 </div>
 </div>
 </div>
