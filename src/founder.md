@@ -1,6 +1,6 @@
 ---
 layout: layouts/page.njk
-title: Founder - Rev. A. Isaiah
+title: Founder - Rev. Dr. A. Isaiah
 permalink: /founder/
 ---
 

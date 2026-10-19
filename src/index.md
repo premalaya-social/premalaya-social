@@ -83,7 +83,7 @@ heroSlides:
   - heading: Our Founder
     badge: Leadership
     alt: Founder
-    subtext: Rev. A. Isaiah's vision of compassionate service
+    subtext: Rev. Dr. A. Isaiah's vision of compassionate service
     buttonColor: purple
     link: /founder/
     image: /img/uploads/dsc_4067.jpg
@@ -131,8 +131,8 @@ aboutCards:
       our dedicated mission.
     link: /vision-mission/
   - image: /img/uploads/isaiah-individual.jpg
-    alt: Rev. A. Isaiah
-    title: About Rev. A. Isaiah
+    alt: Rev. Dr. A. Isaiah
+    title: About Rev. Dr. A. Isaiah
     description: Founder & President of Premalaya Social Development Society,
       leading with compassion and dedication.
     link: /founder/
