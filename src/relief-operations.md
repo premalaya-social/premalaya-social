@@ -22,6 +22,20 @@ sidebarCta:
   text: Your support can make a significant difference in the lives of those we serve.
   primaryButton: Donate Now
   secondaryButton:
+galleryLayout: collage
+gallery:
+  - src: /img/images2/reliefwork/relief-work-1.png
+    alt: Relief supplies prepared for distribution
+  - src: /img/images2/reliefwork/relief-work-2.jpg
+    alt: Relief distribution to families
+  - src: /img/images2/reliefwork/relief-work-3.jpg
+    alt: Handing out food supplies to families
+  - src: /img/images2/reliefwork/relief-work-4.jpg
+    alt: Distributing rice to a family
+  - src: /img/images2/reliefwork/relief-work-5.jpg
+    alt: Women receiving relief supplies
+  - src: /img/images2/reliefwork/relief-work-6.jpg
+    alt: Relief distribution to a family
 permalink: /relief-operations/
 ---
 ## Standing with Families in Crisis
