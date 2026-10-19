@@ -1,16 +1,16 @@
 ---
 layout: layouts/page.njk
-title: Educational Activities
+title: Education & Skill Development
 lead: Supplementary education, learning materials, and day care for children in marginalized communities.
-bannerImage: /img/uploads/dsc_0029.jpg
+bannerImage: /img/images2/vision/2-banner.jpg
 bannerHeight: hd
-bannerFocus: center-top
+bannerFocus: center
 sidebar: true
 sidebarInfo:
   title: Program Information
   items:
     - label: Focus Area
-      value: Education & Child Development
+      value: Education & Skill Development
     - label: Who It Serves
       value: Children in slum and marginalized communities
     - label: Approach
@@ -22,13 +22,15 @@ sidebarCta:
   text: Your support can make a significant difference in the lives of those we serve.
   primaryButton: Donate Now
   secondaryButton:
-permalink: /educational-activities/
+heroStrip:
+  - /img/images2/vision/1.jpg
+permalink: /education-skill-development/
 ---
 ## Helping Every Child Learn
 
 > A child without education is like a bird without wings.
 
-In the communities we serve, many children — especially school dropouts — miss out on the education that could change their lives. Our educational activities give them a second chance to learn, stay in school, and dream bigger.
+In the communities we serve, many children — especially school dropouts — miss out on the education that could change their lives. Our education and skill development initiatives give them a second chance to learn, stay in school, and dream bigger.
 
 ### Why It Matters
 

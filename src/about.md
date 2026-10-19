@@ -41,7 +41,7 @@ Our work spans several areas, each designed to address a specific gap rather tha
 
 - **Children Home** — residential care, education, and protection for orphans and semi-orphans
 - **Healthcare** — medical camps, health awareness, medicines and spectacles, and cataract surgeries in villages, slums, and cities
-- **Educational Activities** — keeping children in school and improving learning outcomes
+- **Education & Skill Development** — keeping children in school and improving learning outcomes
 - **Savitribai Scholarships** — scholarships that let deserving students continue their education
 - **Shankar Narayan Library** — a community library nurturing reading habits and lifelong learning
 - **Relief Operations** — emergency manpower and material support when natural calamities strike

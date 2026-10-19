@@ -29,10 +29,10 @@ projectCards:
     link: /relief-operations/
     imageFocus: top
   - image: /img/images2/education/education1.jpg
-    alt: Educational Activities
-    title: Educational Activities
+    alt: Education & Skill Development
+    title: Education & Skill Development
     description: Helping children access quality education and stay in school.
-    link: /educational-activities/
+    link: /education-skill-development/
     imageFocus: center
   - image: /img/uploads/dsc_0588.jpg
     alt: Medical Camps

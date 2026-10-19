@@ -678,9 +678,9 @@ collections:
           - { label: "URL Path", name: "permalink", widget: "string" }
           - { label: "Body Content", name: "body", widget: "markdown" }
 
-      - name: "educational-activities"
-        label: "Educational Activities"
-        file: "src/educational-activities.md"
+      - name: "education-skill-development"
+        label: "Education & Skill Development"
+        file: "src/education-skill-development.md"
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.njk" }
           - { label: "Title", name: "title", widget: "string" }

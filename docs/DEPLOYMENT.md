@@ -30,7 +30,7 @@ github-pages-site/
 │   ├── health-care.html
 │   ├── medical-camps.html
 │   ├── relief-operations.html
-│   ├── educational-activities.html
+│   ├── education-skill-development/
 │   └── shankar-narayan-library.html
 │
 ├── Assets:

@@ -2,9 +2,6 @@
 layout: layouts/page.njk
 title: Vision & Mission
 contentPadding: pt-10 pb-16 md:pt-14 md:pb-24
-heroStrip:
-  - /img/images2/vision/2.jpg
-  - /img/images2/vision/1.jpg
 permalink: /vision-mission/
 ---
 
@@ -173,7 +170,7 @@ permalink: /vision-mission/
                 <h3>Education and Skill Development</h3>
                 <p>Creating opportunities for learning, capacity building, and employable skills.</p>
                 <div class="vm-pillar-links">
-                    <a href="/educational-activities/">Educational Activities</a>
+                    <a href="/education-skill-development/">Education &amp; Skill Development</a>
                     <a href="/savitribai-scholarships/">Scholarships</a>
                     <a href="/shankar-narayan-library/">Library</a>
                 </div>

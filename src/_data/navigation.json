@@ -21,7 +21,7 @@
         { "label": "Children Home", "url": "/children-home/" },
         { "label": "Healthcare", "url": "/health-care/" },
         { "label": "Relief Operations", "url": "/relief-operations/" },
-        { "label": "Educational Activities", "url": "/educational-activities/" },
+        { "label": "Education & Skill Development", "url": "/education-skill-development/" },
         { "label": "Shankar Narayan Library", "url": "/shankar-narayan-library/" },
         { "label": "Savitribai Phule Scholarships", "url": "/savitribai-scholarships/" }
       ]
