@@ -2,9 +2,9 @@
 layout: layouts/page.njk
 title: Healthcare
 lead: Free medical camps, medicines, spectacles, and cataract surgeries for those who cannot afford care.
-bannerImage: /img/images2/inhealth.jpg
-bannerHeight: hd
-bannerFocus: center-top
+bannerImage: /img/images2/healthcare/healthcare-2.jpg
+bannerHeight: hd-sm
+bannerFocus: center
 sidebar: true
 sidebarInfo:
   title: Program Information
@@ -22,6 +22,18 @@ sidebarCta:
   text: Your support can make a significant difference in the lives of those we serve.
   primaryButton: Donate Now
   secondaryButton:
+galleryLayout: collage
+gallery:
+  - src: /img/images2/healthcare/healthcare-3.jpg
+    alt: Healthcare team and volunteers at a medical camp
+  - src: /img/images2/healthcare/healthcare-4.jpg
+    alt: Patient receiving an eye check at a medical camp
+  - src: /img/images2/healthcare/healthcare-5.jpg
+    alt: Eye examination at a medical camp
+  - src: /img/images2/healthcare/healthcare-6.jpg
+    alt: Spectacles being distributed at a medical camp
+  - src: /img/images2/healthcare/healthcare-7.jpg
+    alt: Wheelchair distribution at the Premalaya second anniversary
 permalink: /health-care/
 ---
 ## Healthcare for Those Who Cannot Afford It

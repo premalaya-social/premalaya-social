@@ -4,8 +4,8 @@ layout: layouts/base.njk
 
 <!-- Page Banner -->
 {% if bannerImage %}
-{% set mobileMap = { "short": "160px", "medium": "240px", "tall": "280px", "xtall": "320px", "hd": "400px", "xxtall": "480px" } %}
-{% set desktopMap = { "short": "220px", "medium": "320px", "tall": "420px", "xtall": "520px", "hd": "720px", "xxtall": "1080px" } %}
+{% set mobileMap = { "short": "160px", "medium": "240px", "tall": "280px", "xtall": "320px", "hd-sm": "360px", "hd": "400px", "xxtall": "480px" } %}
+{% set desktopMap = { "short": "220px", "medium": "320px", "tall": "420px", "xtall": "520px", "hd-sm": "640px", "hd": "720px", "xxtall": "1080px" } %}
 {% set bKey = bannerHeight or "medium" %}
 {% set focusClass = { "center": "object-center", "top": "object-top", "bottom": "object-bottom" } %}
 {% set focusStyle = { "center-top": "center 25%", "center-bottom": "center 75%" } %}
