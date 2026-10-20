@@ -3,6 +3,9 @@ layout: layouts/page.njk
 title: "Children Home"
 titleSize: text-2xl sm:text-3xl md:text-4xl
 lead: A safe home, education, and care for orphaned and semi-orphaned children.
+bannerImage: /img/uploads/dsc_0221.jpg
+bannerHeight: hd-sm
+bannerFocus: center
 sidebar: true
 sidebarInfo:
   title: Program Information
@@ -37,8 +40,6 @@ galleryLayout: collage
 galleryRatio: "4/3"
 permalink: /children-home/
 ---
-
-<img src="/img/uploads/dsc_0221.jpg" alt="Children Home" style="width:100%;height:auto;display:block;margin:-2.5rem auto 2rem;border-radius:1rem;box-shadow:0 10px 30px rgba(0,0,0,0.12);">
 
 ## A Safe Home and a Bright Future
 
