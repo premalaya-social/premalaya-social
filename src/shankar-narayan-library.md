@@ -3,9 +3,9 @@ layout: layouts/page.njk
 title: Shankar Narayan Library
 titleSize: text-2xl sm:text-3xl md:text-4xl
 lead: A free library of books and learning resources for students and the local community.
-bannerImage: /img/images2/inlibrary.jpg
-bannerHeight: hd
-bannerFocus: center-top
+bannerImage: /img/images2/library/5.jpg
+bannerHeight: hd-sm
+bannerFocus: center
 sidebar: true
 sidebarInfo:
   title: Program Information
@@ -24,6 +24,14 @@ sidebarCta:
   primaryButton: Donate Now
   secondaryButton:
 permalink: /shankar-narayan-library/
+galleryLayout: collage
+gallery:
+  - src: /img/images2/library/2.jpg
+    alt: Library interior
+  - src: /img/images2/library/3.jpg
+    alt: Books and reading materials
+  - src: /img/images2/library/4.jpg
+    alt: Students at the library
 ---
 ## A Library Open to All
 

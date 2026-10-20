@@ -23,8 +23,10 @@ sidebarCta:
   text: Your support can make a significant difference in the lives of those we serve.
   primaryButton: Donate Now
   secondaryButton:
-heroStrip:
-  - /img/images2/vision/1.jpg
+galleryLayout: collage
+gallery:
+  - src: /img/images2/vision/1.jpg
+    alt: Education and skill development activity
 permalink: /education-skill-development/
 ---
 ## Helping Every Child Learn
