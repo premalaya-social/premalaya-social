@@ -1,6 +1,7 @@
 ---
 layout: layouts/page.njk
 title: Education & Skill Development
+titleSize: text-2xl sm:text-3xl md:text-4xl
 lead: Supplementary education, learning materials, and day care for children in marginalized communities.
 bannerImage: /img/images2/vision/2-banner.jpg
 bannerHeight: hd

@@ -1,6 +1,7 @@
 ---
 layout: layouts/page.njk
 title: Shankar Narayan Library
+titleSize: text-2xl sm:text-3xl md:text-4xl
 lead: A free library of books and learning resources for students and the local community.
 bannerImage: /img/images2/inlibrary.jpg
 bannerHeight: hd

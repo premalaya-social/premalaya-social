@@ -1,7 +1,11 @@
 ---
 layout: layouts/page.njk
 title: Women Empowerment
+titleSize: text-2xl sm:text-3xl md:text-4xl
 lead: Skills, livelihoods, and dignity for women in our communities.
+bannerImage: /img/images2/women/dsc08434.jpg
+bannerHeight: hd-sm
+bannerFocus: center
 sidebar: true
 sidebarInfo:
   title: Program Information
@@ -29,8 +33,6 @@ gallery:
     alt: Women empowerment
 permalink: /women-empowerment/
 ---
-
-<img src="/img/images2/women/dsc08434.jpg" alt="Women Empowerment" style="width:100%;height:auto;display:block;margin:-2.5rem auto 2rem;border-radius:1rem;box-shadow:0 10px 30px rgba(0,0,0,0.12);">
 
 ## Building Skills, Building Dignity
 

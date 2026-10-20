@@ -1,6 +1,7 @@
 ---
 layout: layouts/page.njk
 title: Healthcare
+titleSize: text-2xl sm:text-3xl md:text-4xl
 lead: Free medical camps, medicines, spectacles, and cataract surgeries for those who cannot afford care.
 bannerImage: /img/images2/healthcare/healthcare-2.jpg
 bannerHeight: hd-sm

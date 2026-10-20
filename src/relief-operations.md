@@ -1,6 +1,7 @@
 ---
 layout: layouts/page.njk
 title: Relief Operations
+titleSize: text-2xl sm:text-3xl md:text-4xl
 lead: Emergency relief for families affected by disasters, floods, and crisis.
 bannerImage: /img/uploads/dsc_0587.jpg
 bannerHeight: hd

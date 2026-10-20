@@ -1,6 +1,7 @@
 ---
 layout: layouts/page.njk
 title: "Children Home"
+titleSize: text-2xl sm:text-3xl md:text-4xl
 lead: A safe home, education, and care for orphaned and semi-orphaned children.
 sidebar: true
 sidebarInfo:
