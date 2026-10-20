@@ -25,8 +25,18 @@ sidebarCta:
   secondaryButton:
 galleryLayout: collage
 gallery:
-  - src: /img/images2/vision/1.jpg
-    alt: Education and skill development activity
+  - src: /img/images2/education/education-1.jpg
+    alt: Education activity 1
+  - src: /img/images2/education/education-2.jpg
+    alt: Education activity 2
+  - src: /img/images2/education/education-3.jpg
+    alt: Education activity 3
+  - src: /img/images2/education/education-4.jpg
+    alt: Education activity 4
+  - src: /img/images2/education/education-5.jpg
+    alt: Education activity 5
+  - src: /img/images2/education/education-6.jpg
+    alt: Education activity 6
 permalink: /education-skill-development/
 ---
 ## Helping Every Child Learn

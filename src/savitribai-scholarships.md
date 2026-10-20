@@ -3,8 +3,16 @@ layout: layouts/page.njk
 title: Savitribai Phule Scholarships
 titleSize: text-2xl sm:text-3xl md:text-4xl
 lead: Supporting education through scholarships for deserving students.
-bannerImage: /img/images2/savitriheader.png
+bannerImage: /img/images2/savitribai-phule-scholarships/title-image.png
+bannerHeight: hd-sm
+bannerFocus: center
 permalink: /savitribai-scholarships/
+galleryLayout: collage
+gallery:
+  - src: /img/images2/savitribai-phule-scholarships/savitrbai-1.jpg
+    alt: Savitribai Phule scholarship activity
+  - src: /img/images2/savitribai-phule-scholarships/savitrbai-2.jpg
+    alt: Savitribai Phule scholarship students
 ---
 
 ## Scholarships for Deserving Students
