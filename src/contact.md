@@ -3,7 +3,7 @@ layout: layouts/page.njk
 title: Contact Premalaya
 lead: Help us to serve the downtrodden and the needy
 bannerImage: /img/uploads/dsc_0221.jpg
-bannerHeight: xxtall
+bannerHeight: hd-sm
 bannerFocus: center-top
 sidebar: true
 sidebarInfo:
