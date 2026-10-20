@@ -5,6 +5,7 @@ lead: Donations and partnerships play a vital role in keeping Premalaya running.
 bannerImage: /img/uploads/dsc_4067.jpg
 bannerHeight: tall
 bannerFocus: center-top
+titleSize: text-2xl sm:text-3xl md:text-4xl
 leadJustify: true
 leadFull: true
 permalink: /support/

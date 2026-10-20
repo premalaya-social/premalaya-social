@@ -5,6 +5,7 @@ lead: Help us to serve the downtrodden and the needy
 bannerImage: /img/uploads/dsc_0221.jpg
 bannerHeight: hd-sm
 bannerFocus: center-top
+titleSize: text-2xl sm:text-3xl md:text-4xl
 sidebar: true
 sidebarInfo:
   title: Quick Contact
