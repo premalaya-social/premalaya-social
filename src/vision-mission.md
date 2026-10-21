@@ -35,7 +35,7 @@ permalink: /vision-mission/
         position: relative;
         z-index: 1;
         font-family: 'Outfit', system-ui, sans-serif;
-        font-size: 1.25rem;
+        font-size: 1.125rem;
         line-height: 1.6;
         font-weight: 500;
         color: #1e293b;
@@ -43,7 +43,7 @@ permalink: /vision-mission/
     }
     @media (min-width: 768px) {
         .vm-statement { padding-left: 4rem; }
-        .vm-statement p { font-size: 1.5rem; line-height: 1.55; }
+        .vm-statement p { font-size: 1.25rem; line-height: 1.55; }
         .vm-statement::before { font-size: 3.25rem; top: -0.5rem; left: 1.25rem; }
     }
 
@@ -176,19 +176,19 @@ permalink: /vision-mission/
                 </div>
             </div>
             <div class="vm-pillar">
-                <div class="vm-pillar-icon"><i class="fa-solid fa-people-group"></i></div>
-                <h3>Women and Youth Empowerment</h3>
-                <p>Strengthening leadership, independence, confidence, and livelihood opportunities among women and young people.</p>
-                <div class="vm-pillar-links">
-                    <a href="/women-empowerment/">Women Empowerment</a>
-                </div>
-            </div>
-            <div class="vm-pillar">
                 <div class="vm-pillar-icon"><i class="fa-solid fa-heart-pulse"></i></div>
                 <h3>Healthcare and Rehabilitation</h3>
                 <p>Promoting access to healthcare, rehabilitation, and support services for vulnerable individuals and communities.</p>
                 <div class="vm-pillar-links">
                     <a href="/health-care/">Healthcare</a>
+                </div>
+            </div>
+            <div class="vm-pillar">
+                <div class="vm-pillar-icon"><i class="fa-solid fa-people-group"></i></div>
+                <h3>Women and Youth Empowerment</h3>
+                <p>Strengthening leadership, independence, confidence, and livelihood opportunities among women and young people.</p>
+                <div class="vm-pillar-links">
+                    <a href="/women-empowerment/">Women Empowerment</a>
                 </div>
             </div>
             <div class="vm-pillar">
