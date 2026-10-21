@@ -52,7 +52,7 @@ Children from slum and marginalized communities often face overcrowded classroom
 ### What We Do
 
 - Provide supplementary education for school-going children and dropouts
-- Provide computer literacy training
+- Provide computer literacy, English literacy, and financial management training, along with supplementary educational programs
 - Help children build strong foundations in reading
 - Distribute books, uniforms, bags, and educational materials
 - Run Day Care Centers that give young children safety, care, and nutrition
