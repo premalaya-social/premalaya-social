@@ -126,7 +126,7 @@ aboutCards:
     imageFocus: center
   - image: /img/uploads/dsc_0221.jpg
     alt: Vision Mission
-    title: Mission & Vision
+    title: Vision & Mission
     description: Share love, by caring for the poor, needy and the helpless through
       our dedicated mission.
     link: /vision-mission/
