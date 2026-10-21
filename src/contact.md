@@ -3,7 +3,7 @@ layout: layouts/page.njk
 title: Contact Premalaya
 titleSize: text-2xl sm:text-3xl md:text-4xl
 lead: Help us to serve the downtrodden and the needy
-bannerImage: /img/uploads/dsc_0221.jpg
+bannerImage: /img/uploads/dsc_4067.jpg
 bannerHeight: hd-sm
 bannerFocus: center-top
 sidebar: true
@@ -35,10 +35,9 @@ We'd love to hear from you. Whether you're interested in our programs, want to v
         <div>
             <h3 class="font-heading font-bold text-slate-900 mb-1">Office Address</h3>
             <p class="text-sm text-slate-600 leading-relaxed">
-                Premalaya Social Development Society<br>
-                NO.9/A, 6th Street, 2nd Lane<br>
-                Defence Enclave, Muthapudupet, I.A.F, Avadi<br>
-                Chennai – 600055, Tamil Nadu, India
+Premalaya Social Development Society<br>
+                                NO.9/A, 2nd Lane, 6th Street, Defence Enclave, Muthapudupet, I.A.F Avadi<br>
+                                Chennai - 600055, Tamil Nadu
             </p>
         </div>
     </div>

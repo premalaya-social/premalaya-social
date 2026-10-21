@@ -2,7 +2,7 @@
 layout: layouts/page.njk
 title: Sustainability & Support
 lead: Donations and partnerships play a vital role in keeping Premalaya running. Whether you give once or regularly — as an individual, business, or institution in India or abroad — your support goes directly to our programs.
-bannerImage: /img/uploads/dsc_4067.jpg
+bannerImage: /img/uploads/dsc_0221.jpg
 bannerHeight: tall
 bannerFocus: center-top
 titleSize: text-2xl sm:text-3xl md:text-4xl

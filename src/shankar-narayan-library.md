@@ -28,8 +28,6 @@ galleryLayout: collage
 gallery:
   - src: /img/images2/library/2.jpg
     alt: Library interior
-  - src: /img/images2/library/3.jpg
-    alt: Books and reading materials
   - src: /img/images2/library/4.jpg
     alt: Students at the library
 ---
