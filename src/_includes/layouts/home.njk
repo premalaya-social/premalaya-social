@@ -92,7 +92,7 @@
                 <div class="swiper-wrapper">
 {% set buttonColorMap = { "primary":"bg-primary-500 hover:bg-primary-600 shadow-primary-500/30", "secondary":"bg-accent-500 hover:bg-accent-600 shadow-accent-500/30", "purple":"bg-purple-600 hover:bg-purple-700 shadow-purple-600/30", "green":"bg-emerald-600 hover:bg-emerald-700 shadow-emerald-600/30", "red":"bg-red-500 hover:bg-red-600 shadow-red-500/30" } %}
                     {% for slide in heroSlides %}
-                    {% set slideFocusMap = { "center":"object-center", "top":"object-top", "bottom":"object-bottom", "left":"object-left", "right":"object-right" } %}
+                    {% set slideFocusMap = { "center":"object-center", "center-top":"object-[center_25%]", "center-more-top":"object-[center_35%]", "top":"object-top", "bottom":"object-bottom", "left":"object-left", "right":"object-right" } %}
                     <div class="swiper-slide relative overflow-hidden" data-subtext="{{ slide.subtext }}" data-cta-text="{{ slide.buttonText }}" data-cta-link="{{ slide.link }}" data-cta-class="{{ buttonColorMap[slide.buttonColor] or 'bg-accent-500 hover:bg-accent-600 shadow-accent-500/30' }}">
                         <img src="{{ slide.image }}" alt="{{ slide.alt }}" class="hero-img w-full h-full object-cover {{ slideFocusMap[slide.imageFocus] or 'object-center' }}" loading="{% if loop.index0 == 0 %}eager{% else %}lazy{% endif %}">
                         <div class="absolute inset-0 bg-gradient-to-r from-primary-900/80 via-primary-900/50 to-transparent"></div>
@@ -179,7 +179,7 @@
     <section class="relative py-24 md:py-40 overflow-hidden">
         <div class="absolute inset-0">
             {% if heroSlides and heroSlides | length > 1 %}
-            <img src="{{ heroSlides[1].image }}" alt="" class="w-full h-full object-cover object-position-top" loading="lazy">
+            <img src="{{ heroSlides[1].image }}" alt="" class="w-full h-full object-cover object-[center_25%]" loading="lazy">
             {% else %}
             <img src="/img/images2/home2.jpg" alt="" class="w-full h-full object-cover object-position-top" loading="lazy">
             {% endif %}

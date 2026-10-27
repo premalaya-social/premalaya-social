@@ -68,7 +68,7 @@ heroSlides:
     subtext: Caring for the community with compassion and dedication
     buttonColor: primary
     link: /about/
-    image: /img/uploads/dsc_0193.jpg
+    image: /img/uploads/dsc_0578.jpg
     imageFocus: center
     buttonText: Learn More →
   - heading: Women Empowerment
@@ -77,7 +77,7 @@ heroSlides:
     subtext: Empowering women through skills and opportunities
     buttonColor: secondary
     link: /women-empowerment/
-    image: /img/uploads/dsc07302.jpg
+    image: /img/uploads/dsc01185.jpg
     imageFocus: center
     buttonText: Explore Programs →
   - heading: Our Founder
@@ -95,8 +95,8 @@ heroSlides:
     subtext: Caring for our future, nurturing young minds
     buttonColor: green
     link: /children-home/
-    image: /img/images2/children/DSC_4045.JPG
-    imageFocus: center
+    image: /img/uploads/dsc_0221.jpg
+    imageFocus: center-top
     buttonText: Children Programs →
   - heading: Medical Camps
     badge: Healthcare Services
@@ -104,8 +104,8 @@ heroSlides:
     subtext: Healthcare for all, serving communities with care
     buttonColor: red
     link: /health-care/
-    image: /img/uploads/dsc_0690.jpg
-    imageFocus: center
+    image: /img/uploads/img_9367.jpg
+    imageFocus: center-top
     buttonText: Medical Services →
   - heading: Relief Operations
     badge: Emergency Response
@@ -114,7 +114,7 @@ heroSlides:
     buttonColor: secondary
     link: /relief-operations/
     image: /img/images2/reliefwork/relief-work-2.jpg
-    imageFocus: center
+    imageFocus: center-more-top
     buttonText: Relief Programs →
 aboutCards:
   - image: /img/uploads/dsc07302.jpg
