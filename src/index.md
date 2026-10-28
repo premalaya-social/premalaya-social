@@ -70,7 +70,7 @@ heroSlides:
     link: /children-home/
     image: /img/uploads/dsc_0221.jpg
     imageFocus: center-top
-    buttonText: Learn More
+    buttonText: Learn More →
   - heading: Women Empowerment
     badge: Empowerment Program
     alt: Women Empowerment
