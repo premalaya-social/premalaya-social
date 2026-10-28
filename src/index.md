@@ -71,10 +71,14 @@ heroSlides:
     image: /img/uploads/dsc_0221.jpg
     imageFocus: center-top
 <<<<<<< HEAD
+    buttonText: Learn More
+=======
+<<<<<<< HEAD
     buttonText: Children Programs →
 =======
     buttonText: Learn More
 >>>>>>> abed9c7 (Change carousel button to Learn More)
+>>>>>>> develop
   - heading: Women Empowerment
     badge: Empowerment Program
     alt: Women Empowerment
