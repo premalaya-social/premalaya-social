@@ -148,7 +148,7 @@ aboutCards:
 impactStats:
   - number: 6+
     label: Active Programs
-  - number: 15000+
+  - number: 105000+
     label: Lives Impacted
   - number: 30+
     label: Years of Service
