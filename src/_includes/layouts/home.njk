@@ -181,7 +181,7 @@
     <section class="relative py-24 md:py-40 overflow-hidden">
         <div class="absolute inset-0">
             {% if heroSlides and heroSlides | length > 1 %}
-            <img src="{{ heroSlides[1].image }}" alt="" class="w-full h-full object-cover object-[center_25%]" loading="lazy">
+            <img src="{{ heroSlides[1].image }}" alt="" class="w-full h-full object-cover object-[center_60%] sm:object-[center_50%]" loading="lazy">
             {% else %}
             <img src="/img/images2/home2.jpg" alt="" class="w-full h-full object-cover object-position-top" loading="lazy">
             {% endif %}
@@ -199,27 +199,27 @@
                 </div>
                 <div class="lg:w-1/2">
                     {% if impactStats and impactStats | length %}
-                    <div class="grid grid-cols-2 gap-8 {% if impactStats | length == 3 %}sm:grid-cols-3{% elif impactStats | length == 4 %}sm:grid-cols-2 lg:grid-cols-4{% endif %}">
+                    <div class="grid grid-cols-2 gap-6 sm:gap-8 {% if impactStats | length == 3 %}sm:grid-cols-[1fr_1.25fr_1fr]{% elif impactStats | length == 4 %}sm:grid-cols-2 lg:grid-cols-4{% endif %}">
                         {% for stat in impactStats %}
-                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                            <div class="font-heading text-3xl sm:text-4xl font-black text-white leading-none mb-1" {% if stat.number | replace('+', '') | int %}data-count="{{ stat.number | replace('+', '') | int }}" data-suffix="{{ '+' if '+' in stat.number else '' }}" data-format="{{ 'comma' if stat.number | replace('+', '') | int >= 1000 else 'plain' }}"{% endif %}>{{ stat.number }}</div>
-                            <p class="text-sm text-white/60 font-medium">{{ stat.label }}</p>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-5 border border-white/10 min-w-0 overflow-hidden">
+                            <div class="font-heading font-black text-white leading-none mb-1 whitespace-nowrap tracking-tight" style="font-size: clamp(1.05rem, 4.2vw, 2.25rem);" {% if stat.number | replace('+', '') | int %}data-count="{{ stat.number | replace('+', '') | int }}" data-suffix="{{ '+' if '+' in stat.number else '' }}" data-format="{{ 'comma' if stat.number | replace('+', '') | int >= 1000 else 'plain' }}"{% endif %}>{{ stat.number }}</div>
+                            <p class="text-xs sm:text-sm text-white/60 font-medium">{{ stat.label }}</p>
                         </div>
                         {% endfor %}
                     </div>
                     {% else %}
-                    <div class="grid grid-cols-2 gap-8">
-                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                            <div class="font-heading text-3xl sm:text-4xl font-black text-white leading-none mb-1">6+</div>
-                            <p class="text-sm text-white/60 font-medium">Active Programs</p>
+                    <div class="grid grid-cols-2 sm:grid-cols-[1fr_1.25fr_1fr] gap-6 sm:gap-8">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-5 border border-white/10 min-w-0 overflow-hidden">
+                            <div class="font-heading font-black text-white leading-none mb-1 whitespace-nowrap tracking-tight" style="font-size: clamp(1.05rem, 4.2vw, 2.25rem);">6+</div>
+                            <p class="text-xs sm:text-sm text-white/60 font-medium">Active Programs</p>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                            <div class="font-heading text-3xl sm:text-4xl font-black text-white leading-none mb-1">15000+</div>
-                            <p class="text-sm text-white/60 font-medium">Lives Impacted</p>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-5 border border-white/10 min-w-0 overflow-hidden">
+                            <div class="font-heading font-black text-white leading-none mb-1 whitespace-nowrap tracking-tight" style="font-size: clamp(1.05rem, 4.2vw, 2.25rem);">105,000+</div>
+                            <p class="text-xs sm:text-sm text-white/60 font-medium">Lives Impacted</p>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                            <div class="font-heading text-3xl sm:text-4xl font-black text-white leading-none mb-1">30+</div>
-                            <p class="text-sm text-white/60 font-medium">Years of Service</p>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-5 border border-white/10 min-w-0 overflow-hidden">
+                            <div class="font-heading font-black text-white leading-none mb-1 whitespace-nowrap tracking-tight" style="font-size: clamp(1.05rem, 4.2vw, 2.25rem);">30+</div>
+                            <p class="text-xs sm:text-sm text-white/60 font-medium">Years of Service</p>
                         </div>
                     </div>
                     {% endif %}
