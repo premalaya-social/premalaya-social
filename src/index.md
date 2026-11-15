@@ -57,7 +57,7 @@ projectCards:
 permalink: /
 title: Premalaya Social Development Society
 description: "Premalaya Social Development Society (PSDS), meaning Temple of
-  Love, is a registered non-profit organization founded in 1994 by Rev. Dr. A.
+  Love, is a registered non-profit organization founded in 1994 by A.
   Isaiah. Premalaya works with compassion and commitment to uplift rural and
   urban poor, marginalized communities, scavengers, women, children, persons
   with disabilities, and other vulnerable sections of society. "
@@ -118,7 +118,7 @@ heroSlides:
   - heading: Our Founder
     badge: Leadership
     alt: Founder
-    subtext: Rev. Dr. A. Isaiah's vision of compassionate service
+    subtext: A. Isaiah's vision of compassionate service
     buttonColor: purple
     link: /founder/
     image: /img/uploads/dsc_4067.jpg
@@ -139,8 +139,8 @@ aboutCards:
       our dedicated mission.
     link: /vision-mission/
   - image: /img/uploads/isaiah-individual.jpg
-    alt: Rev. Dr. A. Isaiah
-    title: About Rev. Dr. A. Isaiah
+    alt: A. Isaiah
+    title: About A. Isaiah
     description: Founder & President of Premalaya Social Development Society,
       leading with compassion and dedication.
     link: /founder/
