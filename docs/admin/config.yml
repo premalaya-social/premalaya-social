@@ -261,7 +261,7 @@ collections:
           - { label: "Body Content", name: "body", widget: "markdown" }
 
       - name: "founder"
-        label: "Rev. Dr. A. Isaiah (Founder)"
+        label: "A. Isaiah (Founder)"
         file: "src/founder.md"
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.njk" }

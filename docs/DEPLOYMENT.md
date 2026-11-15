@@ -14,7 +14,7 @@ github-pages-site/
 ├── support.html (Support/Donation page)
 │
 ├── About Us Section:
-│   ├── founder.html (Rev. Dr. A. Isaiah)
+│   ├── founder.html (A. Isaiah)
 │   ├── vision-mission.html
 │   ├── governing-committee.html
 │   ├── donors-list.html
